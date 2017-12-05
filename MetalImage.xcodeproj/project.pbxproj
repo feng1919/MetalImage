@@ -28,6 +28,13 @@
 		5A22D8E31FD63CFE006A1FC2 /* MetalImageColorLocalBinaryPatternFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8E21FD63CFE006A1FC2 /* MetalImageColorLocalBinaryPatternFilter.metal */; };
 		5A22D8E41FD63CFE006A1FC2 /* MetalImageColorLocalBinaryPatternFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8E21FD63CFE006A1FC2 /* MetalImageColorLocalBinaryPatternFilter.metal */; };
 		5A22D8E51FD63CFE006A1FC2 /* MetalImageColorLocalBinaryPatternFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8E21FD63CFE006A1FC2 /* MetalImageColorLocalBinaryPatternFilter.metal */; };
+		5A22D8E81FD6442D006A1FC2 /* MILanczosResamplingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A22D8E61FD6442D006A1FC2 /* MILanczosResamplingFilter.h */; };
+		5A22D8E91FD6442D006A1FC2 /* MILanczosResamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8E71FD6442D006A1FC2 /* MILanczosResamplingFilter.m */; };
+		5A22D8EA1FD6442D006A1FC2 /* MILanczosResamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8E71FD6442D006A1FC2 /* MILanczosResamplingFilter.m */; };
+		5A22D8EB1FD6442D006A1FC2 /* MILanczosResamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8E71FD6442D006A1FC2 /* MILanczosResamplingFilter.m */; };
+		5A22D8ED1FD64440006A1FC2 /* MILanczosResamplingFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8EC1FD64440006A1FC2 /* MILanczosResamplingFilter.metal */; };
+		5A22D8EE1FD64440006A1FC2 /* MILanczosResamplingFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8EC1FD64440006A1FC2 /* MILanczosResamplingFilter.metal */; };
+		5A22D8EF1FD64440006A1FC2 /* MILanczosResamplingFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8EC1FD64440006A1FC2 /* MILanczosResamplingFilter.metal */; };
 		5A2659B31F92440A00CE1879 /* CommonStruct.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A7077EC1F8CE4D10017A39C /* CommonStruct.metal */; };
 		5A2659B41F92440B00CE1879 /* CommonStruct.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A7077EC1F8CE4D10017A39C /* CommonStruct.metal */; };
 		5A2659B61F92440E00CE1879 /* CommonStruct.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A7077EC1F8CE4D10017A39C /* CommonStruct.metal */; };
@@ -776,6 +783,9 @@
 		5A22D8DC1FD63CDE006A1FC2 /* MetalImageColorLocalBinaryPatternFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalImageColorLocalBinaryPatternFilter.h; sourceTree = "<group>"; };
 		5A22D8DD1FD63CDE006A1FC2 /* MetalImageColorLocalBinaryPatternFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalImageColorLocalBinaryPatternFilter.m; sourceTree = "<group>"; };
 		5A22D8E21FD63CFE006A1FC2 /* MetalImageColorLocalBinaryPatternFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MetalImageColorLocalBinaryPatternFilter.metal; sourceTree = "<group>"; };
+		5A22D8E61FD6442D006A1FC2 /* MILanczosResamplingFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MILanczosResamplingFilter.h; sourceTree = "<group>"; };
+		5A22D8E71FD6442D006A1FC2 /* MILanczosResamplingFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MILanczosResamplingFilter.m; sourceTree = "<group>"; };
+		5A22D8EC1FD64440006A1FC2 /* MILanczosResamplingFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MILanczosResamplingFilter.metal; sourceTree = "<group>"; };
 		5A5EF3301FAB440400C311D4 /* MetalImageSolarizeFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalImageSolarizeFilter.h; sourceTree = "<group>"; };
 		5A5EF3311FAB440400C311D4 /* MetalImageSolarizeFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalImageSolarizeFilter.m; sourceTree = "<group>"; };
 		5A5EF3361FAB443400C311D4 /* MetalImageSolarizeFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MetalImageSolarizeFilter.metal; sourceTree = "<group>"; };
@@ -1244,6 +1254,9 @@
 				5A22D8DC1FD63CDE006A1FC2 /* MetalImageColorLocalBinaryPatternFilter.h */,
 				5A22D8DD1FD63CDE006A1FC2 /* MetalImageColorLocalBinaryPatternFilter.m */,
 				5A22D8E21FD63CFE006A1FC2 /* MetalImageColorLocalBinaryPatternFilter.metal */,
+				5A22D8E61FD6442D006A1FC2 /* MILanczosResamplingFilter.h */,
+				5A22D8E71FD6442D006A1FC2 /* MILanczosResamplingFilter.m */,
+				5A22D8EC1FD64440006A1FC2 /* MILanczosResamplingFilter.metal */,
 			);
 			path = ImageProcessing;
 			sourceTree = "<group>";
@@ -1645,6 +1658,7 @@
 				5AF4380C1F9CE0FE0081D4B8 /* MetalImageHueFilter.h in Headers */,
 				5AE7140D1FC45CEC0067E7A7 /* MetalImageRGBClosingFilter.h in Headers */,
 				9FFACD781FB554FA004BF184 /* MetalImageCGAColorspaceFilter.h in Headers */,
+				5A22D8E81FD6442D006A1FC2 /* MILanczosResamplingFilter.h in Headers */,
 				9FFACD681FB54088004BF184 /* MetalImageCrosshatchFilter.h in Headers */,
 				5AE713D51FC44ACC0067E7A7 /* MetalImageRGBDilationFilter.h in Headers */,
 				9FFACCF21FB42E57004BF184 /* MetalImageAddBlendFilter.h in Headers */,
@@ -2005,6 +2019,7 @@
 				5A5EF3441FAB499A00C311D4 /* MetalImageGaussianBlurFilter.m in Sources */,
 				5AF438081F9CCB2B0081D4B8 /* MetalImageHSBFilter.metal in Sources */,
 				9FFACCEE1FB42D4A004BF184 /* MetalImageLightenBlendFilter.m in Sources */,
+				5A22D8EA1FD6442D006A1FC2 /* MILanczosResamplingFilter.m in Sources */,
 				EB54C9401ECC712100FB7DC3 /* BlasMatrixMult.mm in Sources */,
 				5AE7137D1FC2CC230067E7A7 /* MetalImageDirectionalSobelEdgeDetectionFilter.metal in Sources */,
 				5AE713D71FC44ACC0067E7A7 /* MetalImageRGBDilationFilter.m in Sources */,
@@ -2038,6 +2053,7 @@
 				EB54C94D1ECC712700FB7DC3 /* MetalImageExposureFilter.m in Sources */,
 				5A22D8E01FD63CDE006A1FC2 /* MetalImageColorLocalBinaryPatternFilter.m in Sources */,
 				EB54C9291ECC711B00FB7DC3 /* MetalImageFilterGroup.m in Sources */,
+				5A22D8EE1FD64440006A1FC2 /* MILanczosResamplingFilter.metal in Sources */,
 				5AF438221F9D941E0081D4B8 /* MetalImageFalseColorFilter.m in Sources */,
 				5AE713EF1FC453620067E7A7 /* MetalImageRGBErosionFilter.m in Sources */,
 				EB54C91B1ECC711B00FB7DC3 /* MetalDevice.m in Sources */,
@@ -2172,6 +2188,7 @@
 				9FFACD3E1FB447F7004BF184 /* MetalImageLuminosityBlendFilter.m in Sources */,
 				5AE713C21FC4056C0067E7A7 /* MetalImageCrosshairGenerator.m in Sources */,
 				9FCA3B781FB2E97F00220274 /* MetalImageBilateralSmoothKernel.m in Sources */,
+				5A22D8EB1FD6442D006A1FC2 /* MILanczosResamplingFilter.m in Sources */,
 				9FFACC9C1FB3E01F004BF184 /* MetalImageWhiteBalanceFilter.m in Sources */,
 				5A60BDAF1FB82AED00781C41 /* MetalImagePicture.m in Sources */,
 				9FFACCC51FB3F798004BF184 /* MetalImageColorDodgeBlendFilter.m in Sources */,
@@ -2267,6 +2284,7 @@
 				9FFACC961FB32D39004BF184 /* MetalImageChromaKeyFilter.metal in Sources */,
 				5AE7133C1FBD53800067E7A7 /* MetalImageSharpenFilter.metal in Sources */,
 				5AE713F41FC453730067E7A7 /* MetalImageRGBErosionFilter.metal in Sources */,
+				5A22D8EF1FD64440006A1FC2 /* MILanczosResamplingFilter.metal in Sources */,
 				5AF438671FA6040D0081D4B8 /* MetalImageAdaptiveThresholdFilter.metal in Sources */,
 				9FFACDB71FB5C386004BF184 /* MetalImageSphereFilter.metal in Sources */,
 				5AE7137E1FC2CC230067E7A7 /* MetalImageDirectionalSobelEdgeDetectionFilter.metal in Sources */,
@@ -2376,6 +2394,7 @@
 				5A2659B71F92441100CE1879 /* CommonShader.metal in Sources */,
 				5A60BD8F1FB80FD100781C41 /* MetalImageVignetteFilter.m in Sources */,
 				5A60BD991FB8167900781C41 /* MetalImageJFAVoronoiFilter.m in Sources */,
+				5A22D8E91FD6442D006A1FC2 /* MILanczosResamplingFilter.m in Sources */,
 				9FFACD241FB4404A004BF184 /* MetalImageNormalBlendFilter.m in Sources */,
 				EB50A5171F7E3B3D009B4C45 /* MetalImageColorConversion.metal in Sources */,
 				5AE714081FC45B730067E7A7 /* MetalImageClosingFilter.m in Sources */,
@@ -2384,6 +2403,7 @@
 				5A5EF3331FAB440400C311D4 /* MetalImageSolarizeFilter.m in Sources */,
 				9FFACC801FB324F6004BF184 /* MetalImageLookupFilter.metal in Sources */,
 				EB50A52F1F7E5946009B4C45 /* MetalImageSaturationFilter.metal in Sources */,
+				5A22D8ED1FD64440006A1FC2 /* MILanczosResamplingFilter.metal in Sources */,
 				9FFACD301FB443DE004BF184 /* MetalImageHueBlendFilter.m in Sources */,
 				5A60BD7B1FB7E73500781C41 /* MetalImageKuwaharaFilter.m in Sources */,
 				5AF438251F9D95920081D4B8 /* MetalImageFalseColorFilter.metal in Sources */,

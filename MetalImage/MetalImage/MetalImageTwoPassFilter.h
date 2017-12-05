@@ -39,4 +39,6 @@
                                secondStageVertexShaderFromString:(nonnull NSString *)secondStageVertexShaderString
                              secondStageFragmentShaderFromString:(nonnull NSString *)secondStageFragmentShaderString;
 
+- (void)assembleSecondStageRenderEncoder:(id<MTLRenderCommandEncoder>)renderEncoder;
+
 @end

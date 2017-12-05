@@ -34,10 +34,14 @@
     return self;
 }
 
+- (MTLUInt2)textureSizeForTexel {
+    return firstInputTexture.size;
+}
+
 - (void)setInputTexture:(MetalImageTexture *)newInputTexture atIndex:(NSInteger)textureIndex {
     [super setInputTexture:newInputTexture atIndex:textureIndex];
     
-    MTLUInt2 textureSize = [self textureSizeForOutput];
+    MTLUInt2 textureSize = [self textureSizeForTexel];
     
     if (!MTLUInt2Equal(textureSize, lastImageSize)) {
         lastImageSize = textureSize;
@@ -46,12 +50,22 @@
     }
 }
 
-- (void)setupFilterForSize:(MTLUInt2)filterFrameSize;
+- (void)setupFilterForSize:(MTLUInt2)filterFrameSize
 {
     runMetalSynchronouslyOnVideoProcessingQueue(^{
+        // The first pass through the framebuffer may rotate the inbound image,
+        // so need to account for that by changing up the kernel ordering for that pass
         MTLFloat *verticalContentBuffer = (MTLFloat *)[verticalBuffer contents];
-        verticalContentBuffer[0] = 0.0f;
-        verticalContentBuffer[1] = _verticalTexelSpacing / (MTLFloat)filterFrameSize.y;
+        if (MetalImageRotationSwapsWidthAndHeight(firstInputParameter.rotationMode))
+        {
+            verticalContentBuffer[0] = _verticalTexelSpacing / (MTLFloat)filterFrameSize.y;
+            verticalContentBuffer[1] = 0.0;
+        }
+        else
+        {
+            verticalContentBuffer[0] = 0.0f;
+            verticalContentBuffer[1] = _verticalTexelSpacing / (MTLFloat)filterFrameSize.y;
+        }
         
         MTLFloat *horizontalContentBuffer = (MTLFloat *)[verticalBuffer contents];
         horizontalContentBuffer[0] = _horizontalTexelSpacing / (MTLFloat)filterFrameSize.x;
@@ -93,13 +107,13 @@
 - (void)setVerticalTexelSpacing:(MTLFloat)newValue;
 {
     _verticalTexelSpacing = newValue;
-    [self setupFilterForSize:[self textureSizeForOutput]];
+    [self setupFilterForSize:[self textureSizeForTexel]];
 }
 
 - (void)setHorizontalTexelSpacing:(MTLFloat)newValue;
 {
     _horizontalTexelSpacing = newValue;
-    [self setupFilterForSize:[self textureSizeForOutput]];
+    [self setupFilterForSize:[self textureSizeForTexel]];
 }
 
 @end
