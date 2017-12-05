@@ -15,8 +15,8 @@
 @property (nonatomic, strong) NSArray<MetalImageOutput<MetalImageInput> *> *initialFilters;
 @property (nonatomic, assign) MTLClearColor bgClearColor;
 
-- (void)addFilter:(MetalImageFilter *)filter;
-- (void)removeFilter:(MetalImageFilter *)filter;
+- (void)addFilter:(MetalImageOutput<MetalImageInput> *)filter;
+- (void)removeFilter:(MetalImageOutput<MetalImageInput> *)filter;
 - (void)removeAllFilters;
 - (MetalImageOutput<MetalImageInput> *)filterAtIndex:(NSUInteger)filterIndex;
 - (NSUInteger)filterCount;

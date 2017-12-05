@@ -11,7 +11,7 @@
 
 @interface MetalImageFilterGroup ()
 
-@property (nonatomic,strong) NSMutableArray<MetalImageFilter *> *filterArray;
+@property (nonatomic,strong) NSMutableArray<MetalImageOutput<MetalImageInput> *> *filterArray;
 
 @end
 
@@ -51,7 +51,7 @@
 #pragma mark - chain management
 
 
-- (void)addFilter:(MetalImageFilter *)filter {
+- (void)addFilter:(MetalImageOutput<MetalImageInput> *)filter {
     if (filter) {
         @synchronized(self) {
             [_filterArray addObject:filter];
@@ -62,7 +62,7 @@
     }
 }
 
-- (void)removeFilter:(MetalImageFilter *)filter {
+- (void)removeFilter:(MetalImageOutput<MetalImageInput> *)filter {
     if (filter) {
         @synchronized(self) {
             [_filterArray removeObject:filter];
@@ -79,7 +79,7 @@
     }
 }
 
-- (MetalImageFilter *)filterAtIndex:(NSUInteger)filterIndex {
+- (MetalImageOutput<MetalImageInput> *)filterAtIndex:(NSUInteger)filterIndex {
     if (filterIndex < _filterArray.count) {
         @synchronized(self) {
             return _filterArray[filterIndex];
