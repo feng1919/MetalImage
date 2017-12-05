@@ -8,7 +8,7 @@ Email : redpark@qq.com
 
 # Technical requirements
 Metal Framework: Applications using this will run on arm64 iOS devices only.
-iOS 9.0 SDK to build
+iOS 9.0 SDK to build.
 Devices must have a camera to use camera-related functionality (obviously).
 
 # License
