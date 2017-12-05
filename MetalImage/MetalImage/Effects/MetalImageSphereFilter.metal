@@ -1,5 +1,5 @@
 //
-//  MetalImageSphereRefractionFilter.metal
+//  MISphereRefractionFilter.metal
 //  MetalImage
 //
 //  Created by fengshi on 2017/10/10.

@@ -11,59 +11,62 @@
 #import "MetalImageView.h"
 #import "MetalImageDebugView.h"
 #import "MetalImageContext.h"
-#import "MetalImageContrastFilter.h"
-#import "MetalImageBrightnessFilter.h"
-#import "MetalImageLevelsFilter.h"
-#import "MetalImageColorMatrixFilter.h"
+#import "MIContrastFilter.h"
+#import "MIBrightnessFilter.h"
+#import "MILevelsFilter.h"
+#import "MIColorMatrixFilter.h"
 #import "MetalImageTwoInputFilter.h"
-#import "MetalImageRGBFilter.h"
-#import "MetalImageColorInvertFilter.h"
+#import "MIRGBFilter.h"
+#import "MIColorInvertFilter.h"
 #import "MetalImageFilterGroup.h"
 #import "MetalImageTwoPassFilter.h"
-#import "MetalImageGaussianBlurFilter.h"
-#import "MetalImageSolarizeFilter.h"
-#import "MetalImagePerlinNoiseFilter.h"
-#import "MetalImagePolarPixellateFilter.h"
-#import "MetalImageCrosshatchFilter.h"
-#import "MetalImageCGAColorspaceFilter.h"
-#import "MetalImagePosterizeFilter.h"
-#import "MetalImageSwirlFilter.h"
-#import "MetalImageBulgeDistortionFilter.h"
-#import "MetalImagePinchDistortionFilter.h"
-#import "MetalImageStretchDistortionFilter.h"
-#import "MetalImageSphereRefractionFilter.h"
-#import "MetalImageGlassSphereFilter.h"
-#import "MetalImageKuwaharaFilter.h"
-#import "MetalImageKuwaharaRadius3Filter.h"
-#import "MetalImageVignetteFilter.h"
-#import "MetalImageJFAVoronoiFilter.h"
+#import "MIGaussianBlurFilter.h"
+#import "MISolarizeFilter.h"
+#import "MIPerlinNoiseFilter.h"
+#import "MIPolarPixellateFilter.h"
+#import "MICrosshatchFilter.h"
+#import "MICGAColorspaceFilter.h"
+#import "MIPosterizeFilter.h"
+#import "MISwirlFilter.h"
+#import "MIBulgeDistortionFilter.h"
+#import "MIPinchDistortionFilter.h"
+#import "MIStretchDistortionFilter.h"
+#import "MISphereRefractionFilter.h"
+#import "MIGlassSphereFilter.h"
+#import "MIKuwaharaFilter.h"
+#import "MIKuwaharaRadius3Filter.h"
+#import "MIVignetteFilter.h"
+#import "MIJFAVoronoiFilter.h"
 #import "MetalImagePicture.h"
-#import "MetalImageMosaicFilter.h"
-#import "MetalImagePixellateFilter.h"
-#import "MetalImagePolkaDotFilter.h"
-#import "MetalImageHalftoneFilter.h"
-#import "MetalImageCropFilter.h"
-#import "MetalImageTransformFilter.h"
-#import "MetalImageSharpenFilter.h"
-#import "MetalImageMedianFilter.h"
-#import "MetalImage3x3ConvolutionFilter.h"
-#import "MetalImageLaplacianFilter.h"
-#import "MetalImageSobelEdgeDetectionFilter.h"
-#import "MetalImageThresholdEdgeDetectionFilter.h"
-#import "MetalImageDirectionalSobelEdgeDetectionFilter.h"
-#import "MetalImageDirectionalNonMaximumSuppressionFilter.h"
-#import "MetalImageWeakPixelInclusionFilter.h"
-#import "MetalImagePrewittEdgeDetectionFilter.h"
-#import "MetalImageNonMaximumSuppressionFilter.h"
-#import "MetalImageDilationFilter.h"
-#import "MetalImageRGBDilationFilter.h"
-#import "MetalImageErosionFilter.h"
-#import "MetalImageRGBErosionFilter.h"
-#import "MetalImageOpeningFilter.h"
-#import "MetalImageRGBOpeningFilter.h"
-#import "MetalImageClosingFilter.h"
-#import "MetalImageRGBClosingFilter.h"
-#import "MetalImageColorPackingFilter.h"
+#import "MIMosaicFilter.h"
+#import "MIPixellateFilter.h"
+#import "MIPolkaDotFilter.h"
+#import "MIHalftoneFilter.h"
+#import "MICropFilter.h"
+#import "MITransformFilter.h"
+#import "MISharpenFilter.h"
+#import "MIMedianFilter.h"
+#import "MI3x3ConvolutionFilter.h"
+#import "MILaplacianFilter.h"
+#import "MISobelEdgeDetectionFilter.h"
+#import "MIThresholdEdgeDetectionFilter.h"
+#import "MIDirectionalSobelEdgeDetectionFilter.h"
+#import "MIDirectionalNonMaximumSuppressionFilter.h"
+#import "MIWeakPixelInclusionFilter.h"
+#import "MIPrewittEdgeDetectionFilter.h"
+#import "MINonMaximumSuppressionFilter.h"
+#import "MIDilationFilter.h"
+#import "MIRGBDilationFilter.h"
+#import "MIErosionFilter.h"
+#import "MIRGBErosionFilter.h"
+#import "MIOpeningFilter.h"
+#import "MIRGBOpeningFilter.h"
+#import "MIClosingFilter.h"
+#import "MIRGBClosingFilter.h"
+#import "MIColorPackingFilter.h"
+#import "MILocalBinaryPatternFilter.h"
+#import "MIColorLocalBinaryPatternFilter.h"
+#import "MILanczosResamplingFilter.h"
 
 #define METAL_DEBUG 0
 
@@ -109,67 +112,21 @@
     
     MetalImageOutput *lastNode = _videoCamera;
     
-//    for (int i = 0; i < 200; i++) {
-//        MetalImageContrastFilter *filter = [[MetalImageContrastFilter alloc] init];
-//        filter.contrast = 0.5f;
-    
-//    MetalImageColorMatrixFilter *filter = [[MetalImageColorMatrixFilter alloc] init];
-    
-//    MetalImageBrightnessFilter *filter = [[MetalImageBrightnessFilter alloc] init];
-//    filter.brightness = 0.5f;
-    
-//        MetalImageLevelsFilter *filter = [[MetalImageLevelsFilter alloc] init];
-//            [filter setRedMin:0.7 gamma:0.6 max:0.9];
-    
-//    MetalImageRGBFilter *filter = [[MetalImageRGBFilter alloc] init];
-//    filter.red = 0.0f;
-//    filter.green = 0.5;
-//    filter.blue = 0.5f;
-    
-//    MetalImageFilterGroup *filterGroup = [[MetalImageFilterGroup alloc] init];
-//
-//    MetalImageColorInvertFilter *filter = [[MetalImageColorInvertFilter alloc] init];
-//    [filterGroup addFilter:filter];
-//
-//    MetalImageBrightnessFilter *filter1 = [[MetalImageBrightnessFilter alloc] init];
-//    filter1.brightness = 0.0f;
-//    [filterGroup addFilter:filter1];
-//
-//    [filter addTarget:filter1];
-//    filterGroup.terminalFilter = filter1;
-//    filterGroup.initialFilters = @[filter];
-//
-//            [lastNode addTarget:filterGroup];
-//            lastNode = filterGroup;
-    
 //    MetalImageFilter *filter1 = [[MetalImageFilter alloc] init];
 //    [lastNode addTarget:filter1];
 //    lastNode = filter1;
-    
-//    MetalImageTwoPassFilter *filter = [[MetalImageTwoPassFilter alloc] initWithFirstStageFragmentFunctionName:@"fragment_common"
-//                                                                              secondStageFragmentFunctionName:@"fragment_common"];
-//    [lastNode addTarget:filter];
-//    lastNode = filter;
-    
-//    MetalImageSolarizeFilter *solarizeFilter = [[MetalImageSolarizeFilter alloc] init];
-//    [lastNode addTarget:solarizeFilter];
-//    lastNode = solarizeFilter;
+
     
 //    MetalImageFilter *filter1 = [[MetalImageFilter alloc] init];
 ////    filter1.outputImageSize = MTLUInt2Make(27, 48);
 //    [lastNode addTarget:filter1];
 //    lastNode = filter1;
     
-    MetalImageColorPackingFilter *filter = [[MetalImageColorPackingFilter alloc] init];
+    MILanczosResamplingFilter *filter = [[MILanczosResamplingFilter alloc] init];
 //    [filter setAffineTransform:CGAffineTransformIdentity];
     [lastNode addTarget:filter];
     lastNode = filter;
 
-//    }
-
-//    TestTwoInputFilter *twoInputFilter = [[TestTwoInputFilter alloc] init];
-//    [lastNode addTarget:twoInputFilter];
-//    lastNode = twoInputFilter;
     [lastNode addTarget:_metalView];
 }
 

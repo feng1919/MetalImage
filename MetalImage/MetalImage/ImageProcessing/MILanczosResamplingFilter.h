@@ -6,9 +6,9 @@
 //  Copyright © 2017年 fengshi. All rights reserved.
 //
 
-#import "MetalImageTwoPassTextureSamplingFilter.h"
+#import "MITwoPassTextureSamplingFilter.h"
 
-@interface MILanczosResamplingFilter : MetalImageTwoPassTextureSamplingFilter {
+@interface MILanczosResamplingFilter : MITwoPassTextureSamplingFilter {
     
 @protected
     BOOL fixedOriginalImageSize;

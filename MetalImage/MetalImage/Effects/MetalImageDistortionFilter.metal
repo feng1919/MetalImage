@@ -1,5 +1,5 @@
 //
-//  MetalImageBulgeDistortionFilter.metal
+//  MIBulgeDistortionFilter.metal
 //  MetalImage
 //
 //  Created by fengshi on 2017/10/10.
