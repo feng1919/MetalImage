@@ -67,6 +67,7 @@
 #import "MILocalBinaryPatternFilter.h"
 #import "MIColorLocalBinaryPatternFilter.h"
 #import "MILanczosResamplingFilter.h"
+#import "MILowPassFilter.h"
 
 #define METAL_DEBUG 0
 
@@ -122,7 +123,7 @@
 //    [lastNode addTarget:filter1];
 //    lastNode = filter1;
     
-    MILanczosResamplingFilter *filter = [[MILanczosResamplingFilter alloc] init];
+    MILowPassFilter *filter = [[MILowPassFilter alloc] init];
 //    [filter setAffineTransform:CGAffineTransformIdentity];
     [lastNode addTarget:filter];
     lastNode = filter;

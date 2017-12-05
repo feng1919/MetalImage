@@ -362,6 +362,10 @@
 		5AF4386F1FA614D00081D4B8 /* MetalImageTwoPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4386D1FA614D00081D4B8 /* MetalImageTwoPassFilter.m */; };
 		5AF438701FA614D00081D4B8 /* MetalImageTwoPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4386D1FA614D00081D4B8 /* MetalImageTwoPassFilter.m */; };
 		5AF438711FA614D00081D4B8 /* MetalImageTwoPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4386D1FA614D00081D4B8 /* MetalImageTwoPassFilter.m */; };
+		5AFAA0121FD6C39500038BA4 /* MILowPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AFAA0101FD6C39500038BA4 /* MILowPassFilter.h */; };
+		5AFAA0131FD6C39500038BA4 /* MILowPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA0111FD6C39500038BA4 /* MILowPassFilter.m */; };
+		5AFAA0141FD6C39500038BA4 /* MILowPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA0111FD6C39500038BA4 /* MILowPassFilter.m */; };
+		5AFAA0151FD6C39500038BA4 /* MILowPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA0111FD6C39500038BA4 /* MILowPassFilter.m */; };
 		9F1250EA1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1250E81FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.h */; };
 		9F1250EB1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1250E91FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m */; };
 		9F1250EC1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1250E91FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m */; };
@@ -928,6 +932,8 @@
 		5AF438641FA6040D0081D4B8 /* MIAdaptiveThresholdFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MIAdaptiveThresholdFilter.metal; sourceTree = "<group>"; };
 		5AF4386C1FA614D00081D4B8 /* MetalImageTwoPassFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalImageTwoPassFilter.h; sourceTree = "<group>"; };
 		5AF4386D1FA614D00081D4B8 /* MetalImageTwoPassFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalImageTwoPassFilter.m; sourceTree = "<group>"; };
+		5AFAA0101FD6C39500038BA4 /* MILowPassFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MILowPassFilter.h; sourceTree = "<group>"; };
+		5AFAA0111FD6C39500038BA4 /* MILowPassFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MILowPassFilter.m; sourceTree = "<group>"; };
 		9F1250E81FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIAverageLuminanceThresholdFilter.h; sourceTree = "<group>"; };
 		9F1250E91FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIAverageLuminanceThresholdFilter.m; sourceTree = "<group>"; };
 		9FCA3B791FB2ED4400220274 /* MIHistogramGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIHistogramGenerator.h; sourceTree = "<group>"; };
@@ -1251,6 +1257,8 @@
 				5A22D8E61FD6442D006A1FC2 /* MILanczosResamplingFilter.h */,
 				5A22D8E71FD6442D006A1FC2 /* MILanczosResamplingFilter.m */,
 				5A22D8EC1FD64440006A1FC2 /* MILanczosResamplingFilter.metal */,
+				5AFAA0101FD6C39500038BA4 /* MILowPassFilter.h */,
+				5AFAA0111FD6C39500038BA4 /* MILowPassFilter.m */,
 			);
 			path = ImageProcessing;
 			sourceTree = "<group>";
@@ -1696,6 +1704,7 @@
 				5AF438161F9CEC840081D4B8 /* MIMonochromeFilter.h in Headers */,
 				9FFACCE01FB4036B004BF184 /* MIHardLightBlendFilter.h in Headers */,
 				9F1250EA1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.h in Headers */,
+				5AFAA0121FD6C39500038BA4 /* MILowPassFilter.h in Headers */,
 				9FFACDB01FB5C2D2004BF184 /* MISphereRefractionFilter.h in Headers */,
 				5AF438201F9D941E0081D4B8 /* MIFalseColorFilter.h in Headers */,
 				5AE713BF1FC4056C0067E7A7 /* MICrosshairGenerator.h in Headers */,
@@ -2099,6 +2108,7 @@
 				5AF4381C1F9CECCB0081D4B8 /* MIMonochromeFilter.metal in Sources */,
 				9FFACD6A1FB54088004BF184 /* MICrosshatchFilter.m in Sources */,
 				EB54C9441ECC712100FB7DC3 /* MetalMatrixMult.mm in Sources */,
+				5AFAA0141FD6C39500038BA4 /* MILowPassFilter.m in Sources */,
 				5A60BD9A1FB8167900781C41 /* MIJFAVoronoiFilter.m in Sources */,
 				5AE713411FBE99C70067E7A7 /* MI3x3TextureSamplingFilter.m in Sources */,
 				9FFACD431FB44C86004BF184 /* MILinearBurnBlendFilter.m in Sources */,
@@ -2206,6 +2216,7 @@
 				EB54C98A1ECC780C00FB7DC3 /* MetalImageKernel.m in Sources */,
 				9FFACD011FB43022004BF184 /* MIDivideBlendFilter.m in Sources */,
 				5AE713F01FC453620067E7A7 /* MIRGBErosionFilter.m in Sources */,
+				5AFAA0151FD6C39500038BA4 /* MILowPassFilter.m in Sources */,
 				5AF4382D1F9E13FF0081D4B8 /* MIHazeFilter.m in Sources */,
 				5AE713A21FC2F8B00067E7A7 /* MIXYDerivativeFilter.m in Sources */,
 				5A60BD911FB80FD100781C41 /* MIVignetteFilter.m in Sources */,
@@ -2450,6 +2461,7 @@
 				9FFACD361FB446BA004BF184 /* MISaturationBlendFilter.m in Sources */,
 				5AE713541FBFEA950067E7A7 /* MI3x3ConvolutionFilter.m in Sources */,
 				5AF438571FA311DD0081D4B8 /* MILuminanceThresholdFilter.metal in Sources */,
+				5AFAA0131FD6C39500038BA4 /* MILowPassFilter.m in Sources */,
 				9FFACCA41FB3E681004BF184 /* MILuminanceRangeFilter.m in Sources */,
 				EB57B1961E86126F00832619 /* MIExposureFilter.m in Sources */,
 				5A60BD9D1FB8168F00781C41 /* MIJFAVoronoiFilter.metal in Sources */,
