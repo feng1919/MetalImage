@@ -13,8 +13,7 @@
 using namespace metal;
 
 fragment half4 fragment_NonMaximumSuppressionFilter(VertexIONearbyTexelSampling         inFrag  [[ stage_in ]],
-                                                    texture2d<half>                   texture2D  [[ texture(0) ]],
-                                                    constant float                  &edgeStrength [[ buffer(0) ]])
+                                                    texture2d<half>                   texture2D  [[ texture(0) ]])
 {
     constexpr sampler quadSampler(coord::normalized, filter::linear, address::clamp_to_edge);
     
