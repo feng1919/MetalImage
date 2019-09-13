@@ -6,6 +6,9 @@
 //  Copyright © 2017年 fengshi. All rights reserved.
 //
 
+#ifndef __MetalImageGlobal__
+#define __MetalImageGlobal__
+
 #define MetalImageRotationSwapsWidthAndHeight(rotation) (\
 (rotation) == kMetalImageRotateLeft || \
 (rotation) == kMetalImageRotateRight || \
@@ -22,3 +25,5 @@ typedef NS_ENUM(NSUInteger, MetalImageRotationMode) {
     kMetalImageRotateRightFlipHorizontal,//6
     kMetalImageRotate180//7
 };
+
+#endif
