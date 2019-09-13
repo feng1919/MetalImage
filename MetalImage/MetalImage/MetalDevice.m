@@ -105,11 +105,26 @@ static MetalDevice *_sharedMetalDevice = nil;
     [self commitCommandBufferWaitUntilDone:NO];
 }
 
++ (void)commitCommandBufferWithCompletion:(void (^)(id<MTLCommandBuffer>))completion {
+    [_sharedMetalDevice.commandBuffer addCompletedHandler:completion];
+    [self commitCommandBufferWaitUntilDone:NO];
+}
+
 + (void)commitCommandBufferWaitUntilDone:(BOOL)waitUtilDone {
     @synchronized (self) {
         [_sharedMetalDevice.commandBuffer commit];
         if (waitUtilDone) {
             [_sharedMetalDevice.commandBuffer waitUntilCompleted];
+        }
+        _sharedMetalDevice.commandBuffer = nil;
+    }
+}
+
++ (void)commitCommandBufferWaitUntilScheduled:(BOOL)waitUtilScheduled {
+    @synchronized (self) {
+        [_sharedMetalDevice.commandBuffer commit];
+        if (waitUtilScheduled) {
+            [_sharedMetalDevice.commandBuffer waitUntilScheduled];
         }
         _sharedMetalDevice.commandBuffer = nil;
     }

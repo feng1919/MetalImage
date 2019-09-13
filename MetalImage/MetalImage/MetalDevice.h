@@ -14,9 +14,11 @@
 + (nullable id<MTLDevice>)sharedMTLDevice;
 + (nullable id<MTLLibrary>)MetalImageLibrary;
 + (nullable id<MTLCommandQueue>)sharedCommandQueue;
-+ (nullable id<MTLCommandBuffer>)sharedCommandBuffer;
 
++ (nullable id<MTLCommandBuffer>)sharedCommandBuffer;
 + (void)commitCommandBuffer;
++ (void)commitCommandBufferWithCompletion:(void(^)(id<MTLCommandBuffer>))completion;
++ (void)commitCommandBufferWaitUntilScheduled:(BOOL)waitUtilScheduled;
 + (void)commitCommandBufferWaitUntilDone:(BOOL)waitUtilDone;
 
 @end
