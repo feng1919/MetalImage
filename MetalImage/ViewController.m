@@ -68,6 +68,7 @@
 #import "MIColorLocalBinaryPatternFilter.h"
 #import "MILanczosResamplingFilter.h"
 #import "MILowPassFilter.h"
+#import "MIHistogramFilter.h"
 
 #define METAL_DEBUG 0
 
@@ -106,27 +107,30 @@
 
     [self.view addSubview:self.metalView];
     
-    self.videoCamera = [[MetalImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPresetiFrame960x540 cameraPosition:AVCaptureDevicePositionFront];
+    self.videoCamera = [[MetalImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset1920x1080 cameraPosition:AVCaptureDevicePositionFront];
     self.videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
     self.videoCamera.horizontallyMirrorFrontFacingCamera = YES;
     self.videoCamera.horizontallyMirrorRearFacingCamera = NO;
     
     MetalImageOutput *lastNode = _videoCamera;
     
-//    MetalImageFilter *filter1 = [[MetalImageFilter alloc] init];
-//    [lastNode addTarget:filter1];
-//    lastNode = filter1;
-
+//    MIGaussianBlurFilter *filter = [[MIGaussianBlurFilter alloc] init];
+//    [lastNode addTarget:filter];
+//    lastNode = filter;
     
-//    MetalImageFilter *filter1 = [[MetalImageFilter alloc] init];
-////    filter1.outputImageSize = MTLUInt2Make(27, 48);
+//    MIHistogramFilter *filter1 = [[MIHistogramFilter alloc] init];
 //    [lastNode addTarget:filter1];
 //    lastNode = filter1;
     
-    MILowPassFilter *filter = [[MILowPassFilter alloc] init];
+    MetalImageFilter *filter1 = [[MetalImageFilter alloc] init];
+//    filter1.outputImageSize = MTLUInt2Make(27, 48);
+    [lastNode addTarget:filter1];
+    lastNode = filter1;
+    
+//    MILowPassFilter *filter = [[MILowPassFilter alloc] init];
 //    [filter setAffineTransform:CGAffineTransformIdentity];
-    [lastNode addTarget:filter];
-    lastNode = filter;
+//    [lastNode addTarget:filter];
+//    lastNode = filter;
 
     [lastNode addTarget:_metalView];
 }
