@@ -63,7 +63,7 @@
             lastImageSize = textureSize;
             
             runMetalSynchronouslyOnVideoProcessingQueue(^{
-                MTLFloat *contentBuffer = (MTLFloat *)[_texelSizeBuffer contents];
+                MTLFloat *contentBuffer = (MTLFloat *)[self->_texelSizeBuffer contents];
                 contentBuffer[0] = 1.0 / (MTLFloat)textureSize.x;
                 contentBuffer[1] = 1.0 / (MTLFloat)textureSize.y;
             });

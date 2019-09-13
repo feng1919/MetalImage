@@ -23,6 +23,7 @@
     {
         return nil;
     }
+    NSParameterAssert(newImage);
     
     CGImageRef newImageSource = newImage.CGImage;
     
@@ -106,7 +107,6 @@
     }
     
     //    CFAbsoluteTime elapsedTime, startTime = CFAbsoluteTimeGetCurrent();
-    
     if (shouldRedrawUsingCoreGraphics)
     {
         // For resized or incompatible image: redraw
@@ -255,6 +255,7 @@
 }
 
 - (BOOL)processImageWithCompletionHandler:(void (^)(void))completion {
+    
     hasProcessedImage = YES;
     
     if (dispatch_semaphore_wait(imageUpdateSemaphore, DISPATCH_TIME_NOW) != 0)

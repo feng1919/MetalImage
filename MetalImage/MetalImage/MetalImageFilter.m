@@ -60,10 +60,10 @@
         firstInputParameter.hasSetTarget = NO;
         firstInputParameter.rotationMode = kMetalImageNoRotation;
         
-        vertexBufferArray = [NSMutableArray array];
-        fragmentBufferArray = [NSMutableArray array];
-        vertexTextureArray = [NSMutableArray array];
-        fragmentTextureArray = [NSMutableArray array];
+//        vertexBufferArray = [NSMutableArray array];
+//        fragmentBufferArray = [NSMutableArray array];
+//        vertexTextureArray = [NSMutableArray array];
+//        fragmentTextureArray = [NSMutableArray array];
         
         [self createTextureVertexBuffer];
         [self createTextureCoordinateBuffer];
@@ -95,7 +95,7 @@
     pQuadPipelineStateDescriptor.depthAttachmentPixelFormat      = MTLPixelFormatInvalid;
     pQuadPipelineStateDescriptor.stencilAttachmentPixelFormat    = MTLPixelFormatInvalid;
     pQuadPipelineStateDescriptor.colorAttachments[0].pixelFormat = MTLPixelFormatBGRA8Unorm;
-    pQuadPipelineStateDescriptor.sampleCount                     = 1;
+    pQuadPipelineStateDescriptor.rasterSampleCount               = 1;
     pQuadPipelineStateDescriptor.vertexFunction                  = _vertexFunction;
     pQuadPipelineStateDescriptor.fragmentFunction                = _fragmentFunction;
     
@@ -203,6 +203,8 @@
 }
 
 - (void)newTextureReadyAtTime:(CMTime)frameTime atIndex:(NSInteger)textureIndex {
+    
+    firstInputParameter.frameTime = frameTime;
     
     [self renderToTextureWithVertices:MetalImageDefaultRenderVetics
                    textureCoordinates:TextureCoordinatesForRotation(firstInputParameter.rotationMode)];

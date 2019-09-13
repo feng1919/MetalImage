@@ -18,8 +18,6 @@ MTLFloat4 imageVertices[] = {VertexA,VertexB,VertexC,VertexD};
 MTLFloat4 *MetalImageDefaultRenderVetics = imageVertices;
 NSUInteger MetalImageDefaultRenderVetexCount = 4;
 
-const MTLUInt2 MTLUInt2Zero = {0,0};
-
 @implementation MetalImageFunction
 
 dispatch_queue_attr_t MetalImageDefaultQueueAttribute(void)

@@ -24,10 +24,10 @@
     id<MTLDepthStencilState> _depthStencilState;
     MTLRenderPassDescriptor *_renderPassDescriptor;
     
-    NSMutableArray <MetalImageVertexBuffer *> *vertexBufferArray;
-    NSMutableArray <MetalImageFragmentBuffer *> *fragmentBufferArray;
-    NSMutableArray <MetalImageVertexTexture *> *vertexTextureArray;
-    NSMutableArray <MetalImageFragmentTexture *> *fragmentTextureArray;
+//    NSMutableArray <MetalImageVertexBuffer *> *vertexBufferArray;
+//    NSMutableArray <MetalImageFragmentBuffer *> *fragmentBufferArray;
+//    NSMutableArray <MetalImageVertexTexture *> *vertexTextureArray;
+//    NSMutableArray <MetalImageFragmentTexture *> *fragmentTextureArray;
     
 }
 
