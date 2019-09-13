@@ -17,8 +17,8 @@ typedef struct {
 }SphereParameters;
 
 fragment half4 fragment_SphereRefractionFilter(VertexIO         inFrag  [[ stage_in ]],
-                                    texture2d<half>  tex2D   [[ texture(0) ]],
-                                    constant SphereParameters &parameters  [[ buffer(0) ]])
+                                               texture2d<half>  tex2D   [[ texture(0) ]],
+                                               constant SphereParameters &parameters  [[ buffer(0) ]])
 {
     constexpr sampler quadSampler(coord::normalized, filter::linear, address::clamp_to_edge);
     
