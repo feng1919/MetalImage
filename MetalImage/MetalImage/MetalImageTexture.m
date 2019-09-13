@@ -10,6 +10,7 @@
 #import "MetalImageFunction.h"
 #import "MetalImageContext.h"
 #import "MetalDevice.h"
+#import "UIImage+Texture.h"
 
 static int MetalSupportFastTextureLoad = -1;
 
@@ -22,10 +23,12 @@ static int MetalSupportFastTextureLoad = -1;
     NSUInteger _readLockCount;
     CVMetalTextureRef _textureRef;
     CVPixelBufferRef _renderTarget;
+    MTLTextureUsage _usage;
 }
 
+- (void)buildupFramebuffer;
 - (void)buildupTexture;
-- (void)teardownTexture;
+- (void)teardownFramebuffer;
 
 @end
 
@@ -38,30 +41,54 @@ static int MetalSupportFastTextureLoad = -1;
 }
 
 - (instancetype)initWithTextureSize:(MTLUInt2)size {
+//    if (self = [super init]) {
+//        _reference.enabled = YES;
+//        _reference.count = 0;
+//        _size = size;
+//        [self buildupFramebuffer];
+//    }
+//    return self;
+    return [self initWithTextureSize:size pixelFormat:[[self class] defaultPixelFormat]];
+}
+
+- (instancetype)initWithTextureSize:(MTLUInt2)size pixelFormat:(int)pixelFormat {
     if (self = [super init]) {
         _reference.enabled = YES;
         _reference.count = 0;
         _size = size;
+        _pixelFormat = pixelFormat;
+        [self buildupFramebuffer];
+    }
+    return self;
+}
+
+- (instancetype)initWithTextureSize:(MTLUInt2)size textureUsage:(MTLTextureUsage)usage {
+    if (self = [super init]) {
+        _reference.enabled = NO;
+        _reference.count = 0;
+        _size = size;
+        _usage = usage;
         [self buildupTexture];
-        NSLog(@"Create Texture: %@",[self description]);
     }
     return self;
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"[%p] <%@> width:%ld height:%ld depth:%ld reference count: %ld",
-            self, NSStringFromClass([self class]), [_texture width], [_texture height], [_texture depth], _reference.count];
+    return [NSString stringWithFormat:@"[%p] <%@> width:%d height:%d depth:%d reference count: %d",
+            self, NSStringFromClass([self class]), (int)[_texture width], (int)[_texture height],
+            (int)[_texture depth], (int)_reference.count];
 }
 
-
 - (void)dealloc {
-    [self teardownTexture];
-    
-    NSLog(@"Dealloc Texture: %@",[self description]);
+    [self teardownFramebuffer];
+}
+
++ (int)defaultPixelFormat {
+    return kCVPixelFormatType_32BGRA;
 }
 
 #pragma mark - Internal
-- (void)buildupTexture {
+- (void)buildupFramebuffer {
     if ([MetalImageTexture supportsFastTextureUpload]) {
         CVMetalTextureCacheRef coreVideoTextureCache = [[MetalImageContext sharedImageProcessingContext] coreVideoTextureCache];
         // Code originally sourced from http://allmybrain.com/2011/12/08/rendering-to-a-texture-with-ios-5-texture-cache-api/
@@ -72,15 +99,14 @@ static int MetalSupportFastTextureLoad = -1;
         attrs = CFDictionaryCreateMutable(kCFAllocatorDefault, 1, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
         CFDictionarySetValue(attrs, kCVPixelBufferIOSurfacePropertiesKey, empty);
         
-        CVReturn err = CVPixelBufferCreate(kCFAllocatorDefault, _size.x, _size.y, kCVPixelFormatType_32BGRA, attrs, &_renderTarget);
+        CVReturn err = CVPixelBufferCreate(kCFAllocatorDefault, _size.x, _size.y, _pixelFormat, attrs, &_renderTarget);
         if (err)
         {
             NSLog(@"FBO size: %d, %d", _size.x, _size.y);
             NSAssert(NO, @"Error at CVPixelBufferCreate %d", err);
         }
         
-        CVReturn error = CVMetalTextureCacheCreateTextureFromImage(kCFAllocatorDefault, coreVideoTextureCache,
-                                                                   _renderTarget, NULL, MTLPixelFormatBGRA8Unorm, _size.x, _size.y, 0, &_textureRef);
+        CVReturn error = CVMetalTextureCacheCreateTextureFromImage(kCFAllocatorDefault, coreVideoTextureCache, _renderTarget, NULL, MTLPixelFormatBGRA8Unorm, _size.x, _size.y, 0, &_textureRef);
         
         NSAssert(error == kCVReturnSuccess, @">>>>ERR: Failed to create CVMetalTextureRef.");
         
@@ -91,19 +117,24 @@ static int MetalSupportFastTextureLoad = -1;
             _texture = CVMetalTextureGetTexture(_textureRef);
             NSAssert(_texture != NULL, @">>>>ERR: Failed to obtain texture from CVMetalTextureRef.");
         }
-    }
-    else {
-        MTLTextureDescriptor *descriptor = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatBGRA8Unorm width:_size.x height:_size.y mipmapped:NO];
-        _texture = [[MetalDevice sharedMTLDevice] newTextureWithDescriptor:descriptor];
+        
+        NSLog(@"Create Texture Framebuffer: %@",[self description]);
     }
 }
 
-- (void)teardownTexture {
+- (void)buildupTexture {
+    MTLTextureDescriptor *descriptor = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatBGRA8Unorm width:_size.x height:_size.y mipmapped:NO];
+    descriptor.usage = _usage;
+    _texture = [[MetalDevice sharedMTLDevice] newTextureWithDescriptor:descriptor];
+}
+
+- (void)teardownFramebuffer {
     if ([MetalImageTexture supportsFastTextureUpload]) {
         if (_renderTarget)
         {
             CFRelease(_renderTarget);
             _renderTarget = NULL;
+            NSLog(@"Dealloc Texture Framebuffer: %@",[self description]);
         }
         
         if (_textureRef) {
@@ -263,6 +294,10 @@ static int MetalSupportFastTextureLoad = -1;
     }
     
     return adjustedSize;
+}
+
+- (UIImage *)imageFromTexture {
+    return [UIImage imageWithMTLTexture:self.texture orientation:UIImageOrientationUp];
 }
 
 @end

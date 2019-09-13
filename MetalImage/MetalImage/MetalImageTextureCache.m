@@ -68,16 +68,20 @@
 }
 
 #pragma mark - Framebuffer management
-- (NSString *)hashForSize:(MTLUInt2)size {
-    return [NSString stringWithFormat:@"width%d-height%d",size.x, size.y];
+- (NSString *)hashForSize:(MTLUInt2)size pixelFormat:(int)pixelFormat {
+    return [NSString stringWithFormat:@"width%d-height%d-format%d",size.x, size.y, pixelFormat];
 }
 
 - (MetalImageTexture *)fetchTextureWithSize:(MTLUInt2)size {
+    return [self fetchTextureWithSize:size pixelFormat:[MetalImageTexture defaultPixelFormat]];
+}
+
+- (MetalImageTexture *)fetchTextureWithSize:(MTLUInt2)size pixelFormat:(int)pixelFormat {
     
     @synchronized (self) {
         MetalImageTexture *textureFromCache = nil;
         
-        NSString *lookupHash = [self hashForSize:size];
+        NSString *lookupHash = [self hashForSize:size pixelFormat:pixelFormat];
         NSNumber *numberOfMatchingTexturesInCache = [framebufferTypeCounts objectForKey:lookupHash];
         NSInteger numberOfMatchingTextures = [numberOfMatchingTexturesInCache integerValue];
         
@@ -130,7 +134,7 @@
     @synchronized (self) {
         [texture clearAllLocks];
         
-        NSString *lookupHash = [self hashForSize:texture.size];
+        NSString *lookupHash = [self hashForSize:texture.size pixelFormat:texture.pixelFormat];
         NSNumber *numberOfMatchingTexturesInCache = [framebufferTypeCounts objectForKey:lookupHash];
         NSInteger numberOfMatchingTextures = [numberOfMatchingTexturesInCache integerValue];
         

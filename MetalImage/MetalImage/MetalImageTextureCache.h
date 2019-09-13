@@ -13,6 +13,7 @@
 
 // texture management
 - (MetalImageTexture *)fetchTextureWithSize:(MTLUInt2)size;
+- (MetalImageTexture *)fetchTextureWithSize:(MTLUInt2)size pixelFormat:(int)pixelFormat;
 
 - (void)cacheTexture:(MetalImageTexture *)texture;
 - (void)purgeAllUnassignedTextures;
