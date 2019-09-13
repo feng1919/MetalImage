@@ -25,7 +25,7 @@ fragment half4 fragment_BulgeDistortionFilter(VertexIO         inFrag  [[ stage_
     float2 center = parameters.center;
     float2 textureCoordinate = inFrag.textureCoordinate;
     float2 textureCoordinateToUse = float2(textureCoordinate.x, ((textureCoordinate.y - center.y) * parameters.aspectRatio) + center.y);
-    float dist = distance(parameters.center, textureCoordinateToUse);
+    float dist = distance((float2)parameters.center, textureCoordinateToUse);
     
     textureCoordinateToUse = textureCoordinate;
     
@@ -51,7 +51,7 @@ fragment half4 fragment_PinchDistortionFilter(VertexIO         inFrag  [[ stage_
     float2 center = parameters.center;
     float2 textureCoordinate = inFrag.textureCoordinate;
     float2 textureCoordinateToUse = float2(textureCoordinate.x, (textureCoordinate.y * parameters.aspectRatio + 0.5 - 0.5 * parameters.aspectRatio));
-    float dist = distance(parameters.center, textureCoordinateToUse);
+    float dist = distance((float2)parameters.center, textureCoordinateToUse);
     
     textureCoordinateToUse = textureCoordinate;
     

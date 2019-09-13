@@ -22,7 +22,7 @@ fragment half4 fragment_swirlFilter(VertexIO         inFrag  [[ stage_in ]],
     constexpr sampler quadSampler(coord::normalized, filter::linear, address::clamp_to_edge);
     
     float2 textureCoordinateToUse = inFrag.textureCoordinate;
-    float dist = distance(parameters.center, textureCoordinateToUse);
+    float dist = distance((float2)parameters.center, textureCoordinateToUse);
     
     if (dist < parameters.radius)
     {

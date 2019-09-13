@@ -24,7 +24,7 @@ fragment half4 fragment_SphereRefractionFilter(VertexIO         inFrag  [[ stage
     
     float2 textureCoordinate = inFrag.textureCoordinate;
     float2 textureCoordinateToUse = float2(textureCoordinate.x, (textureCoordinate.y * parameters.aspectRatio + 0.5 - 0.5 * parameters.aspectRatio));
-    float distanceFromCenter = distance(parameters.center, textureCoordinateToUse);
+    float distanceFromCenter = distance((float2)parameters.center, textureCoordinateToUse);
     float checkForPresenceWithinSphere = step(distanceFromCenter, parameters.radius);
     distanceFromCenter = distanceFromCenter/parameters.radius;
     float normalizedDepth = parameters.radius * sqrt(1.0 - distanceFromCenter * distanceFromCenter);
@@ -48,7 +48,7 @@ fragment half4 fragment_GlassSphereFilter(VertexIO         inFrag  [[ stage_in ]
     const float3 ambientLightPosition = float3(0.0, 0.0, 1.0);
     
     float2 textureCoordinateToUse = float2(textureCoordinate.x, (textureCoordinate.y * parameters.aspectRatio + 0.5 - 0.5 * parameters.aspectRatio));
-    float distanceFromCenter = distance(parameters.center, textureCoordinateToUse);
+    float distanceFromCenter = distance((float2)parameters.center, textureCoordinateToUse);
     float checkForPresenceWithinSphere = step(distanceFromCenter, parameters.radius);
     
     distanceFromCenter = distanceFromCenter / parameters.radius;

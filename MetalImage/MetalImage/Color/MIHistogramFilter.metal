@@ -70,7 +70,7 @@ vertex VertexIO vertex_luminanceHistogramSampling(constant uchar4         *pPosi
 {
     VertexIO outVertices;
     
-    const float3 W = float3(0.2125, 0.7154, 0.0721);
+//    const float3 W = float3(0.2125, 0.7154, 0.0721);
     float luminance = 0;//dot(pPosition[vid].xyz, W);
     
     outVertices.m_colorFactor = float3(1.0, 1.0, 1.0);

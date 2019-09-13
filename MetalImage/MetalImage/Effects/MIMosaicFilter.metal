@@ -24,7 +24,7 @@ fragment half4 fragment_MosaicFilter(VertexIO         inFrag  [[ stage_in ]],
     constexpr sampler quadSampler(coord::normalized, filter::linear, address::clamp_to_edge);
     
     float2 xy = inFrag.textureCoordinate;
-    xy = xy - fmod(xy, parameters.displayTileSize);
+    xy = xy - fmod(xy, (float2)parameters.displayTileSize);
     
     half4 lumcoeff = half4(0.299h, 0.587h, 0.114h, 0.0h);
     
