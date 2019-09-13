@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MILuminanceRangeFilter : MetalImageFilter
 
 /** The degree to reduce the luminance range, from 0.0 to 1.0. Default is 0.6.
@@ -15,3 +17,5 @@
 @property(readwrite, nonatomic) CGFloat rangeReductionFactor;
 
 @end
+
+NS_ASSUME_NONNULL_END

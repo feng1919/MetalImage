@@ -8,6 +8,10 @@
 
 #import "MI3x3ConvolutionFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MILaplacianFilter : MI3x3ConvolutionFilter
 
 @end
+
+NS_ASSUME_NONNULL_END

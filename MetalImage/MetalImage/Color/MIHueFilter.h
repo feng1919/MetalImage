@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIHueFilter : MetalImageFilter {
     GLint hueAdjustUniform;
 }
@@ -15,3 +17,5 @@
 @property (nonatomic, readwrite) CGFloat hue;
 
 @end
+
+NS_ASSUME_NONNULL_END

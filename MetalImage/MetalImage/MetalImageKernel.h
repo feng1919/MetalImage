@@ -8,6 +8,8 @@
 
 #import "MetalImageOutput.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageKernel : MetalImageOutput <MetalImageInput> {
     
 @protected
@@ -28,3 +30,5 @@
 - (void)assembleComputeEncoder:(id<MTLComputeCommandEncoder>)computeEncoder;
 
 @end
+
+NS_ASSUME_NONNULL_END

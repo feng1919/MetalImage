@@ -8,7 +8,11 @@
 
 #import "MIColorMatrixFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// Simple sepia tone filter
 @interface MISepiaFilter : MIColorMatrixFilter
 
 @end
+
+NS_ASSUME_NONNULL_END

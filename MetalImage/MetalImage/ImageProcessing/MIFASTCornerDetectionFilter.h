@@ -11,6 +11,7 @@
 #import "MI3x3TextureSamplingFilter.h"
 #import "MINonMaximumSuppressionFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
 /*
  An implementation of the Features from Accelerated Segment Test (FAST) feature detector as described in the following publications:
  
@@ -33,3 +34,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

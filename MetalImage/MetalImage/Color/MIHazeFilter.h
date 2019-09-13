@@ -21,6 +21,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIHazeFilter : MetalImageFilter
 
 /** Strength of the color applied. Default 0. Values between -.3 and .3 are best
@@ -34,3 +36,5 @@
 @property (nonatomic, strong) id<MTLBuffer> buffer;
 
 @end
+
+NS_ASSUME_NONNULL_END

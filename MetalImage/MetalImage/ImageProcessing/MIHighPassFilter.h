@@ -10,6 +10,8 @@
 #import "MILowPassFilter.h"
 #import "MIDifferenceBlendFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIHighPassFilter : MetalImageFilterGroup
 {
 @protected
@@ -21,3 +23,5 @@
 @property(readwrite, nonatomic) MTLFloat filterStrength;
 
 @end
+
+NS_ASSUME_NONNULL_END

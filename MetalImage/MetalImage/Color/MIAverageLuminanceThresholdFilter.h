@@ -8,6 +8,10 @@
 
 #import "MetalImageFilterGroup.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIAverageLuminanceThresholdFilter : MetalImageFilterGroup
 
 @end
+
+NS_ASSUME_NONNULL_END

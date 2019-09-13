@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "MetalImageTwoInputFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIMosaicFilter : MetalImageTwoInputFilter
 
 //  This filter takes an input tileset, the tiles must ascend in luminance
@@ -23,3 +25,5 @@
 - (void)setTileSetImage:(UIImage *)tileSetImage;
 
 @end
+
+NS_ASSUME_NONNULL_END

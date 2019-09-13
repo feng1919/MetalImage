@@ -8,6 +8,8 @@
 
 #import "MISobelEdgeDetectionFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIThresholdEdgeDetectionFilter : MISobelEdgeDetectionFilter
 
 /** Any edge above this threshold will be black, and anything below white.
@@ -16,3 +18,5 @@
 @property(readwrite, nonatomic) MTLFloat threshold;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MI3x3TextureSamplingFilter : MetalImageFilter {
     
 @protected
@@ -21,3 +23,5 @@
 @property (nonatomic, strong, readonly) id<MTLBuffer> texelSizeBuffer;
 
 @end
+
+NS_ASSUME_NONNULL_END

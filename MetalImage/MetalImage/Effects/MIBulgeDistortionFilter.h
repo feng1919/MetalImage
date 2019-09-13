@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /// Creates a bulge distortion on the image
 @interface MIBulgeDistortionFilter : MetalImageFilter
 
@@ -19,3 +21,5 @@
 @property(readwrite, nonatomic) MTLFloat scale;
 
 @end
+
+NS_ASSUME_NONNULL_END

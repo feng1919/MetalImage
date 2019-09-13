@@ -10,6 +10,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MITransformFilter : MetalImageFilter
 
 // You can either set the transform to apply to be a 2-D affine transform or a 3-D transform.
@@ -25,3 +27,5 @@
 @property(readwrite, nonatomic) BOOL anchorTopLeft;
 
 @end
+
+NS_ASSUME_NONNULL_END

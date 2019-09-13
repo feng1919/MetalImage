@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MICropFilter : MetalImageFilter {
 @protected
     MTLFloat2 cropTextureCoordinates[4];
@@ -22,3 +24,5 @@
 - (void)setTextureCropCoordinates:(MTLFloat2[4])coordinates;
 
 @end
+
+NS_ASSUME_NONNULL_END

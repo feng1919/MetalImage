@@ -8,6 +8,7 @@
 
 #import "MI3x3TextureSamplingFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
 /** Runs a 3x3 convolution kernel against the image
  */
 @interface MI3x3ConvolutionFilter : MI3x3TextureSamplingFilter
@@ -23,3 +24,5 @@
 @property (nonatomic, strong) id<MTLBuffer> buffer;
 
 @end
+
+NS_ASSUME_NONNULL_END

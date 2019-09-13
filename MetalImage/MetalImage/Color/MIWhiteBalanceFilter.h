@@ -15,6 +15,8 @@
  
  */
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIWhiteBalanceFilter : MetalImageFilter
 
 //choose color temperature, in degrees Kelvin
@@ -24,3 +26,5 @@
 @property(readwrite, nonatomic) CGFloat tint;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -11,6 +11,10 @@
 /** Applies a color dodge blend of two images
  */
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIColorDodgeBlendFilter : MetalImageTwoInputFilter
 
 @end
+
+NS_ASSUME_NONNULL_END

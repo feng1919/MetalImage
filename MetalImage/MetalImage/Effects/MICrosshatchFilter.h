@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MICrosshatchFilter : MetalImageFilter
 
 // The fractional width of the image to use as the spacing for the crosshatch. The default is 0.03.
@@ -18,3 +20,5 @@
 
 
 @end
+
+NS_ASSUME_NONNULL_END

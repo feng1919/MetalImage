@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "MetalImageTexture.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSUInteger, ColorConversionKernalFunction) {
     ColorConversionKernalFunction601v,
     ColorConversionKernalFunction601f,
@@ -24,3 +26,5 @@ typedef NS_ENUM(NSUInteger, ColorConversionKernalFunction) {
                          UVPlane:(nonnull id<MTLTexture>)uv_texture;
 
 @end
+
+NS_ASSUME_NONNULL_END

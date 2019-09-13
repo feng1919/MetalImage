@@ -8,6 +8,7 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
 /** This reduces the color dynamic range into the number of steps specified, leading to a cartoon-like simple shading of the image.
  */
 
@@ -18,3 +19,5 @@
 @property(readwrite, nonatomic) MTLUInt colorLevels;
 
 @end
+
+NS_ASSUME_NONNULL_END

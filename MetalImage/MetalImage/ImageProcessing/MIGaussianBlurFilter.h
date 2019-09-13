@@ -8,6 +8,7 @@
 
 #import "MITwoPassTextureSamplingFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
 /** A Gaussian blur filter
  Interpolated optimization based on Daniel Rákos' work at http://rastergrid.com/blog/2010/09/efficient-gaussian-blur-with-linear-sampling/
  */
@@ -40,3 +41,5 @@
 - (void)switchToVertexShader:(NSString *)newVertexShader fragmentShader:(NSString *)newFragmentShader;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -8,8 +8,12 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageFilter (Extension)
 
 - (MTLFloat2)rotatedPoint:(MTLFloat2)pointToRotate forRotation:(MetalImageRotationMode)rotation;
 
 @end
+
+NS_ASSUME_NONNULL_END

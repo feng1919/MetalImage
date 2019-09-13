@@ -13,6 +13,9 @@
 #import "MetalImageTypes.h"
 
 @class UIImage;
+
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageTexture : NSObject 
 
 @property (nonatomic,strong,readonly) id<MTLTexture> texture;
@@ -47,3 +50,4 @@
 
 @end
 
+NS_ASSUME_NONNULL_END

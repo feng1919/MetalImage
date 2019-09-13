@@ -12,6 +12,8 @@
 typedef enum CBLAS_ORDER      CBLAS_ORDER;
 typedef enum CBLAS_TRANSPOSE  CBLAS_TRANSPOSE;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface BlasMatrixMult: NSObject
 
 // Specifies row-major (C) or column-major (Fortran) data ordering.
@@ -58,3 +60,5 @@ typedef enum CBLAS_TRANSPOSE  CBLAS_TRANSPOSE;
              with:(float*)matB;
 
 @end
+
+NS_ASSUME_NONNULL_END

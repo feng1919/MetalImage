@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIFalseColorFilter : MetalImageFilter
 
 // The first and second colors specify what colors replace the dark and light areas of the image, respectively.
@@ -18,3 +20,5 @@
 @property (nonatomic, strong) id<MTLBuffer> buffer;
 
 @end
+
+NS_ASSUME_NONNULL_END

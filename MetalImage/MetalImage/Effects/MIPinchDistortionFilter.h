@@ -8,6 +8,7 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
 /** Creates a pinch distortion of the image
  */
 @interface MIPinchDistortionFilter : MetalImageFilter
@@ -23,3 +24,5 @@
 @property(readwrite, nonatomic) MTLFloat scale;
 
 @end
+
+NS_ASSUME_NONNULL_END

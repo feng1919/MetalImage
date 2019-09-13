@@ -10,6 +10,8 @@
  */
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIColorMatrixFilter : MetalImageFilter
 
 /** A 4x4 matrix used to transform each color in an image
@@ -27,3 +29,5 @@
 - (void)updateBufferContents;
 
 @end
+
+NS_ASSUME_NONNULL_END

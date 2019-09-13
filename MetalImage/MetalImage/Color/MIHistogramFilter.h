@@ -16,6 +16,8 @@ typedef enum {
     kMetalImageHistogramLuminance
 } MetalImageHistogramType;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIHistogramFilter : MetalImageFilter
 {
     MetalImageHistogramType histogramType;
@@ -33,3 +35,5 @@ typedef enum {
 - (id)initWithHistogramType:(MetalImageHistogramType)newHistogramType;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIDirectionalNonMaximumSuppressionFilter : MetalImageFilter
 
 // The texel width and height determines how far out to sample from this texel.
@@ -19,3 +21,5 @@
 @property(readwrite, nonatomic) MTLFloat lowerThreshold;
 
 @end
+
+NS_ASSUME_NONNULL_END

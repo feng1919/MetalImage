@@ -10,6 +10,8 @@
 #import "MetalImageInput.h"
 #import "MetalImageTexture.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageDebugView : UIImageView <MetalImageInput> {
     
 @protected
@@ -18,3 +20,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

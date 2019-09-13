@@ -19,6 +19,8 @@ typedef struct {
     BOOL hasSetTarget;
 }MetalImageInputParameter;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol MetalImageInput <NSObject>
 
 @required
@@ -41,3 +43,4 @@ typedef struct {
 
 @end
 
+NS_ASSUME_NONNULL_END

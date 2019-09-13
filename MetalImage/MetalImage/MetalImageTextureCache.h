@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "MetalImageTexture.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageTextureCache : NSObject
 
 // texture management
@@ -28,3 +30,5 @@
 - (NSString *)reuseIdentifier;
 
 @end
+
+NS_ASSUME_NONNULL_END

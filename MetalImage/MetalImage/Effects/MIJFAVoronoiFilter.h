@@ -8,8 +8,12 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIJFAVoronoiFilter : MetalImageFilter
 
 @property (nonatomic, readwrite) MTLUInt2 sizeInPixels;
 
 @end
+
+NS_ASSUME_NONNULL_END

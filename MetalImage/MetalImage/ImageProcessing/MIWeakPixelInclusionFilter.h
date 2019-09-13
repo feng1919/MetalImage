@@ -8,6 +8,10 @@
 
 #import "MI3x3TextureSamplingFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIWeakPixelInclusionFilter : MI3x3TextureSamplingFilter
 
 @end
+
+NS_ASSUME_NONNULL_END

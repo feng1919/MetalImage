@@ -8,8 +8,12 @@
 
 #import "MetalImageTwoInputFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIVoronoiConsumerFilter : MetalImageTwoInputFilter
 
 @property (nonatomic, readwrite) MTLUInt2 sizeInPixels;
 
 @end
+
+NS_ASSUME_NONNULL_END

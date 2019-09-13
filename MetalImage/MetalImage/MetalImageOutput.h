@@ -11,6 +11,8 @@
 #import "MetalImageInput.h"
 #import "MetalImageTexture.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageOutput : NSObject {
     
 @protected
@@ -63,3 +65,5 @@
 - (void)removeAllTargets;
 
 @end
+
+NS_ASSUME_NONNULL_END

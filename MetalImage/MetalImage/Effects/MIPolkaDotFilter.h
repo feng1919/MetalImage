@@ -8,8 +8,12 @@
 
 #import "MIPixellateFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIPolkaDotFilter : MIPixellateFilter
 
 @property(readwrite, nonatomic) MTLFloat dotScaling;
 
 @end
+
+NS_ASSUME_NONNULL_END

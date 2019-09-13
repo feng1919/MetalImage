@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIPolarPixellateFilter : MetalImageFilter
 
 // The center about which to apply the distortion, with a default of (0.5, 0.5)
@@ -16,3 +18,5 @@
 @property(readwrite, nonatomic) MTLFloat2 pixelSize;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /** Pixels with a luminance above the threshold will appear white, and those below will be black
  */
 @interface MILuminanceThresholdFilter : MetalImageFilter
@@ -17,3 +19,5 @@
 @property(readwrite, nonatomic) MTLFloat threshold;
 
 @end
+
+NS_ASSUME_NONNULL_END

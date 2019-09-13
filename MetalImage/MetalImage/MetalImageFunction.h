@@ -12,6 +12,8 @@
 extern MTLFloat4 *MetalImageDefaultRenderVetics;
 extern NSUInteger MetalImageDefaultRenderVetexCount;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageFunction : NSObject
 
 extern dispatch_queue_attr_t MetalImageDefaultQueueAttribute(void);
@@ -29,3 +31,4 @@ extern const MTLFloat2 *TextureCoordinatesForRotation(MetalImageRotationMode rot
 
 @end
 
+NS_ASSUME_NONNULL_END

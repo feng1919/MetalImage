@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /** Performs a vignetting effect, fading out the image at the edges
  */
 @interface MIVignetteFilter : MetalImageFilter
@@ -25,3 +27,5 @@
 @property (nonatomic, readwrite) MTLFloat vignetteEnd;
 
 @end
+
+NS_ASSUME_NONNULL_END

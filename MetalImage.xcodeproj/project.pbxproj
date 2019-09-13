@@ -2800,7 +2800,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_COMPILER_FLAGS = "";
 				MTL_FAST_MATH = YES;
-				MTL_LANGUAGE_REVISION = Metal21;
+				MTL_LANGUAGE_REVISION = UseDeploymentTarget;
 				MTL_TREAT_WARNINGS_AS_ERRORS = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2819,7 +2819,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_COMPILER_FLAGS = "";
 				MTL_FAST_MATH = YES;
-				MTL_LANGUAGE_REVISION = Metal21;
+				MTL_LANGUAGE_REVISION = UseDeploymentTarget;
 				MTL_TREAT_WARNINGS_AS_ERRORS = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";

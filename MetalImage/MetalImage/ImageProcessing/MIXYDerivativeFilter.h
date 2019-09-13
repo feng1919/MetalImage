@@ -8,6 +8,10 @@
 
 #import "MISobelEdgeDetectionFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIXYDerivativeFilter : MISobelEdgeDetectionFilter
 
 @end
+
+NS_ASSUME_NONNULL_END

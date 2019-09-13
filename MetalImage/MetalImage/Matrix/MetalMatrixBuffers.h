@@ -8,6 +8,7 @@
 
 #import <Metal/Metal.h>
 
+NS_ASSUME_NONNULL_BEGIN
 // A utility class to encapsulate instantiation of Metal matrix buffer.
 // By the virtue of this encapsulation, and after the buffers are added
 // to a mutable array of buffers, all buffers are kept alive in the
@@ -37,3 +38,5 @@
                        capacity:(size_t)capacity;
 
 @end
+
+NS_ASSUME_NONNULL_END

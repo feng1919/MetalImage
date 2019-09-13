@@ -16,6 +16,8 @@ typedef NS_ENUM(NSUInteger, MetalImageFillModeType) {
     kMetalImageFillModePreserveAspectRatioAndFill     // Maintains the aspect ratio of the source image, zooming in on its center to fill the view
 };
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageView : UIView <MetalImageInput> {
     
 @protected
@@ -32,3 +34,5 @@ typedef NS_ENUM(NSUInteger, MetalImageFillModeType) {
 @property (nonatomic,assign) MTLClearColor bgClearColor;
 
 @end
+
+NS_ASSUME_NONNULL_END

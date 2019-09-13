@@ -9,6 +9,8 @@
 #import "MetalImageOutput.h"
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageFilterGroup : MetalImageOutput<MetalImageInput>
 
 @property (nonatomic, strong) MetalImageOutput<MetalImageInput> *terminalFilter;
@@ -22,3 +24,5 @@
 - (NSUInteger)filterCount;
 
 @end
+
+NS_ASSUME_NONNULL_END

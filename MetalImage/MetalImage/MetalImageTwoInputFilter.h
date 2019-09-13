@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageTwoInputFilter : MetalImageFilter {
     
 @protected
@@ -22,3 +24,4 @@
 
 @end
 
+NS_ASSUME_NONNULL_END

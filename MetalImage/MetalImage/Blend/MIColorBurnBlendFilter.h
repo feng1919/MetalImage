@@ -11,6 +11,10 @@
 /** Applies a color burn blend of two images
  */
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIColorBurnBlendFilter : MetalImageTwoInputFilter
 
 @end
+
+NS_ASSUME_NONNULL_END

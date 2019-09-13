@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MISphereRefractionFilter : MetalImageFilter
 
 /// The center about which to apply the distortion, with a default of (0.5, 0.5)
@@ -18,3 +20,5 @@
 @property(readwrite, nonatomic) MTLFloat refractiveIndex;
 
 @end
+
+NS_ASSUME_NONNULL_END

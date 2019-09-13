@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIMonochromeFilter : MetalImageFilter
 
 @property (readwrite, nonatomic) CGFloat intensity;
@@ -15,3 +17,5 @@
 @property (nonatomic, strong) id<MTLBuffer> buffer;
 
 @end
+
+NS_ASSUME_NONNULL_END

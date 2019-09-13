@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <Metal/Metal.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageRenderBuffer : NSObject
 
 @property (nonatomic,strong) id<MTLBuffer> buffer;
@@ -35,3 +37,5 @@
 
 @interface MetalImageFragmentTexture : MetalImageRenderTexture
 @end
+
+NS_ASSUME_NONNULL_END

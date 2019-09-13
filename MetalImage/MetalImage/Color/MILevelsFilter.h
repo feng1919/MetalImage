@@ -19,6 +19,7 @@
  * If you want to apply levels to RGB as well as individual channels you need to use
  * this filter twice - first for the individual channels and then for all channels.
  */
+NS_ASSUME_NONNULL_BEGIN
 
 @interface MILevelsFilter : MetalImageFilter
 
@@ -47,3 +48,5 @@
 - (void)updateVectorBuffer;
 
 @end
+
+NS_ASSUME_NONNULL_END

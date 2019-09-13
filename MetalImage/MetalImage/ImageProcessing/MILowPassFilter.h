@@ -10,6 +10,8 @@
 #import "MetalImageBuffer.h"
 #import "MIDissolveBlendFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MILowPassFilter : MetalImageFilterGroup
 {    
 @protected
@@ -22,3 +24,5 @@
 @property(readwrite, nonatomic) MTLFloat filterStrength;
 
 @end
+
+NS_ASSUME_NONNULL_END

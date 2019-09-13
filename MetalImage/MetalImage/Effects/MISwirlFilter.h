@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /** Creates a swirl distortion on the image
  */
 @interface MISwirlFilter : MetalImageFilter
@@ -20,3 +22,5 @@
 @property(readwrite, nonatomic) MTLFloat angle;
 
 @end
+
+NS_ASSUME_NONNULL_END

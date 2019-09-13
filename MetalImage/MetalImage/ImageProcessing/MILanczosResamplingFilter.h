@@ -8,6 +8,8 @@
 
 #import "MITwoPassTextureSamplingFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MILanczosResamplingFilter : MITwoPassTextureSamplingFilter {
     
 @protected
@@ -17,3 +19,5 @@
 @property (nonatomic, assign) MTLUInt2 originalImageSize;
 
 @end
+
+NS_ASSUME_NONNULL_END

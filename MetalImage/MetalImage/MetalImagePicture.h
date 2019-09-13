@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "MetalImageOutput.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImagePicture : MetalImageOutput {
     
     CGSize pixelSizeOfImage;
@@ -25,3 +27,5 @@
 - (BOOL)processImageWithCompletionHandler:(void (^)(void))completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

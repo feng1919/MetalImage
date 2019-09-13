@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIContrastFilter : MetalImageFilter
 
 /** Contrast ranges from 0.0 to 4.0 (max contrast), with 1.0 as the normal level
@@ -15,3 +17,5 @@
 @property (nonatomic,assign) MTLFloat contrast;
 
 @end
+
+NS_ASSUME_NONNULL_END

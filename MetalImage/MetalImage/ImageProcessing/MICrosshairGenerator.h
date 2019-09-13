@@ -8,6 +8,10 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MICrosshairGenerator : MetalImageFilter
 
 @end
+
+NS_ASSUME_NONNULL_END

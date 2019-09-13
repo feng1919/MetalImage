@@ -10,6 +10,8 @@
 #import <CoreVideo/CVMetalTextureCache.h>
 #import "MetalImageTextureCache.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageContext : NSObject
 
 @property (nonatomic, readonly) dispatch_queue_t contextQueue;
@@ -26,3 +28,5 @@
 + (dispatch_queue_t)sharedContextQueue;
 
 @end
+
+NS_ASSUME_NONNULL_END

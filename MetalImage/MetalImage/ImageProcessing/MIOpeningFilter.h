@@ -14,6 +14,8 @@
 // A filter that first performs an erosion on the red channel of an image, followed by a dilation of the same radius.
 // This helps to filter out smaller bright elements.
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIOpeningFilter : MetalImageFilterGroup
 {
     MIErosionFilter *erosionFilter;
@@ -25,3 +27,5 @@
 - (instancetype)initWithRadius:(MTLUInt)radius;
 
 @end
+
+NS_ASSUME_NONNULL_END

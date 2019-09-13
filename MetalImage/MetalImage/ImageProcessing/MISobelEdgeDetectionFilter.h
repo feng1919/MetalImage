@@ -8,6 +8,8 @@
 
 #import "MetalImageTwoPassFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MISobelEdgeDetectionFilter : MetalImageTwoPassFilter {
     
 @protected
@@ -28,3 +30,5 @@
 @property (readwrite, nonatomic) MTLFloat edgeStrength;
 
 @end
+
+NS_ASSUME_NONNULL_END

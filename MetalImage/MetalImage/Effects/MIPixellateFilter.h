@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIPixellateFilter : MetalImageFilter
 
 // The fractional width of the image to use as a size for the pixels in the resulting image.
@@ -19,3 +21,5 @@
 - (void)adjustAspectRatio;
 
 @end
+
+NS_ASSUME_NONNULL_END

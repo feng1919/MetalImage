@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIHighlightShadowFilter : MetalImageFilter
 
 /**
@@ -23,3 +25,5 @@
 @property(readwrite, nonatomic) MTLFloat highlights;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -8,6 +8,8 @@
 
 #import "MetalImageKernel.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageTwoInputKernel : MetalImageKernel {
     
 @protected
@@ -16,3 +18,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

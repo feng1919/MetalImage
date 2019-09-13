@@ -8,7 +8,10 @@
 
 #import "MetalImageTwoInputFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
 /// Blends two images by taking the maximum value of each color component between the images
 @interface MILightenBlendFilter : MetalImageTwoInputFilter
 
 @end
+
+NS_ASSUME_NONNULL_END

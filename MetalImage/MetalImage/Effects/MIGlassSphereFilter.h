@@ -8,6 +8,10 @@
 
 #import "MISphereRefractionFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIGlassSphereFilter : MISphereRefractionFilter
 
 @end
+
+NS_ASSUME_NONNULL_END

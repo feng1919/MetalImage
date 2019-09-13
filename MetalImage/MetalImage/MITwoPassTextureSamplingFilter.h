@@ -8,6 +8,8 @@
 
 #import "MetalImageTwoPassFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MITwoPassTextureSamplingFilter : MetalImageTwoPassFilter {
     
 @protected
@@ -25,3 +27,5 @@
 - (MTLUInt2)textureSizeForTexel;
 
 @end
+
+NS_ASSUME_NONNULL_END

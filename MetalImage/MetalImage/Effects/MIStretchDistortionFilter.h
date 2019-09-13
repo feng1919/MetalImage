@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /** Creates a stretch distortion of the image
  */
 @interface MIStretchDistortionFilter : MetalImageFilter
@@ -17,3 +19,5 @@
 @property(readwrite, nonatomic) MTLFloat2 center;
 
 @end
+
+NS_ASSUME_NONNULL_END

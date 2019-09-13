@@ -8,8 +8,12 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIColorInvertFilter : MetalImageFilter
 
 
 
 @end
+
+NS_ASSUME_NONNULL_END

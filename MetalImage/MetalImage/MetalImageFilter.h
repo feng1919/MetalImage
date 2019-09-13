@@ -9,6 +9,8 @@
 #import "MetalImageOutput.h"
 #import "MetalImageRenderResource.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MetalImageFilter : MetalImageOutput <MetalImageInput> {
     
 @protected
@@ -56,3 +58,4 @@
 
 @end
 
+NS_ASSUME_NONNULL_END

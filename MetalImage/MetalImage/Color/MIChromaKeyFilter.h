@@ -8,6 +8,8 @@
 
 #import "MetalImageFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIChromaKeyFilter : MetalImageFilter
 
 /** The threshold sensitivity controls how similar pixels need to be colored to be replaced
@@ -31,3 +33,5 @@
 @property (nonatomic, assign) MTLFloat3 colorToReplace;
 
 @end
+
+NS_ASSUME_NONNULL_END

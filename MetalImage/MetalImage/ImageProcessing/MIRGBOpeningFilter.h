@@ -14,6 +14,8 @@
 // A filter that first performs an erosion on each color channel of an image, followed by a dilation of the same radius.
 // This helps to filter out smaller bright elements.
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface MIRGBOpeningFilter : MetalImageFilterGroup
 {
     MIRGBErosionFilter *erosionFilter;
@@ -25,3 +27,5 @@
 - (instancetype)initWithRadius:(MTLUInt)radius;
 
 @end
+
+NS_ASSUME_NONNULL_END

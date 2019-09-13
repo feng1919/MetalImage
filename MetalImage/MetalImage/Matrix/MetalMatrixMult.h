@@ -9,6 +9,7 @@
 #import <Metal/Metal.h>
 #import <Accelerate/Accelerate.h>
 
+NS_ASSUME_NONNULL_BEGIN
 // Forward decelaration for the matrix multiplication using
 // Metal compute
 @class MetalMatrixMult;
@@ -72,3 +73,5 @@
 - (void) finish;
 
 @end
+
+NS_ASSUME_NONNULL_END
