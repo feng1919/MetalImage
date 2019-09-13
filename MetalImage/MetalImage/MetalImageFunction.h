@@ -9,10 +9,10 @@
 #import "MetalImageContext.h"
 #import "MetalImageGlobal.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 extern MTLFloat4 *MetalImageDefaultRenderVetics;
 extern NSUInteger MetalImageDefaultRenderVetexCount;
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface MetalImageFunction : NSObject
 

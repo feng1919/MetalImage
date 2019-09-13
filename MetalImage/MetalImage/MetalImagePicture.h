@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithImage:(UIImage *)newImageSource smoothlyScaleOutput:(BOOL)smoothlyScaleOutput removePremultiplication:(BOOL)removePremultiplication;
 
 - (void)processImage;
-- (BOOL)processImageWithCompletionHandler:(void (^)(void))completion;
+- (BOOL)processImageWithCompletionHandler:(void (^ _Nullable)(void))completion;
 
 @end
 

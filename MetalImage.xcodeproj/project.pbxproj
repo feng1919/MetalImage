@@ -2794,6 +2794,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				DEVELOPMENT_TEAM = 6LS62R5GKZ;
 				INFOPLIST_FILE = MetalImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2813,6 +2814,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MetalImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
