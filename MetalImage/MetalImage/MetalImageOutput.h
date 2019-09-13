@@ -19,6 +19,8 @@
     NSMutableArray <NSNumber *> *targetTextureIndices;
 }
 
+@property (nonatomic, strong, nullable) NSString *label;
+
 /// @name Managing targets
 - (MetalImageTexture *)outputTexture;
 - (MetalImageRotationMode)rotationForOutput;

@@ -73,7 +73,7 @@
     for (id<MetalImageInput> currentTarget in targets)
     {
         NSInteger indexOfObject = [targets indexOfObject:currentTarget];
-        NSInteger textureIndex = [[targetTextureIndices objectAtIndex:indexOfObject] integerValue];
+        NSInteger textureIndex = [targetTextureIndices[indexOfObject] integerValue];
         [currentTarget newTextureReadyAtTime:time atIndex:textureIndex];
     }
 }
