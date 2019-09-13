@@ -9,12 +9,6 @@
 #import "MICropFilter.h"
 #import "MetalDevice.h"
 
-@interface MICropFilter() {
-    MTLFloat2 cropTextureCoordinates[4];
-}
-
-@end
-
 @implementation MICropFilter
 
 - (id)initWithCropRegion:(CGRect)newCropRegion;
@@ -31,6 +25,13 @@
 
 - (id)init {
     return [self initWithCropRegion:CGRectMake(0, 0, 1, 1)];
+}
+
+
+- (void)setTextureCropCoordinates:(MTLFloat2[4])coordinates {
+    for (int i = 0; i < 4; i++) {
+        cropTextureCoordinates[i] = coordinates[i];
+    }
 }
 
 - (void)calculateCropTextureCoordinates;
@@ -101,9 +102,25 @@
     }
 }
 
+MTLFloat Distance(MTLFloat2 *p0, MTLFloat2 *p1)
+{
+    MTLFloat x = p1->x-p0->x;
+    MTLFloat y = p1->y-p0->y;
+    return sqrt(x*x+y*y);
+}
+
 - (MTLUInt2)textureSizeForOutput {
     MTLUInt2 textureSize = [super textureSizeForOutput];
-    return MTLUInt2Make(roundf(textureSize.x * _cropRegion.size.width), roundf(textureSize.y * _cropRegion.size.height));
+    MTLFloat2 A, B, C;
+    A.x = cropTextureCoordinates[0].x * textureSize.x;
+    A.y = cropTextureCoordinates[0].y * textureSize.y;
+    B.x = cropTextureCoordinates[1].x * textureSize.x;
+    B.y = cropTextureCoordinates[1].y * textureSize.y;
+    C.x = cropTextureCoordinates[2].x * textureSize.x;
+    C.y = cropTextureCoordinates[2].y * textureSize.y;
+    MTLFloat width = Distance(&A, &B);
+    MTLFloat height = Distance(&C, &A);
+    return MTLUInt2Make(roundf(width), roundf(height));
 }
 
 #pragma mark -
@@ -111,10 +128,10 @@
 
 - (void)setCropRegion:(CGRect)newValue;
 {
-    NSParameterAssert(newValue.origin.x >= 0 && newValue.origin.x <= 1 &&
-                      newValue.origin.y >= 0 && newValue.origin.y <= 1 &&
-                      newValue.size.width >= 0 && newValue.size.width <= 1 &&
-                      newValue.size.height >= 0 && newValue.size.height <= 1);
+//    NSParameterAssert(newValue.origin.x >= 0 && newValue.origin.x <= 1 &&
+//                      newValue.origin.y >= 0 && newValue.origin.y <= 1 &&
+//                      newValue.size.width >= 0 && newValue.size.width <= 1 &&
+//                      newValue.size.height >= 0 && newValue.size.height <= 1);
     
     _cropRegion = newValue;
     [self calculateCropTextureCoordinates];
