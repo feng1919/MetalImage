@@ -117,7 +117,7 @@
                                    fromRegion:MTLRegionMake2D(0, 0, firstInputTexture.size.x, firstInputTexture.size.y)
                                   mipmapLevel:0];
     }
-
+    
     outputTexture = [[MetalImageContext sharedTextureCache] fetchTextureWithSize:[self textureSizeForOutput]];
     NSParameterAssert(outputTexture);
     
@@ -134,21 +134,21 @@
     [renderEncoder setVertexBuffer:_pixelBuffer offset:0 atIndex:0];
 //    [renderEncoder setVertexBuffer:_coordBuffer offset:0 atIndex:1];
 //    [renderEncoder setFragmentTexture:[firstInputTexture texture] atIndex:0];
-    [renderEncoder drawPrimitives:MTLPrimitiveTypePoint vertexStart:0 vertexCount:pixelCount];
+    [renderEncoder drawPrimitives:MTLPrimitiveTypePoint vertexStart:0 vertexCount:pixelCount>>5];
     
 //    [renderEncoder drawIndexedPrimitives:MTLPrimitiveTypePoint
-//                              indexCount:firstInputTexture.size.x * firstInputTexture.size.y // (CGFloat)_downsamplingFactor
-//                               indexType:MTLIndexTypeUInt32
+//                              indexCount:firstInputTexture.size.x * firstInputTexture.size.y / (CGFloat)_downsamplingFactor
+//                               indexType:MTLIndexTypeUInt16
 //                             indexBuffer:_pixelBuffer
-//                       indexBufferOffset:0];
+//                       indexBufferOffset:((unsigned int)_downsamplingFactor - 1)*4];
     
     [renderEncoder endEncoding];
     
     [firstInputTexture unlock];
     
-    [MetalDevice commitCommandBufferWaitUntilDone:YES];
-    NSData *data = [NSData dataWithBytes:[outputTexture byteBuffer] length:256*3*4];
-    NSLog(@"data: %@",data);
+//    [MetalDevice commitCommandBufferWaitUntilDone:YES];
+//    NSData *data = [NSData dataWithBytes:[outputTexture byteBuffer] length:256*3*4];
+//    NSLog(@"data: %@",data);
 }
 
 #pragma mark - MetalImageInput Protocol
