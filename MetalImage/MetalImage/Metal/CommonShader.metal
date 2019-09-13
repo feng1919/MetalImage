@@ -108,3 +108,5 @@ vertex VertexIONearbyTexelSampling vertex_nearbyTexelSampling(constant float4   
     
     return outVertices;
 }
+
+

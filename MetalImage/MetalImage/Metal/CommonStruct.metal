@@ -7,12 +7,12 @@
 //
 
 #include <metal_stdlib>
-//#include <metal_pack>
-//#include <metal_graphics>
-//#include <metal_matrix>
-//#include <metal_geometric>
-//#include <metal_math>
-//#include <metal_texture>
+#include <metal_pack>
+#include <metal_graphics>
+#include <metal_matrix>
+#include <metal_geometric>
+#include <metal_math>
+#include <metal_texture>
 
 using namespace metal;
 
@@ -25,8 +25,8 @@ struct VertexIO
 struct VertexIO2
 {
     float4 position [[position]];
-    float2 textureCoordinate [[user(texturecoord)]];
-    float2 textureCoordinate2 [[user(texturecoord)]];
+    float2 textureCoordinate [[attribute(0)]];
+    float2 textureCoordinate2 [[attribute(1)]];
 };
 
 struct VertexIONearbyTexelSampling

@@ -322,9 +322,9 @@ fragment half4 fragment_chromaKeyBlend(VertexIO2         inFrag  [[ stage_in ]],
     return mix(textureColor, textureColor2, half(blendValue));
 }
 
-fragment half4 fragment_alphaBlend(VertexIO2         inFrag  [[ stage_in ]],
-                                   texture2d<half> texture1[[ texture(0) ]],
-                                   texture2d<half> texture2[[ texture(1) ]],
+fragment half4 fragment_alphaBlend(VertexIO2         inFrag     [[ stage_in ]],
+                                   texture2d<half> texture1     [[ texture(0) ]],
+                                   texture2d<half> texture2     [[ texture(1) ]],
                                    constant float &mixturePercent  [[ buffer(0) ]])
 {
     constexpr sampler quadSampler(coord::normalized, filter::linear, address::clamp_to_edge);
@@ -333,6 +333,8 @@ fragment half4 fragment_alphaBlend(VertexIO2         inFrag  [[ stage_in ]],
     half4 textureColor2 = texture2.sample(quadSampler, inFrag.textureCoordinate2);
     
     return half4(mix(textureColor.rgb, textureColor2.rgb, textureColor2.a * half(mixturePercent)), textureColor.a);
+//    return half4(mix(half3(1.0h, 0.0h, 0.0h), textureColor2.rgb, textureColor2.a), 1.0h);
+//    return half4(half3(mixturePercent), 1.0h);
 }
 
 fragment half4 fragment_normalBlend(VertexIO2         inFrag  [[ stage_in ]],
