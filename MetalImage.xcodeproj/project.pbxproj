@@ -14,6 +14,9 @@
 		5A1C66B01F93A1E500B1F0C4 /* MIRGBFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C66AF1F93A1E500B1F0C4 /* MIRGBFilter.metal */; };
 		5A1C66B11F93A1E500B1F0C4 /* MIRGBFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C66AF1F93A1E500B1F0C4 /* MIRGBFilter.metal */; };
 		5A1C66B31F93A96F00B1F0C4 /* MIRGBFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C66AF1F93A1E500B1F0C4 /* MIRGBFilter.metal */; };
+		5A1D752B232B7FEA00C3F5E9 /* MetalImageTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D752A232B7FEA00C3F5E9 /* MetalImageTypes.c */; };
+		5A1D752C232B7FEA00C3F5E9 /* MetalImageTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D752A232B7FEA00C3F5E9 /* MetalImageTypes.c */; };
+		5A1D752D232B7FEA00C3F5E9 /* MetalImageTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D752A232B7FEA00C3F5E9 /* MetalImageTypes.c */; };
 		5A22D8D41FD6309A006A1FC2 /* MILocalBinaryPatternFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A22D8D21FD6309A006A1FC2 /* MILocalBinaryPatternFilter.h */; };
 		5A22D8D51FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8D31FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m */; };
 		5A22D8D61FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8D31FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m */; };
@@ -781,6 +784,7 @@
 		5A1C66A91F93A1D300B1F0C4 /* MIRGBFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIRGBFilter.h; sourceTree = "<group>"; };
 		5A1C66AA1F93A1D300B1F0C4 /* MIRGBFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIRGBFilter.m; sourceTree = "<group>"; };
 		5A1C66AF1F93A1E500B1F0C4 /* MIRGBFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MIRGBFilter.metal; sourceTree = "<group>"; };
+		5A1D752A232B7FEA00C3F5E9 /* MetalImageTypes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MetalImageTypes.c; sourceTree = "<group>"; };
 		5A22D8D21FD6309A006A1FC2 /* MILocalBinaryPatternFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MILocalBinaryPatternFilter.h; sourceTree = "<group>"; };
 		5A22D8D31FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MILocalBinaryPatternFilter.m; sourceTree = "<group>"; };
 		5A22D8D81FD630CB006A1FC2 /* MILocalBinaryPatternFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MILocalBinaryPatternFilter.metal; sourceTree = "<group>"; };
@@ -1487,6 +1491,7 @@
 				EB57B17D1E86126F00832619 /* MetalImageFunction.m */,
 				EB57B17E1E86126F00832619 /* MetalImageGlobal.h */,
 				EB57B18A1E86126F00832619 /* MetalImageTypes.h */,
+				5A1D752A232B7FEA00C3F5E9 /* MetalImageTypes.c */,
 				EB57B17F1E86126F00832619 /* MetalImageInput.h */,
 				EB57B1801E86126F00832619 /* MetalImageKernel.h */,
 				EB57B1811E86126F00832619 /* MetalImageKernel.m */,
@@ -1857,7 +1862,7 @@
 		EB57B12F1E8611ED00832619 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = fengshi;
 				TargetAttributes = {
 					EB54C9111ECC710100FB7DC3 = {
@@ -1884,7 +1889,7 @@
 			};
 			buildConfigurationList = EB57B1321E8611ED00832619 /* Build configuration list for PBXProject "MetalImage" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -2085,6 +2090,7 @@
 				9FFACD251FB4404A004BF184 /* MINormalBlendFilter.m in Sources */,
 				5AE713371FBD536B0067E7A7 /* MISharpenFilter.m in Sources */,
 				5A60BD901FB80FD100781C41 /* MIVignetteFilter.m in Sources */,
+				5A1D752C232B7FEA00C3F5E9 /* MetalImageTypes.c in Sources */,
 				5AE713A11FC2F8B00067E7A7 /* MIXYDerivativeFilter.m in Sources */,
 				5AF4384A1FA30D030081D4B8 /* MIGrayscaleFilter.m in Sources */,
 				9FFACCDC1FB40222004BF184 /* MIExclusionBlendFilter.m in Sources */,
@@ -2178,6 +2184,7 @@
 				EB54C98B1ECC780C00FB7DC3 /* MetalImageTwoInputKernel.m in Sources */,
 				EB54C97D1ECC77F500FB7DC3 /* MILevelsFilter.m in Sources */,
 				EB54C9811ECC77FD00FB7DC3 /* MetalMatrixMult.mm in Sources */,
+				5A1D752D232B7FEA00C3F5E9 /* MetalImageTypes.c in Sources */,
 				EB54C98F1ECC780C00FB7DC3 /* MetalImageVideoCamera.m in Sources */,
 				EB54C98D1ECC780C00FB7DC3 /* MetalImageTexture.m in Sources */,
 				9FCA3B7E1FB2ED4400220274 /* MIHistogramGenerator.m in Sources */,
@@ -2357,6 +2364,7 @@
 				9FFACD2A1FB44138004BF184 /* MIColorBlendFilter.m in Sources */,
 				EB57B1A91E86126F00832619 /* MetalImageKernel.m in Sources */,
 				9FFACD871FB581D9004BF184 /* MIPosterizeFilter.metal in Sources */,
+				5A1D752B232B7FEA00C3F5E9 /* MetalImageTypes.c in Sources */,
 				5AE713F81FC457AB0067E7A7 /* MIOpeningFilter.m in Sources */,
 				9FFACCF91FB42F82004BF184 /* MISubtractBlendFilter.m in Sources */,
 				5AE713DE1FC450330067E7A7 /* MIDilationAndErosion.metal in Sources */,
@@ -2689,6 +2697,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -2696,6 +2705,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -2743,6 +2753,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -2750,6 +2761,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -2786,10 +2798,14 @@
 				INFOPLIST_FILE = MetalImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.MetalImageDemo;
+				MTL_COMPILER_FLAGS = "";
+				MTL_FAST_MATH = YES;
+				MTL_LANGUAGE_REVISION = Metal21;
+				MTL_TREAT_WARNINGS_AS_ERRORS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cdc2dc5f-2457-4eec-a1a4-d30c89750d16";
-				PROVISIONING_PROFILE_SPECIFIER = MBP20171014;
+				PROVISIONING_PROFILE = "897a6a0c-6928-4f61-92ff-403d4fce31c3";
+				PROVISIONING_PROFILE_SPECIFIER = fengshi_20190110;
 			};
 			name = Debug;
 		};
@@ -2801,7 +2817,11 @@
 				INFOPLIST_FILE = MetalImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.MetalImageDemo;
+				MTL_COMPILER_FLAGS = "";
+				MTL_FAST_MATH = YES;
+				MTL_LANGUAGE_REVISION = Metal21;
+				MTL_TREAT_WARNINGS_AS_ERRORS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "cdc2dc5f-2457-4eec-a1a4-d30c89750d16";
 				PROVISIONING_PROFILE_SPECIFIER = MBP20171014;
