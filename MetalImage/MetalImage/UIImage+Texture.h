@@ -8,3 +8,4 @@
 
 @end
 
+bool CGRectIsValid(CGRect rect);

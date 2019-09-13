@@ -20,7 +20,10 @@ static void MTLReleaseDataCallback(void *info, const void *data, size_t size)
     [texture getBytes:imageBytes bytesPerRow:bytesPerRow fromRegion:region mipmapLevel:0];
     CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, imageBytes, imageByteCount, MTLReleaseDataCallback);
 
-    CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+    static CGColorSpaceRef colorSpace = NULL;
+    if (colorSpace == NULL) {
+        colorSpace = CGColorSpaceCreateDeviceRGB();
+    }
     CGBitmapInfo bitmapInfo = kCGImageAlphaPremultipliedFirst | kCGBitmapByteOrder32Little;
     CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
     CGImageRef imageRef = CGImageCreate(imageSize.width,
@@ -28,20 +31,32 @@ static void MTLReleaseDataCallback(void *info, const void *data, size_t size)
                                         8,
                                         32,
                                         bytesPerRow,
-                                        colorSpaceRef,
+                                        colorSpace,
                                         bitmapInfo,
                                         provider,
                                         NULL,
                                         false,
                                         renderingIntent);
     
-    UIImage *image = [UIImage imageWithCGImage:imageRef scale:0.0 orientation:orientation];
+    UIImage *image = [UIImage imageWithCGImage:imageRef scale:1.0 orientation:orientation];
     
     CFRelease(provider);
-    CFRelease(colorSpaceRef);
     CFRelease(imageRef);
     
     return image;
 }
 
 @end
+
+bool CGRectIsValid(CGRect rect) {
+
+    if (CGRectIsNull(rect) || CGRectIsEmpty(rect)) {
+        return false;
+    }
+    if (isnan(rect.origin.x) || isnan(rect.origin.y) ||
+        isnan(rect.size.width) || isnan(rect.size.height)) {
+        return false;
+    }
+    return true;
+}
+
