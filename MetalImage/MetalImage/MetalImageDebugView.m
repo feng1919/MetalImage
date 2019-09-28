@@ -19,8 +19,6 @@
     if (inputRotationMode != newInputRotation) {
         inputRotationMode = newInputRotation;
 //        [self updateTextureCoordinates];
-        
-        NSLog(@"update rotaion mode:%ld", newInputRotation);
     }
 }
 

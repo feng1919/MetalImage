@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A1C66AB1F93A1D300B1F0C4 /* MIRGBFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A1C66A91F93A1D300B1F0C4 /* MIRGBFilter.h */; };
+		5A1C66AB1F93A1D300B1F0C4 /* MIRGBFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A1C66A91F93A1D300B1F0C4 /* MIRGBFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A1C66AC1F93A1D300B1F0C4 /* MIRGBFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C66AA1F93A1D300B1F0C4 /* MIRGBFilter.m */; };
 		5A1C66AD1F93A1D300B1F0C4 /* MIRGBFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C66AA1F93A1D300B1F0C4 /* MIRGBFilter.m */; };
 		5A1C66AE1F93A1D300B1F0C4 /* MIRGBFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C66AA1F93A1D300B1F0C4 /* MIRGBFilter.m */; };
@@ -17,21 +17,21 @@
 		5A1D752B232B7FEA00C3F5E9 /* MetalImageTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D752A232B7FEA00C3F5E9 /* MetalImageTypes.c */; };
 		5A1D752C232B7FEA00C3F5E9 /* MetalImageTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D752A232B7FEA00C3F5E9 /* MetalImageTypes.c */; };
 		5A1D752D232B7FEA00C3F5E9 /* MetalImageTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D752A232B7FEA00C3F5E9 /* MetalImageTypes.c */; };
-		5A22D8D41FD6309A006A1FC2 /* MILocalBinaryPatternFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A22D8D21FD6309A006A1FC2 /* MILocalBinaryPatternFilter.h */; };
+		5A22D8D41FD6309A006A1FC2 /* MILocalBinaryPatternFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A22D8D21FD6309A006A1FC2 /* MILocalBinaryPatternFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A22D8D51FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8D31FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m */; };
 		5A22D8D61FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8D31FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m */; };
 		5A22D8D71FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8D31FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m */; };
 		5A22D8D91FD630CB006A1FC2 /* MILocalBinaryPatternFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8D81FD630CB006A1FC2 /* MILocalBinaryPatternFilter.metal */; };
 		5A22D8DA1FD630CB006A1FC2 /* MILocalBinaryPatternFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8D81FD630CB006A1FC2 /* MILocalBinaryPatternFilter.metal */; };
 		5A22D8DB1FD630CB006A1FC2 /* MILocalBinaryPatternFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8D81FD630CB006A1FC2 /* MILocalBinaryPatternFilter.metal */; };
-		5A22D8DE1FD63CDE006A1FC2 /* MIColorLocalBinaryPatternFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A22D8DC1FD63CDE006A1FC2 /* MIColorLocalBinaryPatternFilter.h */; };
+		5A22D8DE1FD63CDE006A1FC2 /* MIColorLocalBinaryPatternFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A22D8DC1FD63CDE006A1FC2 /* MIColorLocalBinaryPatternFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A22D8DF1FD63CDE006A1FC2 /* MIColorLocalBinaryPatternFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8DD1FD63CDE006A1FC2 /* MIColorLocalBinaryPatternFilter.m */; };
 		5A22D8E01FD63CDE006A1FC2 /* MIColorLocalBinaryPatternFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8DD1FD63CDE006A1FC2 /* MIColorLocalBinaryPatternFilter.m */; };
 		5A22D8E11FD63CDE006A1FC2 /* MIColorLocalBinaryPatternFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8DD1FD63CDE006A1FC2 /* MIColorLocalBinaryPatternFilter.m */; };
 		5A22D8E31FD63CFE006A1FC2 /* MIColorLocalBinaryPatternFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8E21FD63CFE006A1FC2 /* MIColorLocalBinaryPatternFilter.metal */; };
 		5A22D8E41FD63CFE006A1FC2 /* MIColorLocalBinaryPatternFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8E21FD63CFE006A1FC2 /* MIColorLocalBinaryPatternFilter.metal */; };
 		5A22D8E51FD63CFE006A1FC2 /* MIColorLocalBinaryPatternFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8E21FD63CFE006A1FC2 /* MIColorLocalBinaryPatternFilter.metal */; };
-		5A22D8E81FD6442D006A1FC2 /* MILanczosResamplingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A22D8E61FD6442D006A1FC2 /* MILanczosResamplingFilter.h */; };
+		5A22D8E81FD6442D006A1FC2 /* MILanczosResamplingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A22D8E61FD6442D006A1FC2 /* MILanczosResamplingFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A22D8E91FD6442D006A1FC2 /* MILanczosResamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8E71FD6442D006A1FC2 /* MILanczosResamplingFilter.m */; };
 		5A22D8EA1FD6442D006A1FC2 /* MILanczosResamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8E71FD6442D006A1FC2 /* MILanczosResamplingFilter.m */; };
 		5A22D8EB1FD6442D006A1FC2 /* MILanczosResamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8E71FD6442D006A1FC2 /* MILanczosResamplingFilter.m */; };
@@ -43,7 +43,7 @@
 		5A22D8F51FD6954A006A1FC2 /* MIHistogramFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8F01FD69549006A1FC2 /* MIHistogramFilter.metal */; };
 		5A22D8F61FD6954A006A1FC2 /* MIHistogramFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8F11FD6954A006A1FC2 /* MIHistogramFilter.m */; };
 		5A22D8F71FD6954A006A1FC2 /* MIHistogramFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8F11FD6954A006A1FC2 /* MIHistogramFilter.m */; };
-		5A22D8F81FD6954A006A1FC2 /* MIHistogramFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A22D8F21FD6954A006A1FC2 /* MIHistogramFilter.h */; };
+		5A22D8F81FD6954A006A1FC2 /* MIHistogramFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A22D8F21FD6954A006A1FC2 /* MIHistogramFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A22D8F91FD69559006A1FC2 /* MIHistogramFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8F11FD6954A006A1FC2 /* MIHistogramFilter.m */; };
 		5A2659B31F92440A00CE1879 /* CommonStruct.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A7077EC1F8CE4D10017A39C /* CommonStruct.metal */; };
 		5A2659B41F92440B00CE1879 /* CommonStruct.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A7077EC1F8CE4D10017A39C /* CommonStruct.metal */; };
@@ -51,58 +51,58 @@
 		5A2659B71F92441100CE1879 /* CommonShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A7077EB1F8CE4D10017A39C /* CommonShader.metal */; };
 		5A2659B81F92441200CE1879 /* CommonShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A7077EB1F8CE4D10017A39C /* CommonShader.metal */; };
 		5A2659B91F92441400CE1879 /* CommonShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A7077EB1F8CE4D10017A39C /* CommonShader.metal */; };
-		5A5EF3321FAB440400C311D4 /* MISolarizeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5EF3301FAB440400C311D4 /* MISolarizeFilter.h */; };
+		5A5EF3321FAB440400C311D4 /* MISolarizeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5EF3301FAB440400C311D4 /* MISolarizeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A5EF3331FAB440400C311D4 /* MISolarizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF3311FAB440400C311D4 /* MISolarizeFilter.m */; };
 		5A5EF3341FAB440400C311D4 /* MISolarizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF3311FAB440400C311D4 /* MISolarizeFilter.m */; };
 		5A5EF3351FAB440400C311D4 /* MISolarizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF3311FAB440400C311D4 /* MISolarizeFilter.m */; };
 		5A5EF3371FAB443400C311D4 /* MISolarizeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF3361FAB443400C311D4 /* MISolarizeFilter.metal */; };
 		5A5EF3381FAB443400C311D4 /* MISolarizeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF3361FAB443400C311D4 /* MISolarizeFilter.metal */; };
 		5A5EF3391FAB443400C311D4 /* MISolarizeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF3361FAB443400C311D4 /* MISolarizeFilter.metal */; };
-		5A5EF33C1FAB45B600C311D4 /* MITwoPassTextureSamplingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5EF33A1FAB45B600C311D4 /* MITwoPassTextureSamplingFilter.h */; };
+		5A5EF33C1FAB45B600C311D4 /* MITwoPassTextureSamplingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5EF33A1FAB45B600C311D4 /* MITwoPassTextureSamplingFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A5EF33D1FAB45B600C311D4 /* MITwoPassTextureSamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF33B1FAB45B600C311D4 /* MITwoPassTextureSamplingFilter.m */; };
 		5A5EF33E1FAB45B600C311D4 /* MITwoPassTextureSamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF33B1FAB45B600C311D4 /* MITwoPassTextureSamplingFilter.m */; };
 		5A5EF33F1FAB45B600C311D4 /* MITwoPassTextureSamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF33B1FAB45B600C311D4 /* MITwoPassTextureSamplingFilter.m */; };
-		5A5EF3421FAB499A00C311D4 /* MIGaussianBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5EF3401FAB499A00C311D4 /* MIGaussianBlurFilter.h */; };
+		5A5EF3421FAB499A00C311D4 /* MIGaussianBlurFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5EF3401FAB499A00C311D4 /* MIGaussianBlurFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A5EF3431FAB499A00C311D4 /* MIGaussianBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF3411FAB499A00C311D4 /* MIGaussianBlurFilter.m */; };
 		5A5EF3441FAB499A00C311D4 /* MIGaussianBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF3411FAB499A00C311D4 /* MIGaussianBlurFilter.m */; };
 		5A5EF3451FAB499A00C311D4 /* MIGaussianBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF3411FAB499A00C311D4 /* MIGaussianBlurFilter.m */; };
-		5A60BD741FB7E46400781C41 /* MIGlassSphereFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BD721FB7E46400781C41 /* MIGlassSphereFilter.h */; };
+		5A60BD741FB7E46400781C41 /* MIGlassSphereFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BD721FB7E46400781C41 /* MIGlassSphereFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A60BD751FB7E46400781C41 /* MIGlassSphereFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD731FB7E46400781C41 /* MIGlassSphereFilter.m */; };
 		5A60BD761FB7E46400781C41 /* MIGlassSphereFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD731FB7E46400781C41 /* MIGlassSphereFilter.m */; };
 		5A60BD771FB7E46400781C41 /* MIGlassSphereFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD731FB7E46400781C41 /* MIGlassSphereFilter.m */; };
-		5A60BD7A1FB7E73500781C41 /* MIKuwaharaFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BD781FB7E73500781C41 /* MIKuwaharaFilter.h */; };
+		5A60BD7A1FB7E73500781C41 /* MIKuwaharaFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BD781FB7E73500781C41 /* MIKuwaharaFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A60BD7B1FB7E73500781C41 /* MIKuwaharaFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD791FB7E73500781C41 /* MIKuwaharaFilter.m */; };
 		5A60BD7C1FB7E73500781C41 /* MIKuwaharaFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD791FB7E73500781C41 /* MIKuwaharaFilter.m */; };
 		5A60BD7D1FB7E73500781C41 /* MIKuwaharaFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD791FB7E73500781C41 /* MIKuwaharaFilter.m */; };
 		5A60BD7F1FB7EA8300781C41 /* MIKuwaharaFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD7E1FB7EA8300781C41 /* MIKuwaharaFilter.metal */; };
 		5A60BD801FB7EA8300781C41 /* MIKuwaharaFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD7E1FB7EA8300781C41 /* MIKuwaharaFilter.metal */; };
 		5A60BD811FB7EA8300781C41 /* MIKuwaharaFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD7E1FB7EA8300781C41 /* MIKuwaharaFilter.metal */; };
-		5A60BD841FB80CE500781C41 /* MIKuwaharaRadius3Filter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BD821FB80CE500781C41 /* MIKuwaharaRadius3Filter.h */; };
+		5A60BD841FB80CE500781C41 /* MIKuwaharaRadius3Filter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BD821FB80CE500781C41 /* MIKuwaharaRadius3Filter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A60BD851FB80CE500781C41 /* MIKuwaharaRadius3Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD831FB80CE500781C41 /* MIKuwaharaRadius3Filter.m */; };
 		5A60BD861FB80CE500781C41 /* MIKuwaharaRadius3Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD831FB80CE500781C41 /* MIKuwaharaRadius3Filter.m */; };
 		5A60BD871FB80CE500781C41 /* MIKuwaharaRadius3Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD831FB80CE500781C41 /* MIKuwaharaRadius3Filter.m */; };
 		5A60BD891FB80D0F00781C41 /* MIKuwaharaRadius3Filter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD881FB80D0F00781C41 /* MIKuwaharaRadius3Filter.metal */; };
 		5A60BD8A1FB80D0F00781C41 /* MIKuwaharaRadius3Filter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD881FB80D0F00781C41 /* MIKuwaharaRadius3Filter.metal */; };
 		5A60BD8B1FB80D0F00781C41 /* MIKuwaharaRadius3Filter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD881FB80D0F00781C41 /* MIKuwaharaRadius3Filter.metal */; };
-		5A60BD8E1FB80FD100781C41 /* MIVignetteFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BD8C1FB80FD100781C41 /* MIVignetteFilter.h */; };
+		5A60BD8E1FB80FD100781C41 /* MIVignetteFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BD8C1FB80FD100781C41 /* MIVignetteFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A60BD8F1FB80FD100781C41 /* MIVignetteFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD8D1FB80FD100781C41 /* MIVignetteFilter.m */; };
 		5A60BD901FB80FD100781C41 /* MIVignetteFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD8D1FB80FD100781C41 /* MIVignetteFilter.m */; };
 		5A60BD911FB80FD100781C41 /* MIVignetteFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD8D1FB80FD100781C41 /* MIVignetteFilter.m */; };
 		5A60BD931FB80FFE00781C41 /* MIVignetteFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD921FB80FFE00781C41 /* MIVignetteFilter.metal */; };
 		5A60BD941FB80FFE00781C41 /* MIVignetteFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD921FB80FFE00781C41 /* MIVignetteFilter.metal */; };
 		5A60BD951FB80FFE00781C41 /* MIVignetteFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD921FB80FFE00781C41 /* MIVignetteFilter.metal */; };
-		5A60BD981FB8167900781C41 /* MIJFAVoronoiFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BD961FB8167900781C41 /* MIJFAVoronoiFilter.h */; };
+		5A60BD981FB8167900781C41 /* MIJFAVoronoiFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BD961FB8167900781C41 /* MIJFAVoronoiFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A60BD991FB8167900781C41 /* MIJFAVoronoiFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD971FB8167900781C41 /* MIJFAVoronoiFilter.m */; };
 		5A60BD9A1FB8167900781C41 /* MIJFAVoronoiFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD971FB8167900781C41 /* MIJFAVoronoiFilter.m */; };
 		5A60BD9B1FB8167900781C41 /* MIJFAVoronoiFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD971FB8167900781C41 /* MIJFAVoronoiFilter.m */; };
 		5A60BD9D1FB8168F00781C41 /* MIJFAVoronoiFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD9C1FB8168F00781C41 /* MIJFAVoronoiFilter.metal */; };
 		5A60BD9E1FB8168F00781C41 /* MIJFAVoronoiFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD9C1FB8168F00781C41 /* MIJFAVoronoiFilter.metal */; };
 		5A60BD9F1FB8168F00781C41 /* MIJFAVoronoiFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BD9C1FB8168F00781C41 /* MIJFAVoronoiFilter.metal */; };
-		5A60BDA21FB8266E00781C41 /* MIVoronoiConsumerFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BDA01FB8266E00781C41 /* MIVoronoiConsumerFilter.h */; };
+		5A60BDA21FB8266E00781C41 /* MIVoronoiConsumerFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BDA01FB8266E00781C41 /* MIVoronoiConsumerFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A60BDA31FB8266E00781C41 /* MIVoronoiConsumerFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BDA11FB8266E00781C41 /* MIVoronoiConsumerFilter.m */; };
 		5A60BDA41FB8266E00781C41 /* MIVoronoiConsumerFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BDA11FB8266E00781C41 /* MIVoronoiConsumerFilter.m */; };
 		5A60BDA51FB8266E00781C41 /* MIVoronoiConsumerFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BDA11FB8266E00781C41 /* MIVoronoiConsumerFilter.m */; };
-		5A60BDAC1FB82AED00781C41 /* MetalImagePicture.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BDAA1FB82AED00781C41 /* MetalImagePicture.h */; };
+		5A60BDAC1FB82AED00781C41 /* MetalImagePicture.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A60BDAA1FB82AED00781C41 /* MetalImagePicture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A60BDAD1FB82AED00781C41 /* MetalImagePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BDAB1FB82AED00781C41 /* MetalImagePicture.m */; };
 		5A60BDAE1FB82AED00781C41 /* MetalImagePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BDAB1FB82AED00781C41 /* MetalImagePicture.m */; };
 		5A60BDAF1FB82AED00781C41 /* MetalImagePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A60BDAB1FB82AED00781C41 /* MetalImagePicture.m */; };
@@ -116,138 +116,139 @@
 		5A60BDBD1FB88A3E00781C41 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A60BDB41FB88A3E00781C41 /* lookup_soft_elegance_1.png */; };
 		5A60BDBE1FB88A3E00781C41 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A60BDB51FB88A3E00781C41 /* lookup_soft_elegance_2.png */; };
 		5A60BDBF1FB88A3E00781C41 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A60BDB51FB88A3E00781C41 /* lookup_soft_elegance_2.png */; };
-		5AE7130B1FB9B9F90067E7A7 /* MIMosaicFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713091FB9B9F90067E7A7 /* MIMosaicFilter.h */; };
+		5A61904B232BC21C00FD73E5 /* MetalImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A619049232BC21C00FD73E5 /* MetalImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AE7130B1FB9B9F90067E7A7 /* MIMosaicFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713091FB9B9F90067E7A7 /* MIMosaicFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE7130C1FB9B9F90067E7A7 /* MIMosaicFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7130A1FB9B9F90067E7A7 /* MIMosaicFilter.m */; };
 		5AE7130D1FB9B9F90067E7A7 /* MIMosaicFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7130A1FB9B9F90067E7A7 /* MIMosaicFilter.m */; };
 		5AE7130E1FB9B9F90067E7A7 /* MIMosaicFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7130A1FB9B9F90067E7A7 /* MIMosaicFilter.m */; };
 		5AE713101FB9BA820067E7A7 /* MIMosaicFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7130F1FB9BA820067E7A7 /* MIMosaicFilter.metal */; };
 		5AE713111FB9BA820067E7A7 /* MIMosaicFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7130F1FB9BA820067E7A7 /* MIMosaicFilter.metal */; };
 		5AE713121FB9BA820067E7A7 /* MIMosaicFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7130F1FB9BA820067E7A7 /* MIMosaicFilter.metal */; };
-		5AE713151FB9CDC80067E7A7 /* MIPixellateFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713131FB9CDC80067E7A7 /* MIPixellateFilter.h */; };
+		5AE713151FB9CDC80067E7A7 /* MIPixellateFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713131FB9CDC80067E7A7 /* MIPixellateFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713161FB9CDC80067E7A7 /* MIPixellateFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713141FB9CDC80067E7A7 /* MIPixellateFilter.m */; };
 		5AE713171FB9CDC80067E7A7 /* MIPixellateFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713141FB9CDC80067E7A7 /* MIPixellateFilter.m */; };
 		5AE713181FB9CDC80067E7A7 /* MIPixellateFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713141FB9CDC80067E7A7 /* MIPixellateFilter.m */; };
 		5AE7131A1FB9CDDF0067E7A7 /* MIPixellateFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713191FB9CDDF0067E7A7 /* MIPixellateFilter.metal */; };
 		5AE7131B1FB9CDDF0067E7A7 /* MIPixellateFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713191FB9CDDF0067E7A7 /* MIPixellateFilter.metal */; };
 		5AE7131C1FB9CDDF0067E7A7 /* MIPixellateFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713191FB9CDDF0067E7A7 /* MIPixellateFilter.metal */; };
-		5AE7131F1FB9D4000067E7A7 /* MIPolkaDotFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7131D1FB9D4000067E7A7 /* MIPolkaDotFilter.h */; };
+		5AE7131F1FB9D4000067E7A7 /* MIPolkaDotFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7131D1FB9D4000067E7A7 /* MIPolkaDotFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713201FB9D4000067E7A7 /* MIPolkaDotFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7131E1FB9D4000067E7A7 /* MIPolkaDotFilter.m */; };
 		5AE713211FB9D4000067E7A7 /* MIPolkaDotFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7131E1FB9D4000067E7A7 /* MIPolkaDotFilter.m */; };
 		5AE713221FB9D4000067E7A7 /* MIPolkaDotFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7131E1FB9D4000067E7A7 /* MIPolkaDotFilter.m */; };
-		5AE713251FB9D42F0067E7A7 /* MIHalftoneFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713231FB9D42F0067E7A7 /* MIHalftoneFilter.h */; };
+		5AE713251FB9D42F0067E7A7 /* MIHalftoneFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713231FB9D42F0067E7A7 /* MIHalftoneFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713261FB9D42F0067E7A7 /* MIHalftoneFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713241FB9D42F0067E7A7 /* MIHalftoneFilter.m */; };
 		5AE713271FB9D42F0067E7A7 /* MIHalftoneFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713241FB9D42F0067E7A7 /* MIHalftoneFilter.m */; };
 		5AE713281FB9D42F0067E7A7 /* MIHalftoneFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713241FB9D42F0067E7A7 /* MIHalftoneFilter.m */; };
-		5AE7132B1FB9DB3F0067E7A7 /* MICropFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713291FB9DB3F0067E7A7 /* MICropFilter.h */; };
+		5AE7132B1FB9DB3F0067E7A7 /* MICropFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713291FB9DB3F0067E7A7 /* MICropFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE7132C1FB9DB3F0067E7A7 /* MICropFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7132A1FB9DB3F0067E7A7 /* MICropFilter.m */; };
 		5AE7132D1FB9DB3F0067E7A7 /* MICropFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7132A1FB9DB3F0067E7A7 /* MICropFilter.m */; };
 		5AE7132E1FB9DB3F0067E7A7 /* MICropFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7132A1FB9DB3F0067E7A7 /* MICropFilter.m */; };
-		5AE713351FBD536B0067E7A7 /* MISharpenFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713331FBD536B0067E7A7 /* MISharpenFilter.h */; };
+		5AE713351FBD536B0067E7A7 /* MISharpenFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713331FBD536B0067E7A7 /* MISharpenFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713361FBD536B0067E7A7 /* MISharpenFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713341FBD536B0067E7A7 /* MISharpenFilter.m */; };
 		5AE713371FBD536B0067E7A7 /* MISharpenFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713341FBD536B0067E7A7 /* MISharpenFilter.m */; };
 		5AE713381FBD536B0067E7A7 /* MISharpenFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713341FBD536B0067E7A7 /* MISharpenFilter.m */; };
 		5AE7133A1FBD53800067E7A7 /* MISharpenFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713391FBD53800067E7A7 /* MISharpenFilter.metal */; };
 		5AE7133B1FBD53800067E7A7 /* MISharpenFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713391FBD53800067E7A7 /* MISharpenFilter.metal */; };
 		5AE7133C1FBD53800067E7A7 /* MISharpenFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713391FBD53800067E7A7 /* MISharpenFilter.metal */; };
-		5AE7133F1FBE99C70067E7A7 /* MI3x3TextureSamplingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7133D1FBE99C70067E7A7 /* MI3x3TextureSamplingFilter.h */; };
+		5AE7133F1FBE99C70067E7A7 /* MI3x3TextureSamplingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7133D1FBE99C70067E7A7 /* MI3x3TextureSamplingFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713401FBE99C70067E7A7 /* MI3x3TextureSamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7133E1FBE99C70067E7A7 /* MI3x3TextureSamplingFilter.m */; };
 		5AE713411FBE99C70067E7A7 /* MI3x3TextureSamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7133E1FBE99C70067E7A7 /* MI3x3TextureSamplingFilter.m */; };
 		5AE713421FBE99C70067E7A7 /* MI3x3TextureSamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7133E1FBE99C70067E7A7 /* MI3x3TextureSamplingFilter.m */; };
-		5AE713491FBFE4B30067E7A7 /* MIMedianFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713471FBFE4B30067E7A7 /* MIMedianFilter.h */; };
+		5AE713491FBFE4B30067E7A7 /* MIMedianFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713471FBFE4B30067E7A7 /* MIMedianFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE7134A1FBFE4B30067E7A7 /* MIMedianFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713481FBFE4B30067E7A7 /* MIMedianFilter.m */; };
 		5AE7134B1FBFE4B30067E7A7 /* MIMedianFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713481FBFE4B30067E7A7 /* MIMedianFilter.m */; };
 		5AE7134C1FBFE4B30067E7A7 /* MIMedianFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713481FBFE4B30067E7A7 /* MIMedianFilter.m */; };
 		5AE7134E1FBFE6860067E7A7 /* MIMedianFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7134D1FBFE6860067E7A7 /* MIMedianFilter.metal */; };
 		5AE7134F1FBFE6860067E7A7 /* MIMedianFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7134D1FBFE6860067E7A7 /* MIMedianFilter.metal */; };
 		5AE713501FBFE6860067E7A7 /* MIMedianFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7134D1FBFE6860067E7A7 /* MIMedianFilter.metal */; };
-		5AE713531FBFEA950067E7A7 /* MI3x3ConvolutionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713511FBFEA950067E7A7 /* MI3x3ConvolutionFilter.h */; };
+		5AE713531FBFEA950067E7A7 /* MI3x3ConvolutionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713511FBFEA950067E7A7 /* MI3x3ConvolutionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713541FBFEA950067E7A7 /* MI3x3ConvolutionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713521FBFEA950067E7A7 /* MI3x3ConvolutionFilter.m */; };
 		5AE713551FBFEA950067E7A7 /* MI3x3ConvolutionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713521FBFEA950067E7A7 /* MI3x3ConvolutionFilter.m */; };
 		5AE713561FBFEA950067E7A7 /* MI3x3ConvolutionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713521FBFEA950067E7A7 /* MI3x3ConvolutionFilter.m */; };
 		5AE713581FBFEAA50067E7A7 /* MI3x3ConvolutionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713571FBFEAA50067E7A7 /* MI3x3ConvolutionFilter.metal */; };
 		5AE713591FBFEAA50067E7A7 /* MI3x3ConvolutionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713571FBFEAA50067E7A7 /* MI3x3ConvolutionFilter.metal */; };
 		5AE7135A1FBFEAA50067E7A7 /* MI3x3ConvolutionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713571FBFEAA50067E7A7 /* MI3x3ConvolutionFilter.metal */; };
-		5AE7135D1FBFF4EF0067E7A7 /* MILaplacianFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7135B1FBFF4EF0067E7A7 /* MILaplacianFilter.h */; };
+		5AE7135D1FBFF4EF0067E7A7 /* MILaplacianFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7135B1FBFF4EF0067E7A7 /* MILaplacianFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE7135E1FBFF4F00067E7A7 /* MILaplacianFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7135C1FBFF4EF0067E7A7 /* MILaplacianFilter.m */; };
 		5AE7135F1FBFF4F00067E7A7 /* MILaplacianFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7135C1FBFF4EF0067E7A7 /* MILaplacianFilter.m */; };
 		5AE713601FBFF4F00067E7A7 /* MILaplacianFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7135C1FBFF4EF0067E7A7 /* MILaplacianFilter.m */; };
-		5AE713671FC2A9FF0067E7A7 /* MISobelEdgeDetectionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713651FC2A9FF0067E7A7 /* MISobelEdgeDetectionFilter.h */; };
+		5AE713671FC2A9FF0067E7A7 /* MISobelEdgeDetectionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713651FC2A9FF0067E7A7 /* MISobelEdgeDetectionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713681FC2A9FF0067E7A7 /* MISobelEdgeDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713661FC2A9FF0067E7A7 /* MISobelEdgeDetectionFilter.m */; };
 		5AE713691FC2A9FF0067E7A7 /* MISobelEdgeDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713661FC2A9FF0067E7A7 /* MISobelEdgeDetectionFilter.m */; };
 		5AE7136A1FC2A9FF0067E7A7 /* MISobelEdgeDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713661FC2A9FF0067E7A7 /* MISobelEdgeDetectionFilter.m */; };
 		5AE7136C1FC2AA100067E7A7 /* MISobelEdgeDetectionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7136B1FC2AA100067E7A7 /* MISobelEdgeDetectionFilter.metal */; };
 		5AE7136D1FC2AA100067E7A7 /* MISobelEdgeDetectionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7136B1FC2AA100067E7A7 /* MISobelEdgeDetectionFilter.metal */; };
 		5AE7136E1FC2AA100067E7A7 /* MISobelEdgeDetectionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7136B1FC2AA100067E7A7 /* MISobelEdgeDetectionFilter.metal */; };
-		5AE713711FC2C0670067E7A7 /* MIThresholdEdgeDetectionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7136F1FC2C0670067E7A7 /* MIThresholdEdgeDetectionFilter.h */; };
+		5AE713711FC2C0670067E7A7 /* MIThresholdEdgeDetectionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7136F1FC2C0670067E7A7 /* MIThresholdEdgeDetectionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713721FC2C0670067E7A7 /* MIThresholdEdgeDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713701FC2C0670067E7A7 /* MIThresholdEdgeDetectionFilter.m */; };
 		5AE713731FC2C0670067E7A7 /* MIThresholdEdgeDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713701FC2C0670067E7A7 /* MIThresholdEdgeDetectionFilter.m */; };
 		5AE713741FC2C0670067E7A7 /* MIThresholdEdgeDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713701FC2C0670067E7A7 /* MIThresholdEdgeDetectionFilter.m */; };
-		5AE713771FC2C70B0067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713751FC2C70B0067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.h */; };
+		5AE713771FC2C70B0067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713751FC2C70B0067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713781FC2C70B0067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713761FC2C70B0067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.m */; };
 		5AE713791FC2C70B0067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713761FC2C70B0067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.m */; };
 		5AE7137A1FC2C70B0067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713761FC2C70B0067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.m */; };
 		5AE7137C1FC2CC230067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7137B1FC2CC230067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.metal */; };
 		5AE7137D1FC2CC230067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7137B1FC2CC230067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.metal */; };
 		5AE7137E1FC2CC230067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7137B1FC2CC230067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.metal */; };
-		5AE713811FC2D51C0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7137F1FC2D51C0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.h */; };
+		5AE713811FC2D51C0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7137F1FC2D51C0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713821FC2D51C0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713801FC2D51C0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.m */; };
 		5AE713831FC2D51C0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713801FC2D51C0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.m */; };
 		5AE713841FC2D51C0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713801FC2D51C0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.m */; };
 		5AE713861FC2D52B0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713851FC2D52B0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.metal */; };
 		5AE713871FC2D52B0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713851FC2D52B0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.metal */; };
 		5AE713881FC2D52B0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713851FC2D52B0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.metal */; };
-		5AE7138B1FC2F5E00067E7A7 /* MIWeakPixelInclusionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713891FC2F5E00067E7A7 /* MIWeakPixelInclusionFilter.h */; };
+		5AE7138B1FC2F5E00067E7A7 /* MIWeakPixelInclusionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713891FC2F5E00067E7A7 /* MIWeakPixelInclusionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE7138C1FC2F5E00067E7A7 /* MIWeakPixelInclusionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7138A1FC2F5E00067E7A7 /* MIWeakPixelInclusionFilter.m */; };
 		5AE7138D1FC2F5E00067E7A7 /* MIWeakPixelInclusionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7138A1FC2F5E00067E7A7 /* MIWeakPixelInclusionFilter.m */; };
 		5AE7138E1FC2F5E00067E7A7 /* MIWeakPixelInclusionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7138A1FC2F5E00067E7A7 /* MIWeakPixelInclusionFilter.m */; };
 		5AE713901FC2F60D0067E7A7 /* MIWeakPixelInclusionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7138F1FC2F60D0067E7A7 /* MIWeakPixelInclusionFilter.metal */; };
 		5AE713911FC2F60D0067E7A7 /* MIWeakPixelInclusionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7138F1FC2F60D0067E7A7 /* MIWeakPixelInclusionFilter.metal */; };
 		5AE713921FC2F60D0067E7A7 /* MIWeakPixelInclusionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7138F1FC2F60D0067E7A7 /* MIWeakPixelInclusionFilter.metal */; };
-		5AE713951FC2F76F0067E7A7 /* MIPrewittEdgeDetectionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713931FC2F76F0067E7A7 /* MIPrewittEdgeDetectionFilter.h */; };
+		5AE713951FC2F76F0067E7A7 /* MIPrewittEdgeDetectionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713931FC2F76F0067E7A7 /* MIPrewittEdgeDetectionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713961FC2F76F0067E7A7 /* MIPrewittEdgeDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713941FC2F76F0067E7A7 /* MIPrewittEdgeDetectionFilter.m */; };
 		5AE713971FC2F76F0067E7A7 /* MIPrewittEdgeDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713941FC2F76F0067E7A7 /* MIPrewittEdgeDetectionFilter.m */; };
 		5AE713981FC2F76F0067E7A7 /* MIPrewittEdgeDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713941FC2F76F0067E7A7 /* MIPrewittEdgeDetectionFilter.m */; };
 		5AE7139A1FC2F7A10067E7A7 /* MIPrewittEdgeDetectionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713991FC2F7A10067E7A7 /* MIPrewittEdgeDetectionFilter.metal */; };
 		5AE7139B1FC2F7A10067E7A7 /* MIPrewittEdgeDetectionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713991FC2F7A10067E7A7 /* MIPrewittEdgeDetectionFilter.metal */; };
 		5AE7139C1FC2F7A10067E7A7 /* MIPrewittEdgeDetectionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713991FC2F7A10067E7A7 /* MIPrewittEdgeDetectionFilter.metal */; };
-		5AE7139F1FC2F8B00067E7A7 /* MIXYDerivativeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7139D1FC2F8B00067E7A7 /* MIXYDerivativeFilter.h */; };
+		5AE7139F1FC2F8B00067E7A7 /* MIXYDerivativeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7139D1FC2F8B00067E7A7 /* MIXYDerivativeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713A01FC2F8B00067E7A7 /* MIXYDerivativeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7139E1FC2F8B00067E7A7 /* MIXYDerivativeFilter.m */; };
 		5AE713A11FC2F8B00067E7A7 /* MIXYDerivativeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7139E1FC2F8B00067E7A7 /* MIXYDerivativeFilter.m */; };
 		5AE713A21FC2F8B00067E7A7 /* MIXYDerivativeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7139E1FC2F8B00067E7A7 /* MIXYDerivativeFilter.m */; };
 		5AE713A41FC2F8C20067E7A7 /* MIXYDerivativeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713A31FC2F8C20067E7A7 /* MIXYDerivativeFilter.metal */; };
 		5AE713A51FC2F8C20067E7A7 /* MIXYDerivativeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713A31FC2F8C20067E7A7 /* MIXYDerivativeFilter.metal */; };
 		5AE713A61FC2F8C20067E7A7 /* MIXYDerivativeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713A31FC2F8C20067E7A7 /* MIXYDerivativeFilter.metal */; };
-		5AE713A91FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713A71FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.h */; };
+		5AE713A91FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713A71FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713AA1FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713A81FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.m */; };
 		5AE713AB1FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713A81FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.m */; };
 		5AE713AC1FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713A81FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.m */; };
-		5AE713AF1FC2FD2D0067E7A7 /* MINonMaximumSuppressionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713AD1FC2FD2D0067E7A7 /* MINonMaximumSuppressionFilter.h */; };
+		5AE713AF1FC2FD2D0067E7A7 /* MINonMaximumSuppressionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713AD1FC2FD2D0067E7A7 /* MINonMaximumSuppressionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713B01FC2FD2D0067E7A7 /* MINonMaximumSuppressionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713AE1FC2FD2D0067E7A7 /* MINonMaximumSuppressionFilter.m */; };
 		5AE713B11FC2FD2D0067E7A7 /* MINonMaximumSuppressionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713AE1FC2FD2D0067E7A7 /* MINonMaximumSuppressionFilter.m */; };
 		5AE713B21FC2FD2D0067E7A7 /* MINonMaximumSuppressionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713AE1FC2FD2D0067E7A7 /* MINonMaximumSuppressionFilter.m */; };
 		5AE713B41FC2FD580067E7A7 /* MINonMaximumSuppressionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713B31FC2FD580067E7A7 /* MINonMaximumSuppressionFilter.metal */; };
 		5AE713B51FC2FD580067E7A7 /* MINonMaximumSuppressionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713B31FC2FD580067E7A7 /* MINonMaximumSuppressionFilter.metal */; };
 		5AE713B61FC2FD580067E7A7 /* MINonMaximumSuppressionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713B31FC2FD580067E7A7 /* MINonMaximumSuppressionFilter.metal */; };
-		5AE713B91FC304180067E7A7 /* MetalImageBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713B71FC304180067E7A7 /* MetalImageBuffer.h */; };
+		5AE713B91FC304180067E7A7 /* MetalImageBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713B71FC304180067E7A7 /* MetalImageBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713BA1FC304180067E7A7 /* MetalImageBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713B81FC304180067E7A7 /* MetalImageBuffer.m */; };
 		5AE713BB1FC304180067E7A7 /* MetalImageBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713B81FC304180067E7A7 /* MetalImageBuffer.m */; };
 		5AE713BC1FC304180067E7A7 /* MetalImageBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713B81FC304180067E7A7 /* MetalImageBuffer.m */; };
-		5AE713BF1FC4056C0067E7A7 /* MICrosshairGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713BD1FC4056C0067E7A7 /* MICrosshairGenerator.h */; };
+		5AE713BF1FC4056C0067E7A7 /* MICrosshairGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713BD1FC4056C0067E7A7 /* MICrosshairGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713C01FC4056C0067E7A7 /* MICrosshairGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713BE1FC4056C0067E7A7 /* MICrosshairGenerator.m */; };
 		5AE713C11FC4056C0067E7A7 /* MICrosshairGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713BE1FC4056C0067E7A7 /* MICrosshairGenerator.m */; };
 		5AE713C21FC4056C0067E7A7 /* MICrosshairGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713BE1FC4056C0067E7A7 /* MICrosshairGenerator.m */; };
-		5AE713C51FC4164E0067E7A7 /* MIDilationFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713C31FC4164E0067E7A7 /* MIDilationFilter.h */; };
+		5AE713C51FC4164E0067E7A7 /* MIDilationFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713C31FC4164E0067E7A7 /* MIDilationFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713C61FC4164E0067E7A7 /* MIDilationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713C41FC4164E0067E7A7 /* MIDilationFilter.m */; };
 		5AE713C71FC4164E0067E7A7 /* MIDilationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713C41FC4164E0067E7A7 /* MIDilationFilter.m */; };
 		5AE713C81FC4164E0067E7A7 /* MIDilationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713C41FC4164E0067E7A7 /* MIDilationFilter.m */; };
 		5AE713CA1FC4167D0067E7A7 /* MIDilationFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713C91FC4167D0067E7A7 /* MIDilationFilter.metal */; };
 		5AE713CB1FC4167D0067E7A7 /* MIDilationFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713C91FC4167D0067E7A7 /* MIDilationFilter.metal */; };
 		5AE713CC1FC4167D0067E7A7 /* MIDilationFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713C91FC4167D0067E7A7 /* MIDilationFilter.metal */; };
-		5AE713CF1FC4380A0067E7A7 /* MetalImageRenderResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713CD1FC4380A0067E7A7 /* MetalImageRenderResource.h */; };
+		5AE713CF1FC4380A0067E7A7 /* MetalImageRenderResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713CD1FC4380A0067E7A7 /* MetalImageRenderResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713D01FC4380A0067E7A7 /* MetalImageRenderResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713CE1FC4380A0067E7A7 /* MetalImageRenderResource.m */; };
 		5AE713D11FC4380A0067E7A7 /* MetalImageRenderResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713CE1FC4380A0067E7A7 /* MetalImageRenderResource.m */; };
 		5AE713D21FC4380A0067E7A7 /* MetalImageRenderResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713CE1FC4380A0067E7A7 /* MetalImageRenderResource.m */; };
-		5AE713D51FC44ACC0067E7A7 /* MIRGBDilationFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713D31FC44ACC0067E7A7 /* MIRGBDilationFilter.h */; };
+		5AE713D51FC44ACC0067E7A7 /* MIRGBDilationFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713D31FC44ACC0067E7A7 /* MIRGBDilationFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713D61FC44ACC0067E7A7 /* MIRGBDilationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713D41FC44ACC0067E7A7 /* MIRGBDilationFilter.m */; };
 		5AE713D71FC44ACC0067E7A7 /* MIRGBDilationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713D41FC44ACC0067E7A7 /* MIRGBDilationFilter.m */; };
 		5AE713D81FC44ACC0067E7A7 /* MIRGBDilationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713D41FC44ACC0067E7A7 /* MIRGBDilationFilter.m */; };
@@ -257,347 +258,347 @@
 		5AE713DE1FC450330067E7A7 /* MIDilationAndErosion.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713DD1FC450330067E7A7 /* MIDilationAndErosion.metal */; };
 		5AE713DF1FC450330067E7A7 /* MIDilationAndErosion.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713DD1FC450330067E7A7 /* MIDilationAndErosion.metal */; };
 		5AE713E01FC450330067E7A7 /* MIDilationAndErosion.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713DD1FC450330067E7A7 /* MIDilationAndErosion.metal */; };
-		5AE713E31FC451360067E7A7 /* MIErosionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713E11FC451360067E7A7 /* MIErosionFilter.h */; };
+		5AE713E31FC451360067E7A7 /* MIErosionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713E11FC451360067E7A7 /* MIErosionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713E41FC451360067E7A7 /* MIErosionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713E21FC451360067E7A7 /* MIErosionFilter.m */; };
 		5AE713E51FC451360067E7A7 /* MIErosionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713E21FC451360067E7A7 /* MIErosionFilter.m */; };
 		5AE713E61FC451360067E7A7 /* MIErosionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713E21FC451360067E7A7 /* MIErosionFilter.m */; };
 		5AE713E81FC4523F0067E7A7 /* MIErosionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713E71FC4523F0067E7A7 /* MIErosionFilter.metal */; };
 		5AE713E91FC4523F0067E7A7 /* MIErosionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713E71FC4523F0067E7A7 /* MIErosionFilter.metal */; };
 		5AE713EA1FC4523F0067E7A7 /* MIErosionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713E71FC4523F0067E7A7 /* MIErosionFilter.metal */; };
-		5AE713ED1FC453620067E7A7 /* MIRGBErosionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713EB1FC453620067E7A7 /* MIRGBErosionFilter.h */; };
+		5AE713ED1FC453620067E7A7 /* MIRGBErosionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713EB1FC453620067E7A7 /* MIRGBErosionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713EE1FC453620067E7A7 /* MIRGBErosionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713EC1FC453620067E7A7 /* MIRGBErosionFilter.m */; };
 		5AE713EF1FC453620067E7A7 /* MIRGBErosionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713EC1FC453620067E7A7 /* MIRGBErosionFilter.m */; };
 		5AE713F01FC453620067E7A7 /* MIRGBErosionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713EC1FC453620067E7A7 /* MIRGBErosionFilter.m */; };
 		5AE713F21FC453730067E7A7 /* MIRGBErosionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713F11FC453730067E7A7 /* MIRGBErosionFilter.metal */; };
 		5AE713F31FC453730067E7A7 /* MIRGBErosionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713F11FC453730067E7A7 /* MIRGBErosionFilter.metal */; };
 		5AE713F41FC453730067E7A7 /* MIRGBErosionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713F11FC453730067E7A7 /* MIRGBErosionFilter.metal */; };
-		5AE713F71FC457AB0067E7A7 /* MIOpeningFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713F51FC457AB0067E7A7 /* MIOpeningFilter.h */; };
+		5AE713F71FC457AB0067E7A7 /* MIOpeningFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713F51FC457AB0067E7A7 /* MIOpeningFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713F81FC457AB0067E7A7 /* MIOpeningFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713F61FC457AB0067E7A7 /* MIOpeningFilter.m */; };
 		5AE713F91FC457AB0067E7A7 /* MIOpeningFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713F61FC457AB0067E7A7 /* MIOpeningFilter.m */; };
 		5AE713FA1FC457AB0067E7A7 /* MIOpeningFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713F61FC457AB0067E7A7 /* MIOpeningFilter.m */; };
-		5AE714011FC459DD0067E7A7 /* MIRGBOpeningFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713FF1FC459DD0067E7A7 /* MIRGBOpeningFilter.h */; };
+		5AE714011FC459DD0067E7A7 /* MIRGBOpeningFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713FF1FC459DD0067E7A7 /* MIRGBOpeningFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE714021FC459DD0067E7A7 /* MIRGBOpeningFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE714001FC459DD0067E7A7 /* MIRGBOpeningFilter.m */; };
 		5AE714031FC459DD0067E7A7 /* MIRGBOpeningFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE714001FC459DD0067E7A7 /* MIRGBOpeningFilter.m */; };
 		5AE714041FC459DD0067E7A7 /* MIRGBOpeningFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE714001FC459DD0067E7A7 /* MIRGBOpeningFilter.m */; };
-		5AE714071FC45B730067E7A7 /* MIClosingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE714051FC45B730067E7A7 /* MIClosingFilter.h */; };
+		5AE714071FC45B730067E7A7 /* MIClosingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE714051FC45B730067E7A7 /* MIClosingFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE714081FC45B730067E7A7 /* MIClosingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE714061FC45B730067E7A7 /* MIClosingFilter.m */; };
 		5AE714091FC45B730067E7A7 /* MIClosingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE714061FC45B730067E7A7 /* MIClosingFilter.m */; };
 		5AE7140A1FC45B730067E7A7 /* MIClosingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE714061FC45B730067E7A7 /* MIClosingFilter.m */; };
-		5AE7140D1FC45CEC0067E7A7 /* MIRGBClosingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7140B1FC45CEC0067E7A7 /* MIRGBClosingFilter.h */; };
+		5AE7140D1FC45CEC0067E7A7 /* MIRGBClosingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE7140B1FC45CEC0067E7A7 /* MIRGBClosingFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE7140E1FC45CEC0067E7A7 /* MIRGBClosingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7140C1FC45CEC0067E7A7 /* MIRGBClosingFilter.m */; };
 		5AE7140F1FC45CEC0067E7A7 /* MIRGBClosingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7140C1FC45CEC0067E7A7 /* MIRGBClosingFilter.m */; };
 		5AE714101FC45CEC0067E7A7 /* MIRGBClosingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE7140C1FC45CEC0067E7A7 /* MIRGBClosingFilter.m */; };
-		5AE714131FC465130067E7A7 /* MIColorPackingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE714111FC465130067E7A7 /* MIColorPackingFilter.h */; };
+		5AE714131FC465130067E7A7 /* MIColorPackingFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE714111FC465130067E7A7 /* MIColorPackingFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE714141FC465130067E7A7 /* MIColorPackingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE714121FC465130067E7A7 /* MIColorPackingFilter.m */; };
 		5AE714151FC465130067E7A7 /* MIColorPackingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE714121FC465130067E7A7 /* MIColorPackingFilter.m */; };
 		5AE714161FC465130067E7A7 /* MIColorPackingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE714121FC465130067E7A7 /* MIColorPackingFilter.m */; };
 		5AE714181FC4652A0067E7A7 /* MIColorPackingFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE714171FC4652A0067E7A7 /* MIColorPackingFilter.metal */; };
 		5AE714191FC4652A0067E7A7 /* MIColorPackingFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE714171FC4652A0067E7A7 /* MIColorPackingFilter.metal */; };
 		5AE7141A1FC4652A0067E7A7 /* MIColorPackingFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE714171FC4652A0067E7A7 /* MIColorPackingFilter.metal */; };
-		5AF438021F9CCB120081D4B8 /* MIHSBFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF438001F9CCB120081D4B8 /* MIHSBFilter.h */; };
+		5AF438021F9CCB120081D4B8 /* MIHSBFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF438001F9CCB120081D4B8 /* MIHSBFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AF438031F9CCB120081D4B8 /* MIHSBFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438011F9CCB120081D4B8 /* MIHSBFilter.m */; };
 		5AF438041F9CCB120081D4B8 /* MIHSBFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438011F9CCB120081D4B8 /* MIHSBFilter.m */; };
 		5AF438051F9CCB120081D4B8 /* MIHSBFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438011F9CCB120081D4B8 /* MIHSBFilter.m */; };
 		5AF438071F9CCB2B0081D4B8 /* MIHSBFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438061F9CCB2B0081D4B8 /* MIHSBFilter.metal */; };
 		5AF438081F9CCB2B0081D4B8 /* MIHSBFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438061F9CCB2B0081D4B8 /* MIHSBFilter.metal */; };
 		5AF438091F9CCB2B0081D4B8 /* MIHSBFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438061F9CCB2B0081D4B8 /* MIHSBFilter.metal */; };
-		5AF4380C1F9CE0FE0081D4B8 /* MIHueFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF4380A1F9CE0FE0081D4B8 /* MIHueFilter.h */; };
+		5AF4380C1F9CE0FE0081D4B8 /* MIHueFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF4380A1F9CE0FE0081D4B8 /* MIHueFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AF4380D1F9CE0FE0081D4B8 /* MIHueFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4380B1F9CE0FE0081D4B8 /* MIHueFilter.m */; };
 		5AF4380E1F9CE0FE0081D4B8 /* MIHueFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4380B1F9CE0FE0081D4B8 /* MIHueFilter.m */; };
 		5AF4380F1F9CE0FE0081D4B8 /* MIHueFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4380B1F9CE0FE0081D4B8 /* MIHueFilter.m */; };
 		5AF438111F9CE1150081D4B8 /* MIHueFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438101F9CE1150081D4B8 /* MIHueFilter.metal */; };
 		5AF438121F9CE1150081D4B8 /* MIHueFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438101F9CE1150081D4B8 /* MIHueFilter.metal */; };
 		5AF438131F9CE1150081D4B8 /* MIHueFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438101F9CE1150081D4B8 /* MIHueFilter.metal */; };
-		5AF438161F9CEC840081D4B8 /* MIMonochromeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF438141F9CEC840081D4B8 /* MIMonochromeFilter.h */; };
+		5AF438161F9CEC840081D4B8 /* MIMonochromeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF438141F9CEC840081D4B8 /* MIMonochromeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AF438171F9CEC840081D4B8 /* MIMonochromeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438151F9CEC840081D4B8 /* MIMonochromeFilter.m */; };
 		5AF438181F9CEC840081D4B8 /* MIMonochromeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438151F9CEC840081D4B8 /* MIMonochromeFilter.m */; };
 		5AF438191F9CEC840081D4B8 /* MIMonochromeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438151F9CEC840081D4B8 /* MIMonochromeFilter.m */; };
 		5AF4381B1F9CECCB0081D4B8 /* MIMonochromeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4381A1F9CECCB0081D4B8 /* MIMonochromeFilter.metal */; };
 		5AF4381C1F9CECCB0081D4B8 /* MIMonochromeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4381A1F9CECCB0081D4B8 /* MIMonochromeFilter.metal */; };
 		5AF4381D1F9CECCB0081D4B8 /* MIMonochromeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4381A1F9CECCB0081D4B8 /* MIMonochromeFilter.metal */; };
-		5AF438201F9D941E0081D4B8 /* MIFalseColorFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF4381E1F9D941E0081D4B8 /* MIFalseColorFilter.h */; };
+		5AF438201F9D941E0081D4B8 /* MIFalseColorFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF4381E1F9D941E0081D4B8 /* MIFalseColorFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AF438211F9D941E0081D4B8 /* MIFalseColorFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4381F1F9D941E0081D4B8 /* MIFalseColorFilter.m */; };
 		5AF438221F9D941E0081D4B8 /* MIFalseColorFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4381F1F9D941E0081D4B8 /* MIFalseColorFilter.m */; };
 		5AF438231F9D941E0081D4B8 /* MIFalseColorFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4381F1F9D941E0081D4B8 /* MIFalseColorFilter.m */; };
 		5AF438251F9D95920081D4B8 /* MIFalseColorFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438241F9D95920081D4B8 /* MIFalseColorFilter.metal */; };
 		5AF438261F9D95920081D4B8 /* MIFalseColorFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438241F9D95920081D4B8 /* MIFalseColorFilter.metal */; };
 		5AF438271F9D95920081D4B8 /* MIFalseColorFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438241F9D95920081D4B8 /* MIFalseColorFilter.metal */; };
-		5AF4382A1F9E13FF0081D4B8 /* MIHazeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF438281F9E13FF0081D4B8 /* MIHazeFilter.h */; };
+		5AF4382A1F9E13FF0081D4B8 /* MIHazeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF438281F9E13FF0081D4B8 /* MIHazeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AF4382B1F9E13FF0081D4B8 /* MIHazeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438291F9E13FF0081D4B8 /* MIHazeFilter.m */; };
 		5AF4382C1F9E13FF0081D4B8 /* MIHazeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438291F9E13FF0081D4B8 /* MIHazeFilter.m */; };
 		5AF4382D1F9E13FF0081D4B8 /* MIHazeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438291F9E13FF0081D4B8 /* MIHazeFilter.m */; };
 		5AF4382F1F9E143D0081D4B8 /* MIHazeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4382E1F9E143D0081D4B8 /* MIHazeFilter.metal */; };
 		5AF438301F9E143D0081D4B8 /* MIHazeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4382E1F9E143D0081D4B8 /* MIHazeFilter.metal */; };
 		5AF438311F9E143D0081D4B8 /* MIHazeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4382E1F9E143D0081D4B8 /* MIHazeFilter.metal */; };
-		5AF438341F9E1B360081D4B8 /* MISepiaFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF438321F9E1B360081D4B8 /* MISepiaFilter.h */; };
+		5AF438341F9E1B360081D4B8 /* MISepiaFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF438321F9E1B360081D4B8 /* MISepiaFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AF438351F9E1B360081D4B8 /* MISepiaFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438331F9E1B360081D4B8 /* MISepiaFilter.m */; };
 		5AF438361F9E1B360081D4B8 /* MISepiaFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438331F9E1B360081D4B8 /* MISepiaFilter.m */; };
 		5AF438371F9E1B360081D4B8 /* MISepiaFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438331F9E1B360081D4B8 /* MISepiaFilter.m */; };
-		5AF4383E1FA099740081D4B8 /* MIColorInvertFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF4383C1FA099740081D4B8 /* MIColorInvertFilter.h */; };
+		5AF4383E1FA099740081D4B8 /* MIColorInvertFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF4383C1FA099740081D4B8 /* MIColorInvertFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AF4383F1FA099740081D4B8 /* MIColorInvertFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4383D1FA099740081D4B8 /* MIColorInvertFilter.m */; };
 		5AF438401FA099740081D4B8 /* MIColorInvertFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4383D1FA099740081D4B8 /* MIColorInvertFilter.m */; };
 		5AF438411FA099740081D4B8 /* MIColorInvertFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4383D1FA099740081D4B8 /* MIColorInvertFilter.m */; };
 		5AF438431FA09C7A0081D4B8 /* MIColorInvertFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438421FA09C7A0081D4B8 /* MIColorInvertFilter.metal */; };
 		5AF438441FA09C7A0081D4B8 /* MIColorInvertFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438421FA09C7A0081D4B8 /* MIColorInvertFilter.metal */; };
 		5AF438451FA09C7A0081D4B8 /* MIColorInvertFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438421FA09C7A0081D4B8 /* MIColorInvertFilter.metal */; };
-		5AF438481FA30D030081D4B8 /* MIGrayscaleFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF438461FA30D030081D4B8 /* MIGrayscaleFilter.h */; };
+		5AF438481FA30D030081D4B8 /* MIGrayscaleFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF438461FA30D030081D4B8 /* MIGrayscaleFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AF438491FA30D030081D4B8 /* MIGrayscaleFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438471FA30D030081D4B8 /* MIGrayscaleFilter.m */; };
 		5AF4384A1FA30D030081D4B8 /* MIGrayscaleFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438471FA30D030081D4B8 /* MIGrayscaleFilter.m */; };
 		5AF4384B1FA30D030081D4B8 /* MIGrayscaleFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438471FA30D030081D4B8 /* MIGrayscaleFilter.m */; };
 		5AF4384D1FA30D1A0081D4B8 /* MIGrayscaleFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4384C1FA30D1A0081D4B8 /* MIGrayscaleFilter.metal */; };
 		5AF4384E1FA30D1A0081D4B8 /* MIGrayscaleFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4384C1FA30D1A0081D4B8 /* MIGrayscaleFilter.metal */; };
 		5AF4384F1FA30D1A0081D4B8 /* MIGrayscaleFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4384C1FA30D1A0081D4B8 /* MIGrayscaleFilter.metal */; };
-		5AF438521FA311D00081D4B8 /* MILuminanceThresholdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF438501FA311D00081D4B8 /* MILuminanceThresholdFilter.h */; };
+		5AF438521FA311D00081D4B8 /* MILuminanceThresholdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF438501FA311D00081D4B8 /* MILuminanceThresholdFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AF438531FA311D00081D4B8 /* MILuminanceThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438511FA311D00081D4B8 /* MILuminanceThresholdFilter.m */; };
 		5AF438541FA311D00081D4B8 /* MILuminanceThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438511FA311D00081D4B8 /* MILuminanceThresholdFilter.m */; };
 		5AF438551FA311D00081D4B8 /* MILuminanceThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438511FA311D00081D4B8 /* MILuminanceThresholdFilter.m */; };
 		5AF438571FA311DD0081D4B8 /* MILuminanceThresholdFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438561FA311DD0081D4B8 /* MILuminanceThresholdFilter.metal */; };
 		5AF438581FA311DD0081D4B8 /* MILuminanceThresholdFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438561FA311DD0081D4B8 /* MILuminanceThresholdFilter.metal */; };
 		5AF438591FA311DD0081D4B8 /* MILuminanceThresholdFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438561FA311DD0081D4B8 /* MILuminanceThresholdFilter.metal */; };
-		5AF4385C1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF4385A1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.h */; };
+		5AF4385C1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF4385A1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AF4385D1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4385B1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.m */; };
 		5AF4385E1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4385B1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.m */; };
 		5AF4385F1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4385B1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.m */; };
 		5AF438651FA6040D0081D4B8 /* MIAdaptiveThresholdFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438641FA6040D0081D4B8 /* MIAdaptiveThresholdFilter.metal */; };
 		5AF438661FA6040D0081D4B8 /* MIAdaptiveThresholdFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438641FA6040D0081D4B8 /* MIAdaptiveThresholdFilter.metal */; };
 		5AF438671FA6040D0081D4B8 /* MIAdaptiveThresholdFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438641FA6040D0081D4B8 /* MIAdaptiveThresholdFilter.metal */; };
-		5AF4386E1FA614D00081D4B8 /* MetalImageTwoPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF4386C1FA614D00081D4B8 /* MetalImageTwoPassFilter.h */; };
+		5AF4386E1FA614D00081D4B8 /* MetalImageTwoPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF4386C1FA614D00081D4B8 /* MetalImageTwoPassFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AF4386F1FA614D00081D4B8 /* MetalImageTwoPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4386D1FA614D00081D4B8 /* MetalImageTwoPassFilter.m */; };
 		5AF438701FA614D00081D4B8 /* MetalImageTwoPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4386D1FA614D00081D4B8 /* MetalImageTwoPassFilter.m */; };
 		5AF438711FA614D00081D4B8 /* MetalImageTwoPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4386D1FA614D00081D4B8 /* MetalImageTwoPassFilter.m */; };
-		5AFAA0121FD6C39500038BA4 /* MILowPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AFAA0101FD6C39500038BA4 /* MILowPassFilter.h */; };
+		5AFAA0121FD6C39500038BA4 /* MILowPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AFAA0101FD6C39500038BA4 /* MILowPassFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AFAA0131FD6C39500038BA4 /* MILowPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA0111FD6C39500038BA4 /* MILowPassFilter.m */; };
 		5AFAA0141FD6C39500038BA4 /* MILowPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA0111FD6C39500038BA4 /* MILowPassFilter.m */; };
 		5AFAA0151FD6C39500038BA4 /* MILowPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA0111FD6C39500038BA4 /* MILowPassFilter.m */; };
-		5AFAA0181FD6D88800038BA4 /* MIHighPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AFAA0161FD6D88800038BA4 /* MIHighPassFilter.h */; };
+		5AFAA0181FD6D88800038BA4 /* MIHighPassFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AFAA0161FD6D88800038BA4 /* MIHighPassFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AFAA0191FD6D88800038BA4 /* MIHighPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA0171FD6D88800038BA4 /* MIHighPassFilter.m */; };
 		5AFAA01A1FD6D88800038BA4 /* MIHighPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA0171FD6D88800038BA4 /* MIHighPassFilter.m */; };
 		5AFAA01B1FD6D88800038BA4 /* MIHighPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA0171FD6D88800038BA4 /* MIHighPassFilter.m */; };
-		9F1250EA1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1250E81FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.h */; };
+		9F1250EA1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1250E81FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F1250EB1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1250E91FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m */; };
 		9F1250EC1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1250E91FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m */; };
 		9F1250ED1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1250E91FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m */; };
-		9FCA3B7B1FB2ED4400220274 /* MIHistogramGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FCA3B791FB2ED4400220274 /* MIHistogramGenerator.h */; };
+		9FCA3B7B1FB2ED4400220274 /* MIHistogramGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FCA3B791FB2ED4400220274 /* MIHistogramGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FCA3B7C1FB2ED4400220274 /* MIHistogramGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCA3B7A1FB2ED4400220274 /* MIHistogramGenerator.m */; };
 		9FCA3B7D1FB2ED4400220274 /* MIHistogramGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCA3B7A1FB2ED4400220274 /* MIHistogramGenerator.m */; };
 		9FCA3B7E1FB2ED4400220274 /* MIHistogramGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCA3B7A1FB2ED4400220274 /* MIHistogramGenerator.m */; };
 		9FCA3B801FB2EF6B00220274 /* MIHistogramGenerator.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FCA3B7F1FB2EF6B00220274 /* MIHistogramGenerator.metal */; };
 		9FCA3B811FB2EF6B00220274 /* MIHistogramGenerator.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FCA3B7F1FB2EF6B00220274 /* MIHistogramGenerator.metal */; };
 		9FCA3B821FB2EF6B00220274 /* MIHistogramGenerator.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FCA3B7F1FB2EF6B00220274 /* MIHistogramGenerator.metal */; };
-		9FFACC711FB31D6F004BF184 /* MIHighlightShadowFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACC6F1FB31D6F004BF184 /* MIHighlightShadowFilter.h */; };
+		9FFACC711FB31D6F004BF184 /* MIHighlightShadowFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACC6F1FB31D6F004BF184 /* MIHighlightShadowFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACC721FB31D6F004BF184 /* MIHighlightShadowFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC701FB31D6F004BF184 /* MIHighlightShadowFilter.m */; };
 		9FFACC731FB31D6F004BF184 /* MIHighlightShadowFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC701FB31D6F004BF184 /* MIHighlightShadowFilter.m */; };
 		9FFACC741FB31D6F004BF184 /* MIHighlightShadowFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC701FB31D6F004BF184 /* MIHighlightShadowFilter.m */; };
 		9FFACC761FB31DA7004BF184 /* MIHighlightShadowFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC751FB31DA7004BF184 /* MIHighlightShadowFilter.metal */; };
 		9FFACC771FB31DA7004BF184 /* MIHighlightShadowFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC751FB31DA7004BF184 /* MIHighlightShadowFilter.metal */; };
 		9FFACC781FB31DA7004BF184 /* MIHighlightShadowFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC751FB31DA7004BF184 /* MIHighlightShadowFilter.metal */; };
-		9FFACC7B1FB324E7004BF184 /* MILookupFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACC791FB324E7004BF184 /* MILookupFilter.h */; };
+		9FFACC7B1FB324E7004BF184 /* MILookupFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACC791FB324E7004BF184 /* MILookupFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACC7C1FB324E7004BF184 /* MILookupFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC7A1FB324E7004BF184 /* MILookupFilter.m */; };
 		9FFACC7D1FB324E7004BF184 /* MILookupFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC7A1FB324E7004BF184 /* MILookupFilter.m */; };
 		9FFACC7E1FB324E7004BF184 /* MILookupFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC7A1FB324E7004BF184 /* MILookupFilter.m */; };
 		9FFACC801FB324F6004BF184 /* MILookupFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC7F1FB324F6004BF184 /* MILookupFilter.metal */; };
 		9FFACC811FB324F6004BF184 /* MILookupFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC7F1FB324F6004BF184 /* MILookupFilter.metal */; };
 		9FFACC821FB324F6004BF184 /* MILookupFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC7F1FB324F6004BF184 /* MILookupFilter.metal */; };
-		9FFACC851FB32B1B004BF184 /* MIOpacityFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACC831FB32B1B004BF184 /* MIOpacityFilter.h */; };
+		9FFACC851FB32B1B004BF184 /* MIOpacityFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACC831FB32B1B004BF184 /* MIOpacityFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACC861FB32B1B004BF184 /* MIOpacityFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC841FB32B1B004BF184 /* MIOpacityFilter.m */; };
 		9FFACC871FB32B1B004BF184 /* MIOpacityFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC841FB32B1B004BF184 /* MIOpacityFilter.m */; };
 		9FFACC881FB32B1B004BF184 /* MIOpacityFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC841FB32B1B004BF184 /* MIOpacityFilter.m */; };
 		9FFACC8A1FB32B2C004BF184 /* MIOpacityFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC891FB32B2C004BF184 /* MIOpacityFilter.metal */; };
 		9FFACC8B1FB32B2C004BF184 /* MIOpacityFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC891FB32B2C004BF184 /* MIOpacityFilter.metal */; };
 		9FFACC8C1FB32B2C004BF184 /* MIOpacityFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC891FB32B2C004BF184 /* MIOpacityFilter.metal */; };
-		9FFACC8F1FB32CA4004BF184 /* MIChromaKeyFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACC8D1FB32CA4004BF184 /* MIChromaKeyFilter.h */; };
+		9FFACC8F1FB32CA4004BF184 /* MIChromaKeyFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACC8D1FB32CA4004BF184 /* MIChromaKeyFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACC901FB32CA4004BF184 /* MIChromaKeyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC8E1FB32CA4004BF184 /* MIChromaKeyFilter.m */; };
 		9FFACC911FB32CA4004BF184 /* MIChromaKeyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC8E1FB32CA4004BF184 /* MIChromaKeyFilter.m */; };
 		9FFACC921FB32CA4004BF184 /* MIChromaKeyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC8E1FB32CA4004BF184 /* MIChromaKeyFilter.m */; };
 		9FFACC941FB32D39004BF184 /* MIChromaKeyFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC931FB32D39004BF184 /* MIChromaKeyFilter.metal */; };
 		9FFACC951FB32D39004BF184 /* MIChromaKeyFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC931FB32D39004BF184 /* MIChromaKeyFilter.metal */; };
 		9FFACC961FB32D39004BF184 /* MIChromaKeyFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC931FB32D39004BF184 /* MIChromaKeyFilter.metal */; };
-		9FFACC991FB3E01F004BF184 /* MIWhiteBalanceFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACC971FB3E01F004BF184 /* MIWhiteBalanceFilter.h */; };
+		9FFACC991FB3E01F004BF184 /* MIWhiteBalanceFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACC971FB3E01F004BF184 /* MIWhiteBalanceFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACC9A1FB3E01F004BF184 /* MIWhiteBalanceFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC981FB3E01F004BF184 /* MIWhiteBalanceFilter.m */; };
 		9FFACC9B1FB3E01F004BF184 /* MIWhiteBalanceFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC981FB3E01F004BF184 /* MIWhiteBalanceFilter.m */; };
 		9FFACC9C1FB3E01F004BF184 /* MIWhiteBalanceFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC981FB3E01F004BF184 /* MIWhiteBalanceFilter.m */; };
 		9FFACC9E1FB3E290004BF184 /* MIWhiteBalanceFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC9D1FB3E290004BF184 /* MIWhiteBalanceFilter.metal */; };
 		9FFACC9F1FB3E290004BF184 /* MIWhiteBalanceFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC9D1FB3E290004BF184 /* MIWhiteBalanceFilter.metal */; };
 		9FFACCA01FB3E290004BF184 /* MIWhiteBalanceFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACC9D1FB3E290004BF184 /* MIWhiteBalanceFilter.metal */; };
-		9FFACCA31FB3E681004BF184 /* MILuminanceRangeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCA11FB3E681004BF184 /* MILuminanceRangeFilter.h */; };
+		9FFACCA31FB3E681004BF184 /* MILuminanceRangeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCA11FB3E681004BF184 /* MILuminanceRangeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCA41FB3E681004BF184 /* MILuminanceRangeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCA21FB3E681004BF184 /* MILuminanceRangeFilter.m */; };
 		9FFACCA51FB3E681004BF184 /* MILuminanceRangeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCA21FB3E681004BF184 /* MILuminanceRangeFilter.m */; };
 		9FFACCA61FB3E681004BF184 /* MILuminanceRangeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCA21FB3E681004BF184 /* MILuminanceRangeFilter.m */; };
 		9FFACCA81FB3E68E004BF184 /* MILuminanceRangeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCA71FB3E68E004BF184 /* MILuminanceRangeFilter.metal */; };
 		9FFACCA91FB3E68E004BF184 /* MILuminanceRangeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCA71FB3E68E004BF184 /* MILuminanceRangeFilter.metal */; };
 		9FFACCAA1FB3E68E004BF184 /* MILuminanceRangeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCA71FB3E68E004BF184 /* MILuminanceRangeFilter.metal */; };
-		9FFACCAE1FB3EBE1004BF184 /* MISourceOverBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCAC1FB3EBE1004BF184 /* MISourceOverBlendFilter.h */; };
+		9FFACCAE1FB3EBE1004BF184 /* MISourceOverBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCAC1FB3EBE1004BF184 /* MISourceOverBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCAF1FB3EBE1004BF184 /* MISourceOverBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCAD1FB3EBE1004BF184 /* MISourceOverBlendFilter.m */; };
 		9FFACCB01FB3EBE1004BF184 /* MISourceOverBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCAD1FB3EBE1004BF184 /* MISourceOverBlendFilter.m */; };
 		9FFACCB11FB3EBE1004BF184 /* MISourceOverBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCAD1FB3EBE1004BF184 /* MISourceOverBlendFilter.m */; };
 		9FFACCB71FB3F693004BF184 /* Blend.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCB61FB3F693004BF184 /* Blend.metal */; };
 		9FFACCB81FB3F693004BF184 /* Blend.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCB61FB3F693004BF184 /* Blend.metal */; };
 		9FFACCB91FB3F693004BF184 /* Blend.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCB61FB3F693004BF184 /* Blend.metal */; };
-		9FFACCBC1FB3F6C7004BF184 /* MIColorBurnBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCBA1FB3F6C7004BF184 /* MIColorBurnBlendFilter.h */; };
+		9FFACCBC1FB3F6C7004BF184 /* MIColorBurnBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCBA1FB3F6C7004BF184 /* MIColorBurnBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCBD1FB3F6C7004BF184 /* MIColorBurnBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCBB1FB3F6C7004BF184 /* MIColorBurnBlendFilter.m */; };
 		9FFACCBE1FB3F6C7004BF184 /* MIColorBurnBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCBB1FB3F6C7004BF184 /* MIColorBurnBlendFilter.m */; };
 		9FFACCBF1FB3F6CD004BF184 /* MIColorBurnBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCBB1FB3F6C7004BF184 /* MIColorBurnBlendFilter.m */; };
-		9FFACCC21FB3F798004BF184 /* MIColorDodgeBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCC01FB3F798004BF184 /* MIColorDodgeBlendFilter.h */; };
+		9FFACCC21FB3F798004BF184 /* MIColorDodgeBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCC01FB3F798004BF184 /* MIColorDodgeBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCC31FB3F798004BF184 /* MIColorDodgeBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCC11FB3F798004BF184 /* MIColorDodgeBlendFilter.m */; };
 		9FFACCC41FB3F798004BF184 /* MIColorDodgeBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCC11FB3F798004BF184 /* MIColorDodgeBlendFilter.m */; };
 		9FFACCC51FB3F798004BF184 /* MIColorDodgeBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCC11FB3F798004BF184 /* MIColorDodgeBlendFilter.m */; };
-		9FFACCC81FB3F8CE004BF184 /* MIDarkenBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCC61FB3F8CE004BF184 /* MIDarkenBlendFilter.h */; };
+		9FFACCC81FB3F8CE004BF184 /* MIDarkenBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCC61FB3F8CE004BF184 /* MIDarkenBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCC91FB3F8CE004BF184 /* MIDarkenBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCC71FB3F8CE004BF184 /* MIDarkenBlendFilter.m */; };
 		9FFACCCA1FB3F8CE004BF184 /* MIDarkenBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCC71FB3F8CE004BF184 /* MIDarkenBlendFilter.m */; };
 		9FFACCCB1FB3F8CE004BF184 /* MIDarkenBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCC71FB3F8CE004BF184 /* MIDarkenBlendFilter.m */; };
-		9FFACCCE1FB3FA80004BF184 /* MIDifferenceBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCCC1FB3FA80004BF184 /* MIDifferenceBlendFilter.h */; };
+		9FFACCCE1FB3FA80004BF184 /* MIDifferenceBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCCC1FB3FA80004BF184 /* MIDifferenceBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCCF1FB3FA80004BF184 /* MIDifferenceBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCCD1FB3FA80004BF184 /* MIDifferenceBlendFilter.m */; };
 		9FFACCD01FB3FA80004BF184 /* MIDifferenceBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCCD1FB3FA80004BF184 /* MIDifferenceBlendFilter.m */; };
 		9FFACCD11FB3FA80004BF184 /* MIDifferenceBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCCD1FB3FA80004BF184 /* MIDifferenceBlendFilter.m */; };
-		9FFACCD41FB3FBA3004BF184 /* MIDissolveBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCD21FB3FBA3004BF184 /* MIDissolveBlendFilter.h */; };
+		9FFACCD41FB3FBA3004BF184 /* MIDissolveBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCD21FB3FBA3004BF184 /* MIDissolveBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCD51FB3FBA3004BF184 /* MIDissolveBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCD31FB3FBA3004BF184 /* MIDissolveBlendFilter.m */; };
 		9FFACCD61FB3FBA3004BF184 /* MIDissolveBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCD31FB3FBA3004BF184 /* MIDissolveBlendFilter.m */; };
 		9FFACCD71FB3FBA3004BF184 /* MIDissolveBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCD31FB3FBA3004BF184 /* MIDissolveBlendFilter.m */; };
-		9FFACCDA1FB40222004BF184 /* MIExclusionBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCD81FB40222004BF184 /* MIExclusionBlendFilter.h */; };
+		9FFACCDA1FB40222004BF184 /* MIExclusionBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCD81FB40222004BF184 /* MIExclusionBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCDB1FB40222004BF184 /* MIExclusionBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCD91FB40222004BF184 /* MIExclusionBlendFilter.m */; };
 		9FFACCDC1FB40222004BF184 /* MIExclusionBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCD91FB40222004BF184 /* MIExclusionBlendFilter.m */; };
 		9FFACCDD1FB40222004BF184 /* MIExclusionBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCD91FB40222004BF184 /* MIExclusionBlendFilter.m */; };
-		9FFACCE01FB4036B004BF184 /* MIHardLightBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCDE1FB4036B004BF184 /* MIHardLightBlendFilter.h */; };
+		9FFACCE01FB4036B004BF184 /* MIHardLightBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCDE1FB4036B004BF184 /* MIHardLightBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCE11FB4036B004BF184 /* MIHardLightBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCDF1FB4036B004BF184 /* MIHardLightBlendFilter.m */; };
 		9FFACCE21FB4036B004BF184 /* MIHardLightBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCDF1FB4036B004BF184 /* MIHardLightBlendFilter.m */; };
 		9FFACCE31FB4036B004BF184 /* MIHardLightBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCDF1FB4036B004BF184 /* MIHardLightBlendFilter.m */; };
-		9FFACCE61FB42A5C004BF184 /* MISoftLightBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCE41FB42A5C004BF184 /* MISoftLightBlendFilter.h */; };
+		9FFACCE61FB42A5C004BF184 /* MISoftLightBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCE41FB42A5C004BF184 /* MISoftLightBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCE71FB42A5C004BF184 /* MISoftLightBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCE51FB42A5C004BF184 /* MISoftLightBlendFilter.m */; };
 		9FFACCE81FB42A5C004BF184 /* MISoftLightBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCE51FB42A5C004BF184 /* MISoftLightBlendFilter.m */; };
 		9FFACCE91FB42A5C004BF184 /* MISoftLightBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCE51FB42A5C004BF184 /* MISoftLightBlendFilter.m */; };
-		9FFACCEC1FB42D4A004BF184 /* MILightenBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCEA1FB42D4A004BF184 /* MILightenBlendFilter.h */; };
+		9FFACCEC1FB42D4A004BF184 /* MILightenBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCEA1FB42D4A004BF184 /* MILightenBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCED1FB42D4A004BF184 /* MILightenBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCEB1FB42D4A004BF184 /* MILightenBlendFilter.m */; };
 		9FFACCEE1FB42D4A004BF184 /* MILightenBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCEB1FB42D4A004BF184 /* MILightenBlendFilter.m */; };
 		9FFACCEF1FB42D4A004BF184 /* MILightenBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCEB1FB42D4A004BF184 /* MILightenBlendFilter.m */; };
-		9FFACCF21FB42E57004BF184 /* MIAddBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCF01FB42E57004BF184 /* MIAddBlendFilter.h */; };
+		9FFACCF21FB42E57004BF184 /* MIAddBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCF01FB42E57004BF184 /* MIAddBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCF31FB42E57004BF184 /* MIAddBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCF11FB42E57004BF184 /* MIAddBlendFilter.m */; };
 		9FFACCF41FB42E57004BF184 /* MIAddBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCF11FB42E57004BF184 /* MIAddBlendFilter.m */; };
 		9FFACCF51FB42E57004BF184 /* MIAddBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCF11FB42E57004BF184 /* MIAddBlendFilter.m */; };
-		9FFACCF81FB42F82004BF184 /* MISubtractBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCF61FB42F82004BF184 /* MISubtractBlendFilter.h */; };
+		9FFACCF81FB42F82004BF184 /* MISubtractBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCF61FB42F82004BF184 /* MISubtractBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCF91FB42F82004BF184 /* MISubtractBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCF71FB42F82004BF184 /* MISubtractBlendFilter.m */; };
 		9FFACCFA1FB42F82004BF184 /* MISubtractBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCF71FB42F82004BF184 /* MISubtractBlendFilter.m */; };
 		9FFACCFB1FB42F82004BF184 /* MISubtractBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCF71FB42F82004BF184 /* MISubtractBlendFilter.m */; };
-		9FFACCFE1FB43022004BF184 /* MIDivideBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCFC1FB43022004BF184 /* MIDivideBlendFilter.h */; };
+		9FFACCFE1FB43022004BF184 /* MIDivideBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACCFC1FB43022004BF184 /* MIDivideBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACCFF1FB43022004BF184 /* MIDivideBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCFD1FB43022004BF184 /* MIDivideBlendFilter.m */; };
 		9FFACD001FB43022004BF184 /* MIDivideBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCFD1FB43022004BF184 /* MIDivideBlendFilter.m */; };
 		9FFACD011FB43022004BF184 /* MIDivideBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACCFD1FB43022004BF184 /* MIDivideBlendFilter.m */; };
-		9FFACD041FB431BF004BF184 /* MIMultiplyBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD021FB431BF004BF184 /* MIMultiplyBlendFilter.h */; };
+		9FFACD041FB431BF004BF184 /* MIMultiplyBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD021FB431BF004BF184 /* MIMultiplyBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD051FB431BF004BF184 /* MIMultiplyBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD031FB431BF004BF184 /* MIMultiplyBlendFilter.m */; };
 		9FFACD061FB431BF004BF184 /* MIMultiplyBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD031FB431BF004BF184 /* MIMultiplyBlendFilter.m */; };
 		9FFACD071FB431BF004BF184 /* MIMultiplyBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD031FB431BF004BF184 /* MIMultiplyBlendFilter.m */; };
-		9FFACD0A1FB43317004BF184 /* MIOverlayBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD081FB43317004BF184 /* MIOverlayBlendFilter.h */; };
+		9FFACD0A1FB43317004BF184 /* MIOverlayBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD081FB43317004BF184 /* MIOverlayBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD0B1FB43317004BF184 /* MIOverlayBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD091FB43317004BF184 /* MIOverlayBlendFilter.m */; };
 		9FFACD0C1FB43317004BF184 /* MIOverlayBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD091FB43317004BF184 /* MIOverlayBlendFilter.m */; };
 		9FFACD0D1FB43317004BF184 /* MIOverlayBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD091FB43317004BF184 /* MIOverlayBlendFilter.m */; };
-		9FFACD101FB4344D004BF184 /* MIScreenBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD0E1FB4344D004BF184 /* MIScreenBlendFilter.h */; };
+		9FFACD101FB4344D004BF184 /* MIScreenBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD0E1FB4344D004BF184 /* MIScreenBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD111FB4344D004BF184 /* MIScreenBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD0F1FB4344D004BF184 /* MIScreenBlendFilter.m */; };
 		9FFACD121FB4344D004BF184 /* MIScreenBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD0F1FB4344D004BF184 /* MIScreenBlendFilter.m */; };
 		9FFACD131FB4344D004BF184 /* MIScreenBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD0F1FB4344D004BF184 /* MIScreenBlendFilter.m */; };
-		9FFACD171FB43A50004BF184 /* MIChromaKeyBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD151FB43A50004BF184 /* MIChromaKeyBlendFilter.h */; };
+		9FFACD171FB43A50004BF184 /* MIChromaKeyBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD151FB43A50004BF184 /* MIChromaKeyBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD181FB43A50004BF184 /* MIChromaKeyBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD161FB43A50004BF184 /* MIChromaKeyBlendFilter.m */; };
 		9FFACD191FB43A50004BF184 /* MIChromaKeyBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD161FB43A50004BF184 /* MIChromaKeyBlendFilter.m */; };
 		9FFACD1A1FB43A50004BF184 /* MIChromaKeyBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD161FB43A50004BF184 /* MIChromaKeyBlendFilter.m */; };
-		9FFACD1D1FB43EAD004BF184 /* MIAlphaBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD1B1FB43EAD004BF184 /* MIAlphaBlendFilter.h */; };
+		9FFACD1D1FB43EAD004BF184 /* MIAlphaBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD1B1FB43EAD004BF184 /* MIAlphaBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD1E1FB43EAD004BF184 /* MIAlphaBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD1C1FB43EAD004BF184 /* MIAlphaBlendFilter.m */; };
 		9FFACD1F1FB43EAD004BF184 /* MIAlphaBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD1C1FB43EAD004BF184 /* MIAlphaBlendFilter.m */; };
 		9FFACD201FB43EAD004BF184 /* MIAlphaBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD1C1FB43EAD004BF184 /* MIAlphaBlendFilter.m */; };
-		9FFACD231FB4404A004BF184 /* MINormalBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD211FB4404A004BF184 /* MINormalBlendFilter.h */; };
+		9FFACD231FB4404A004BF184 /* MINormalBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD211FB4404A004BF184 /* MINormalBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD241FB4404A004BF184 /* MINormalBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD221FB4404A004BF184 /* MINormalBlendFilter.m */; };
 		9FFACD251FB4404A004BF184 /* MINormalBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD221FB4404A004BF184 /* MINormalBlendFilter.m */; };
 		9FFACD261FB4404A004BF184 /* MINormalBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD221FB4404A004BF184 /* MINormalBlendFilter.m */; };
-		9FFACD291FB44138004BF184 /* MIColorBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD271FB44138004BF184 /* MIColorBlendFilter.h */; };
+		9FFACD291FB44138004BF184 /* MIColorBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD271FB44138004BF184 /* MIColorBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD2A1FB44138004BF184 /* MIColorBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD281FB44138004BF184 /* MIColorBlendFilter.m */; };
 		9FFACD2B1FB44138004BF184 /* MIColorBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD281FB44138004BF184 /* MIColorBlendFilter.m */; };
 		9FFACD2C1FB44138004BF184 /* MIColorBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD281FB44138004BF184 /* MIColorBlendFilter.m */; };
-		9FFACD2F1FB443DE004BF184 /* MIHueBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD2D1FB443DE004BF184 /* MIHueBlendFilter.h */; };
+		9FFACD2F1FB443DE004BF184 /* MIHueBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD2D1FB443DE004BF184 /* MIHueBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD301FB443DE004BF184 /* MIHueBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD2E1FB443DE004BF184 /* MIHueBlendFilter.m */; };
 		9FFACD311FB443DE004BF184 /* MIHueBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD2E1FB443DE004BF184 /* MIHueBlendFilter.m */; };
 		9FFACD321FB443DE004BF184 /* MIHueBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD2E1FB443DE004BF184 /* MIHueBlendFilter.m */; };
-		9FFACD351FB446BA004BF184 /* MISaturationBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD331FB446BA004BF184 /* MISaturationBlendFilter.h */; };
+		9FFACD351FB446BA004BF184 /* MISaturationBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD331FB446BA004BF184 /* MISaturationBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD361FB446BA004BF184 /* MISaturationBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD341FB446BA004BF184 /* MISaturationBlendFilter.m */; };
 		9FFACD371FB446BA004BF184 /* MISaturationBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD341FB446BA004BF184 /* MISaturationBlendFilter.m */; };
 		9FFACD381FB446BA004BF184 /* MISaturationBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD341FB446BA004BF184 /* MISaturationBlendFilter.m */; };
-		9FFACD3B1FB447F7004BF184 /* MILuminosityBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD391FB447F7004BF184 /* MILuminosityBlendFilter.h */; };
+		9FFACD3B1FB447F7004BF184 /* MILuminosityBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD391FB447F7004BF184 /* MILuminosityBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD3C1FB447F7004BF184 /* MILuminosityBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD3A1FB447F7004BF184 /* MILuminosityBlendFilter.m */; };
 		9FFACD3D1FB447F7004BF184 /* MILuminosityBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD3A1FB447F7004BF184 /* MILuminosityBlendFilter.m */; };
 		9FFACD3E1FB447F7004BF184 /* MILuminosityBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD3A1FB447F7004BF184 /* MILuminosityBlendFilter.m */; };
-		9FFACD411FB44C86004BF184 /* MILinearBurnBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD3F1FB44C86004BF184 /* MILinearBurnBlendFilter.h */; };
+		9FFACD411FB44C86004BF184 /* MILinearBurnBlendFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD3F1FB44C86004BF184 /* MILinearBurnBlendFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD421FB44C86004BF184 /* MILinearBurnBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD401FB44C86004BF184 /* MILinearBurnBlendFilter.m */; };
 		9FFACD431FB44C86004BF184 /* MILinearBurnBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD401FB44C86004BF184 /* MILinearBurnBlendFilter.m */; };
 		9FFACD441FB44C86004BF184 /* MILinearBurnBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD401FB44C86004BF184 /* MILinearBurnBlendFilter.m */; };
-		9FFACD471FB44D78004BF184 /* MIMaskFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD451FB44D78004BF184 /* MIMaskFilter.h */; };
+		9FFACD471FB44D78004BF184 /* MIMaskFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD451FB44D78004BF184 /* MIMaskFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD481FB44D78004BF184 /* MIMaskFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD461FB44D78004BF184 /* MIMaskFilter.m */; };
 		9FFACD491FB44D78004BF184 /* MIMaskFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD461FB44D78004BF184 /* MIMaskFilter.m */; };
 		9FFACD4A1FB44D78004BF184 /* MIMaskFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD461FB44D78004BF184 /* MIMaskFilter.m */; };
-		9FFACD4E1FB453F6004BF184 /* MIPerlinNoiseFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD4C1FB453F6004BF184 /* MIPerlinNoiseFilter.h */; };
+		9FFACD4E1FB453F6004BF184 /* MIPerlinNoiseFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD4C1FB453F6004BF184 /* MIPerlinNoiseFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD4F1FB453F6004BF184 /* MIPerlinNoiseFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD4D1FB453F6004BF184 /* MIPerlinNoiseFilter.m */; };
 		9FFACD501FB453F6004BF184 /* MIPerlinNoiseFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD4D1FB453F6004BF184 /* MIPerlinNoiseFilter.m */; };
 		9FFACD511FB453F6004BF184 /* MIPerlinNoiseFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD4D1FB453F6004BF184 /* MIPerlinNoiseFilter.m */; };
 		9FFACD531FB46698004BF184 /* MIPerlinNoiseFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD521FB46698004BF184 /* MIPerlinNoiseFilter.metal */; };
 		9FFACD541FB46698004BF184 /* MIPerlinNoiseFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD521FB46698004BF184 /* MIPerlinNoiseFilter.metal */; };
 		9FFACD551FB46698004BF184 /* MIPerlinNoiseFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD521FB46698004BF184 /* MIPerlinNoiseFilter.metal */; };
-		9FFACD5E1FB47391004BF184 /* MIPolarPixellateFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD5C1FB47391004BF184 /* MIPolarPixellateFilter.h */; };
+		9FFACD5E1FB47391004BF184 /* MIPolarPixellateFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD5C1FB47391004BF184 /* MIPolarPixellateFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD5F1FB47391004BF184 /* MIPolarPixellateFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD5D1FB47391004BF184 /* MIPolarPixellateFilter.m */; };
 		9FFACD601FB47391004BF184 /* MIPolarPixellateFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD5D1FB47391004BF184 /* MIPolarPixellateFilter.m */; };
 		9FFACD611FB47391004BF184 /* MIPolarPixellateFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD5D1FB47391004BF184 /* MIPolarPixellateFilter.m */; };
 		9FFACD631FB4741C004BF184 /* MIPolarPixellateFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD621FB4741C004BF184 /* MIPolarPixellateFilter.metal */; };
 		9FFACD641FB4741C004BF184 /* MIPolarPixellateFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD621FB4741C004BF184 /* MIPolarPixellateFilter.metal */; };
 		9FFACD651FB4741C004BF184 /* MIPolarPixellateFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD621FB4741C004BF184 /* MIPolarPixellateFilter.metal */; };
-		9FFACD681FB54088004BF184 /* MICrosshatchFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD661FB54088004BF184 /* MICrosshatchFilter.h */; };
+		9FFACD681FB54088004BF184 /* MICrosshatchFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD661FB54088004BF184 /* MICrosshatchFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD691FB54088004BF184 /* MICrosshatchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD671FB54088004BF184 /* MICrosshatchFilter.m */; };
 		9FFACD6A1FB54088004BF184 /* MICrosshatchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD671FB54088004BF184 /* MICrosshatchFilter.m */; };
 		9FFACD6B1FB54088004BF184 /* MICrosshatchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD671FB54088004BF184 /* MICrosshatchFilter.m */; };
 		9FFACD6D1FB540A6004BF184 /* MICrosshatchFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD6C1FB540A6004BF184 /* MICrosshatchFilter.metal */; };
 		9FFACD6E1FB540A6004BF184 /* MICrosshatchFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD6C1FB540A6004BF184 /* MICrosshatchFilter.metal */; };
 		9FFACD6F1FB540A6004BF184 /* MICrosshatchFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD6C1FB540A6004BF184 /* MICrosshatchFilter.metal */; };
-		9FFACD721FB54212004BF184 /* MetalImageFilterExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD701FB54212004BF184 /* MetalImageFilterExtension.h */; };
+		9FFACD721FB54212004BF184 /* MetalImageFilterExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD701FB54212004BF184 /* MetalImageFilterExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD731FB54212004BF184 /* MetalImageFilterExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD711FB54212004BF184 /* MetalImageFilterExtension.m */; };
 		9FFACD741FB54212004BF184 /* MetalImageFilterExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD711FB54212004BF184 /* MetalImageFilterExtension.m */; };
 		9FFACD751FB54212004BF184 /* MetalImageFilterExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD711FB54212004BF184 /* MetalImageFilterExtension.m */; };
-		9FFACD781FB554FA004BF184 /* MICGAColorspaceFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD761FB554FA004BF184 /* MICGAColorspaceFilter.h */; };
+		9FFACD781FB554FA004BF184 /* MICGAColorspaceFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD761FB554FA004BF184 /* MICGAColorspaceFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD791FB554FA004BF184 /* MICGAColorspaceFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD771FB554FA004BF184 /* MICGAColorspaceFilter.m */; };
 		9FFACD7A1FB554FA004BF184 /* MICGAColorspaceFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD771FB554FA004BF184 /* MICGAColorspaceFilter.m */; };
 		9FFACD7B1FB554FA004BF184 /* MICGAColorspaceFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD771FB554FA004BF184 /* MICGAColorspaceFilter.m */; };
 		9FFACD7D1FB555AA004BF184 /* MICGAColorspaceFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD7C1FB555AA004BF184 /* MICGAColorspaceFilter.metal */; };
 		9FFACD7E1FB555AA004BF184 /* MICGAColorspaceFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD7C1FB555AA004BF184 /* MICGAColorspaceFilter.metal */; };
 		9FFACD7F1FB555AA004BF184 /* MICGAColorspaceFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD7C1FB555AA004BF184 /* MICGAColorspaceFilter.metal */; };
-		9FFACD821FB581CC004BF184 /* MIPosterizeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD801FB581CC004BF184 /* MIPosterizeFilter.h */; };
+		9FFACD821FB581CC004BF184 /* MIPosterizeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD801FB581CC004BF184 /* MIPosterizeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD831FB581CC004BF184 /* MIPosterizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD811FB581CC004BF184 /* MIPosterizeFilter.m */; };
 		9FFACD841FB581CC004BF184 /* MIPosterizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD811FB581CC004BF184 /* MIPosterizeFilter.m */; };
 		9FFACD851FB581CC004BF184 /* MIPosterizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD811FB581CC004BF184 /* MIPosterizeFilter.m */; };
 		9FFACD871FB581D9004BF184 /* MIPosterizeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD861FB581D9004BF184 /* MIPosterizeFilter.metal */; };
 		9FFACD881FB581D9004BF184 /* MIPosterizeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD861FB581D9004BF184 /* MIPosterizeFilter.metal */; };
 		9FFACD891FB581D9004BF184 /* MIPosterizeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD861FB581D9004BF184 /* MIPosterizeFilter.metal */; };
-		9FFACD8C1FB58896004BF184 /* MISwirlFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD8A1FB58896004BF184 /* MISwirlFilter.h */; };
+		9FFACD8C1FB58896004BF184 /* MISwirlFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD8A1FB58896004BF184 /* MISwirlFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD8D1FB58896004BF184 /* MISwirlFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD8B1FB58896004BF184 /* MISwirlFilter.m */; };
 		9FFACD8E1FB58896004BF184 /* MISwirlFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD8B1FB58896004BF184 /* MISwirlFilter.m */; };
 		9FFACD8F1FB58896004BF184 /* MISwirlFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD8B1FB58896004BF184 /* MISwirlFilter.m */; };
 		9FFACD911FB588A4004BF184 /* MISwirlFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD901FB588A4004BF184 /* MISwirlFilter.metal */; };
 		9FFACD921FB588A4004BF184 /* MISwirlFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD901FB588A4004BF184 /* MISwirlFilter.metal */; };
 		9FFACD931FB588A4004BF184 /* MISwirlFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD901FB588A4004BF184 /* MISwirlFilter.metal */; };
-		9FFACD961FB58CED004BF184 /* MIBulgeDistortionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD941FB58CED004BF184 /* MIBulgeDistortionFilter.h */; };
+		9FFACD961FB58CED004BF184 /* MIBulgeDistortionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD941FB58CED004BF184 /* MIBulgeDistortionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACD971FB58CED004BF184 /* MIBulgeDistortionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD951FB58CED004BF184 /* MIBulgeDistortionFilter.m */; };
 		9FFACD981FB58CED004BF184 /* MIBulgeDistortionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD951FB58CED004BF184 /* MIBulgeDistortionFilter.m */; };
 		9FFACD991FB58CED004BF184 /* MIBulgeDistortionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD951FB58CED004BF184 /* MIBulgeDistortionFilter.m */; };
 		9FFACD9B1FB58CFC004BF184 /* MetalImageDistortionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD9A1FB58CFC004BF184 /* MetalImageDistortionFilter.metal */; };
 		9FFACD9C1FB58CFC004BF184 /* MetalImageDistortionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD9A1FB58CFC004BF184 /* MetalImageDistortionFilter.metal */; };
 		9FFACD9D1FB58CFC004BF184 /* MetalImageDistortionFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD9A1FB58CFC004BF184 /* MetalImageDistortionFilter.metal */; };
-		9FFACDA01FB599D6004BF184 /* MIPinchDistortionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD9E1FB599D6004BF184 /* MIPinchDistortionFilter.h */; };
+		9FFACDA01FB599D6004BF184 /* MIPinchDistortionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACD9E1FB599D6004BF184 /* MIPinchDistortionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACDA11FB599D6004BF184 /* MIPinchDistortionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD9F1FB599D6004BF184 /* MIPinchDistortionFilter.m */; };
 		9FFACDA21FB599D6004BF184 /* MIPinchDistortionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD9F1FB599D6004BF184 /* MIPinchDistortionFilter.m */; };
 		9FFACDA31FB599D6004BF184 /* MIPinchDistortionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACD9F1FB599D6004BF184 /* MIPinchDistortionFilter.m */; };
-		9FFACDAA1FB5AAFA004BF184 /* MIStretchDistortionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACDA81FB5AAFA004BF184 /* MIStretchDistortionFilter.h */; };
+		9FFACDAA1FB5AAFA004BF184 /* MIStretchDistortionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACDA81FB5AAFA004BF184 /* MIStretchDistortionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACDAB1FB5AAFA004BF184 /* MIStretchDistortionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDA91FB5AAFA004BF184 /* MIStretchDistortionFilter.m */; };
 		9FFACDAC1FB5AAFA004BF184 /* MIStretchDistortionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDA91FB5AAFA004BF184 /* MIStretchDistortionFilter.m */; };
 		9FFACDAD1FB5AAFA004BF184 /* MIStretchDistortionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDA91FB5AAFA004BF184 /* MIStretchDistortionFilter.m */; };
-		9FFACDB01FB5C2D2004BF184 /* MISphereRefractionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACDAE1FB5C2D2004BF184 /* MISphereRefractionFilter.h */; };
+		9FFACDB01FB5C2D2004BF184 /* MISphereRefractionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACDAE1FB5C2D2004BF184 /* MISphereRefractionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACDB11FB5C2D2004BF184 /* MISphereRefractionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDAF1FB5C2D2004BF184 /* MISphereRefractionFilter.m */; };
 		9FFACDB21FB5C2D2004BF184 /* MISphereRefractionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDAF1FB5C2D2004BF184 /* MISphereRefractionFilter.m */; };
 		9FFACDB31FB5C2D2004BF184 /* MISphereRefractionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDAF1FB5C2D2004BF184 /* MISphereRefractionFilter.m */; };
 		9FFACDB51FB5C386004BF184 /* MetalImageSphereFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDB41FB5C386004BF184 /* MetalImageSphereFilter.metal */; };
 		9FFACDB61FB5C386004BF184 /* MetalImageSphereFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDB41FB5C386004BF184 /* MetalImageSphereFilter.metal */; };
 		9FFACDB71FB5C386004BF184 /* MetalImageSphereFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDB41FB5C386004BF184 /* MetalImageSphereFilter.metal */; };
-		9FFACDC41FBAD1B8004BF184 /* MITransformFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACDC21FBAD1B8004BF184 /* MITransformFilter.h */; };
+		9FFACDC41FBAD1B8004BF184 /* MITransformFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFACDC21FBAD1B8004BF184 /* MITransformFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FFACDC51FBAD1B8004BF184 /* MITransformFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDC31FBAD1B8004BF184 /* MITransformFilter.m */; };
 		9FFACDC61FBAD1B8004BF184 /* MITransformFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDC31FBAD1B8004BF184 /* MITransformFilter.m */; };
 		9FFACDC71FBAD1B8004BF184 /* MITransformFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDC31FBAD1B8004BF184 /* MITransformFilter.m */; };
@@ -627,7 +628,6 @@
 		EB50A52E1F7E3DD9009B4C45 /* MIExposureFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = EB50A5211F7E3CFA009B4C45 /* MIExposureFilter.metal */; };
 		EB50A52F1F7E5946009B4C45 /* MISaturationFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = EB50A5271F7E3D83009B4C45 /* MISaturationFilter.metal */; };
 		EB50A5301F7E5947009B4C45 /* MISaturationFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = EB50A5271F7E3D83009B4C45 /* MISaturationFilter.metal */; };
-		EB54C9161ECC710200FB7DC3 /* MetalImage.h in Headers */ = {isa = PBXBuildFile; fileRef = EB54C9141ECC710200FB7DC3 /* MetalImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB54C91A1ECC711B00FB7DC3 /* MetalDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = EB57B16E1E86126F00832619 /* MetalDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB54C91B1ECC711B00FB7DC3 /* MetalDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = EB57B16F1E86126F00832619 /* MetalDevice.m */; };
 		EB54C91D1ECC711B00FB7DC3 /* MetalImageColorConversion.h in Headers */ = {isa = PBXBuildFile; fileRef = EB57B1711E86126F00832619 /* MetalImageColorConversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -827,6 +827,7 @@
 		5A60BDB31FB88A3E00781C41 /* lookup_miss_etikate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_miss_etikate.png; sourceTree = "<group>"; };
 		5A60BDB41FB88A3E00781C41 /* lookup_soft_elegance_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_1.png; sourceTree = "<group>"; };
 		5A60BDB51FB88A3E00781C41 /* lookup_soft_elegance_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_soft_elegance_2.png; sourceTree = "<group>"; };
+		5A619049232BC21C00FD73E5 /* MetalImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalImage.h; sourceTree = "<group>"; };
 		5A7077EB1F8CE4D10017A39C /* CommonShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CommonShader.metal; sourceTree = "<group>"; };
 		5A7077EC1F8CE4D10017A39C /* CommonStruct.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CommonStruct.metal; sourceTree = "<group>"; };
 		5AE713091FB9B9F90067E7A7 /* MIMosaicFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIMosaicFilter.h; sourceTree = "<group>"; };
@@ -1059,7 +1060,6 @@
 		EB50A5271F7E3D83009B4C45 /* MISaturationFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MISaturationFilter.metal; path = MetalImage/MetalImage/Color/MISaturationFilter.metal; sourceTree = SOURCE_ROOT; };
 		EB50A5291F7E3DCD009B4C45 /* MIColorMatrixFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MIColorMatrixFilter.metal; path = MetalImage/MetalImage/Color/MIColorMatrixFilter.metal; sourceTree = SOURCE_ROOT; };
 		EB54C9121ECC710100FB7DC3 /* MetalImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetalImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB54C9141ECC710200FB7DC3 /* MetalImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetalImage.h; sourceTree = "<group>"; };
 		EB54C9151ECC710200FB7DC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB54C95F1ECC756D00FB7DC3 /* libMetalImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMetalImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB54C96A1ECC77B900FB7DC3 /* MetalImageShader.metallib */ = {isa = PBXFileReference; explicitFileType = "archive.metal-library"; includeInIndex = 0; path = MetalImageShader.metallib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1398,7 +1398,7 @@
 			isa = PBXGroup;
 			children = (
 				5A60BDB01FB88A3E00781C41 /* Resources */,
-				EB54C9141ECC710200FB7DC3 /* MetalImage.h */,
+				5A619049232BC21C00FD73E5 /* MetalImage.h */,
 				EB54C9151ECC710200FB7DC3 /* Info.plist */,
 			);
 			path = MetalImage;
@@ -1649,6 +1649,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB54C9341ECC711B00FB7DC3 /* MetalImageTexture.h in Headers */,
+				EB54C9481ECC712700FB7DC3 /* MIColorMatrixFilter.h in Headers */,
+				EB54C93D1ECC711B00FB7DC3 /* UIImage+Texture.h in Headers */,
+				EB54C94A1ECC712700FB7DC3 /* MIContrastFilter.h in Headers */,
+				EB54C92E1ECC711B00FB7DC3 /* MetalImageKernel.h in Headers */,
 				9FFACD101FB4344D004BF184 /* MIScreenBlendFilter.h in Headers */,
 				9FFACCD41FB3FBA3004BF184 /* MIDissolveBlendFilter.h in Headers */,
 				9FFACC711FB31D6F004BF184 /* MIHighlightShadowFilter.h in Headers */,
@@ -1656,8 +1660,6 @@
 				9FFACD471FB44D78004BF184 /* MIMaskFilter.h in Headers */,
 				9FFACD351FB446BA004BF184 /* MISaturationBlendFilter.h in Headers */,
 				5AE713AF1FC2FD2D0067E7A7 /* MINonMaximumSuppressionFilter.h in Headers */,
-				EB54C9481ECC712700FB7DC3 /* MIColorMatrixFilter.h in Headers */,
-				EB54C93D1ECC711B00FB7DC3 /* UIImage+Texture.h in Headers */,
 				9FFACDC41FBAD1B8004BF184 /* MITransformFilter.h in Headers */,
 				5AE713351FBD536B0067E7A7 /* MISharpenFilter.h in Headers */,
 				5AE7131F1FB9D4000067E7A7 /* MIPolkaDotFilter.h in Headers */,
@@ -1665,7 +1667,6 @@
 				5AE713951FC2F76F0067E7A7 /* MIPrewittEdgeDetectionFilter.h in Headers */,
 				9FFACD8C1FB58896004BF184 /* MISwirlFilter.h in Headers */,
 				5AE713CF1FC4380A0067E7A7 /* MetalImageRenderResource.h in Headers */,
-				EB54C94A1ECC712700FB7DC3 /* MIContrastFilter.h in Headers */,
 				5A60BD8E1FB80FD100781C41 /* MIVignetteFilter.h in Headers */,
 				5AF438021F9CCB120081D4B8 /* MIHSBFilter.h in Headers */,
 				5AF4380C1F9CE0FE0081D4B8 /* MIHueFilter.h in Headers */,
@@ -1676,29 +1677,22 @@
 				5AE713D51FC44ACC0067E7A7 /* MIRGBDilationFilter.h in Headers */,
 				9FFACCF21FB42E57004BF184 /* MIAddBlendFilter.h in Headers */,
 				5AF438481FA30D030081D4B8 /* MIGrayscaleFilter.h in Headers */,
-				EB54C92E1ECC711B00FB7DC3 /* MetalImageKernel.h in Headers */,
 				9FFACCC21FB3F798004BF184 /* MIColorDodgeBlendFilter.h in Headers */,
-				EB54C9321ECC711B00FB7DC3 /* MetalImageOutput.h in Headers */,
 				5AE7135D1FBFF4EF0067E7A7 /* MILaplacianFilter.h in Headers */,
-				EB54C93B1ECC711B00FB7DC3 /* MetalImageView.h in Headers */,
-				EB54C94C1ECC712700FB7DC3 /* MIExposureFilter.h in Headers */,
 				5AE713A91FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.h in Headers */,
-				EB54C9361ECC711B00FB7DC3 /* MetalImageTextureCache.h in Headers */,
-				EB54C9201ECC711B00FB7DC3 /* MetalImageContext.h in Headers */,
 				9FFACCBC1FB3F6C7004BF184 /* MIColorBurnBlendFilter.h in Headers */,
 				9FFACD5E1FB47391004BF184 /* MIPolarPixellateFilter.h in Headers */,
 				9FFACDA01FB599D6004BF184 /* MIPinchDistortionFilter.h in Headers */,
 				5A22D8D41FD6309A006A1FC2 /* MILocalBinaryPatternFilter.h in Headers */,
 				9FFACCDA1FB40222004BF184 /* MIExclusionBlendFilter.h in Headers */,
+				5A61904B232BC21C00FD73E5 /* MetalImage.h in Headers */,
 				5A22D8F81FD6954A006A1FC2 /* MIHistogramFilter.h in Headers */,
 				5AF4385C1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.h in Headers */,
 				9FFACD291FB44138004BF184 /* MIColorBlendFilter.h in Headers */,
 				9FFACD0A1FB43317004BF184 /* MIOverlayBlendFilter.h in Headers */,
-				EB54C91D1ECC711B00FB7DC3 /* MetalImageColorConversion.h in Headers */,
 				9FFACD4E1FB453F6004BF184 /* MIPerlinNoiseFilter.h in Headers */,
 				5AE7138B1FC2F5E00067E7A7 /* MIWeakPixelInclusionFilter.h in Headers */,
 				5A22D8DE1FD63CDE006A1FC2 /* MIColorLocalBinaryPatternFilter.h in Headers */,
-				EB54C9301ECC711B00FB7DC3 /* MetalImageTwoInputKernel.h in Headers */,
 				9FFACCE61FB42A5C004BF184 /* MISoftLightBlendFilter.h in Headers */,
 				5AE713151FB9CDC80067E7A7 /* MIPixellateFilter.h in Headers */,
 				5AF438521FA311D00081D4B8 /* MILuminanceThresholdFilter.h in Headers */,
@@ -1709,10 +1703,7 @@
 				5AE713531FBFEA950067E7A7 /* MI3x3ConvolutionFilter.h in Headers */,
 				9FFACD411FB44C86004BF184 /* MILinearBurnBlendFilter.h in Headers */,
 				9FFACCFE1FB43022004BF184 /* MIDivideBlendFilter.h in Headers */,
-				EB54C9431ECC712100FB7DC3 /* MetalMatrixMult.h in Headers */,
-				EB54C91A1ECC711B00FB7DC3 /* MetalDevice.h in Headers */,
 				5AE714071FC45B730067E7A7 /* MIClosingFilter.h in Headers */,
-				EB54C9161ECC710200FB7DC3 /* MetalImage.h in Headers */,
 				5AE713811FC2D51C0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.h in Headers */,
 				9FFACCA31FB3E681004BF184 /* MILuminanceRangeFilter.h in Headers */,
 				5AF438161F9CEC840081D4B8 /* MIMonochromeFilter.h in Headers */,
@@ -1726,15 +1717,12 @@
 				9FFACD1D1FB43EAD004BF184 /* MIAlphaBlendFilter.h in Headers */,
 				9FFACCF81FB42F82004BF184 /* MISubtractBlendFilter.h in Headers */,
 				9FFACCCE1FB3FA80004BF184 /* MIDifferenceBlendFilter.h in Headers */,
-				EB54C9241ECC711B00FB7DC3 /* MetalImageFilter.h in Headers */,
 				5AF4382A1F9E13FF0081D4B8 /* MIHazeFilter.h in Headers */,
 				9FFACD721FB54212004BF184 /* MetalImageFilterExtension.h in Headers */,
 				9FFACCEC1FB42D4A004BF184 /* MILightenBlendFilter.h in Headers */,
-				EB54C9391ECC711B00FB7DC3 /* MetalImageVideoCamera.h in Headers */,
 				5AE713251FB9D42F0067E7A7 /* MIHalftoneFilter.h in Headers */,
 				5AE714131FC465130067E7A7 /* MIColorPackingFilter.h in Headers */,
 				9FFACC7B1FB324E7004BF184 /* MILookupFilter.h in Headers */,
-				EB54C9381ECC711B00FB7DC3 /* MetalImageTypes.h in Headers */,
 				9FFACD3B1FB447F7004BF184 /* MILuminosityBlendFilter.h in Headers */,
 				5AF4386E1FA614D00081D4B8 /* MetalImageTwoPassFilter.h in Headers */,
 				5A5EF33C1FAB45B600C311D4 /* MITwoPassTextureSamplingFilter.h in Headers */,
@@ -1743,8 +1731,6 @@
 				5AE713491FBFE4B30067E7A7 /* MIMedianFilter.h in Headers */,
 				5AE713711FC2C0670067E7A7 /* MIThresholdEdgeDetectionFilter.h in Headers */,
 				5AE713671FC2A9FF0067E7A7 /* MISobelEdgeDetectionFilter.h in Headers */,
-				EB54C92D1ECC711B00FB7DC3 /* MetalImageInput.h in Headers */,
-				EB54C94E1ECC712700FB7DC3 /* MIGammaFilter.h in Headers */,
 				9FCA3B7B1FB2ED4400220274 /* MIHistogramGenerator.h in Headers */,
 				5A60BD841FB80CE500781C41 /* MIKuwaharaRadius3Filter.h in Headers */,
 				5AE7132B1FB9DB3F0067E7A7 /* MICropFilter.h in Headers */,
@@ -1752,20 +1738,15 @@
 				5A5EF3421FAB499A00C311D4 /* MIGaussianBlurFilter.h in Headers */,
 				9FFACCC81FB3F8CE004BF184 /* MIDarkenBlendFilter.h in Headers */,
 				9FFACCAE1FB3EBE1004BF184 /* MISourceOverBlendFilter.h in Headers */,
-				EB54C92C1ECC711B00FB7DC3 /* MetalImageGlobal.h in Headers */,
 				5A60BD981FB8167900781C41 /* MIJFAVoronoiFilter.h in Headers */,
-				EB54C9281ECC711B00FB7DC3 /* MetalImageFilterGroup.h in Headers */,
 				5AE7139F1FC2F8B00067E7A7 /* MIXYDerivativeFilter.h in Headers */,
-				EB54C9261ECC711B00FB7DC3 /* MetalImageTwoInputFilter.h in Headers */,
 				5AE714011FC459DD0067E7A7 /* MIRGBOpeningFilter.h in Headers */,
-				EB54C9411ECC712100FB7DC3 /* MetalMatrixBuffers.h in Headers */,
 				5A5EF3321FAB440400C311D4 /* MISolarizeFilter.h in Headers */,
 				9FFACD2F1FB443DE004BF184 /* MIHueBlendFilter.h in Headers */,
 				5A60BDAC1FB82AED00781C41 /* MetalImagePicture.h in Headers */,
 				9FFACD171FB43A50004BF184 /* MIChromaKeyBlendFilter.h in Headers */,
 				9FFACD961FB58CED004BF184 /* MIBulgeDistortionFilter.h in Headers */,
 				9FFACC991FB3E01F004BF184 /* MIWhiteBalanceFilter.h in Headers */,
-				EB54C9501ECC712700FB7DC3 /* MILevelsFilter.h in Headers */,
 				5AE713C51FC4164E0067E7A7 /* MIDilationFilter.h in Headers */,
 				9FFACC8F1FB32CA4004BF184 /* MIChromaKeyFilter.h in Headers */,
 				9FFACC851FB32B1B004BF184 /* MIOpacityFilter.h in Headers */,
@@ -1773,14 +1754,33 @@
 				5AE713B91FC304180067E7A7 /* MetalImageBuffer.h in Headers */,
 				9FFACD821FB581CC004BF184 /* MIPosterizeFilter.h in Headers */,
 				5A1C66AB1F93A1D300B1F0C4 /* MIRGBFilter.h in Headers */,
-				EB54C9521ECC712700FB7DC3 /* MISaturationFilter.h in Headers */,
 				5AE713771FC2C70B0067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.h in Headers */,
-				EB54C93F1ECC712100FB7DC3 /* BlasMatrixMult.h in Headers */,
-				EB54C92A1ECC711B00FB7DC3 /* MetalImageFunction.h in Headers */,
-				EB54C9461ECC712700FB7DC3 /* MIBrightnessFilter.h in Headers */,
 				9FFACDAA1FB5AAFA004BF184 /* MIStretchDistortionFilter.h in Headers */,
 				5A60BDA21FB8266E00781C41 /* MIVoronoiConsumerFilter.h in Headers */,
 				5AF4383E1FA099740081D4B8 /* MIColorInvertFilter.h in Headers */,
+				EB54C9321ECC711B00FB7DC3 /* MetalImageOutput.h in Headers */,
+				EB54C93B1ECC711B00FB7DC3 /* MetalImageView.h in Headers */,
+				EB54C94C1ECC712700FB7DC3 /* MIExposureFilter.h in Headers */,
+				EB54C9361ECC711B00FB7DC3 /* MetalImageTextureCache.h in Headers */,
+				EB54C9201ECC711B00FB7DC3 /* MetalImageContext.h in Headers */,
+				EB54C91D1ECC711B00FB7DC3 /* MetalImageColorConversion.h in Headers */,
+				EB54C9301ECC711B00FB7DC3 /* MetalImageTwoInputKernel.h in Headers */,
+				EB54C9431ECC712100FB7DC3 /* MetalMatrixMult.h in Headers */,
+				EB54C91A1ECC711B00FB7DC3 /* MetalDevice.h in Headers */,
+				EB54C9241ECC711B00FB7DC3 /* MetalImageFilter.h in Headers */,
+				EB54C9391ECC711B00FB7DC3 /* MetalImageVideoCamera.h in Headers */,
+				EB54C9381ECC711B00FB7DC3 /* MetalImageTypes.h in Headers */,
+				EB54C92D1ECC711B00FB7DC3 /* MetalImageInput.h in Headers */,
+				EB54C94E1ECC712700FB7DC3 /* MIGammaFilter.h in Headers */,
+				EB54C92C1ECC711B00FB7DC3 /* MetalImageGlobal.h in Headers */,
+				EB54C9281ECC711B00FB7DC3 /* MetalImageFilterGroup.h in Headers */,
+				EB54C9261ECC711B00FB7DC3 /* MetalImageTwoInputFilter.h in Headers */,
+				EB54C9411ECC712100FB7DC3 /* MetalMatrixBuffers.h in Headers */,
+				EB54C9501ECC712700FB7DC3 /* MILevelsFilter.h in Headers */,
+				EB54C9521ECC712700FB7DC3 /* MISaturationFilter.h in Headers */,
+				EB54C93F1ECC712100FB7DC3 /* BlasMatrixMult.h in Headers */,
+				EB54C92A1ECC711B00FB7DC3 /* MetalImageFunction.h in Headers */,
+				EB54C9461ECC712700FB7DC3 /* MIBrightnessFilter.h in Headers */,
 				EB54C9221ECC711B00FB7DC3 /* MetalImageDebugView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2586,6 +2586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -2598,7 +2599,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.MetalImage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2611,6 +2612,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -2623,7 +2625,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.MetalImage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

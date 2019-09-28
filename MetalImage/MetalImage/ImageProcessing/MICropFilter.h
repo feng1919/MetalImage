@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 // Initialization and teardown
 - (id)initWithCropRegion:(CGRect)newCropRegion;
 
-- (void)setTextureCropCoordinates:(MTLFloat2[4] _Nonnull)coordinates;
+- (void)setTextureCropCoordinates:(MTLFloat2[_Nonnull 4])coordinates;
 
 @end
 

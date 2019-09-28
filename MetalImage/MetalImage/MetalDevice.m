@@ -40,7 +40,7 @@ static MetalDevice *_sharedMetalDevice = nil;
 }
 
 + (id<MTLLibrary>)MetalImageLibrary {
-    static NSString *MetalImageBundleName = @"com.tencent.MetalImage";
+    static NSString *MetalImageBundleName = @"com.fengshi.MetalImage";
     NSBundle *MetalImageBundle = [NSBundle bundleWithIdentifier:MetalImageBundleName];
     
     //iOS8.0上newDefaultLibrary返回为空的bug

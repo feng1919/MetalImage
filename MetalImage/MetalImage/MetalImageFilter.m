@@ -103,6 +103,7 @@
     _pipelineState = [device newRenderPipelineStateWithDescriptor:pQuadPipelineStateDescriptor error:&pError];
     if (pError) {
         NSLog(@">> ERROR: Failed acquiring pipeline state descriptor: %@", pError);
+        NSParameterAssert(NO);
     }
     
     return _pipelineState != nil;
