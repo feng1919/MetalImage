@@ -12,6 +12,7 @@
 #include <assert.h>
 
 typedef float MTLFloat;
+typedef int MTLInt;
 typedef unsigned int MTLUInt;
 typedef bool MTLBool;
 
@@ -63,13 +64,20 @@ struct MTLFloat4x4 {MTLFloat4 v1,v2,v3,v4;};
 typedef struct MTLFloat4x4 MTLFloat4x4;
 MTLFloat4x4 MTLFloat4x4Make(MTLFloat4 v1,MTLFloat4 v2,MTLFloat4 v3,MTLFloat4 v4);
 
+struct MTLInt2 {MTLInt x,y;};
+typedef struct MTLInt2 MTLInt2;
+MTLInt2 MTLInt2Make(MTLInt x, MTLInt y);
+MTLBool MTLInt2Equal(MTLInt2 m1, MTLInt2 m2);
+MTLBool MTLInt2IsZero(MTLInt2 m);
+void MTLInt2Swap(MTLInt2 *m);
+extern MTLInt2 MTLInt2Zero;// = {0,0};
+
 struct MTLUInt2 {MTLUInt x,y;};
 typedef struct MTLUInt2 MTLUInt2;
 MTLUInt2 MTLUInt2Make(MTLUInt x, MTLUInt y);
 MTLBool MTLUInt2Equal(MTLUInt2 m1, MTLUInt2 m2);
 MTLBool MTLUInt2IsZero(MTLUInt2 m);
 void MTLUInt2Swap(MTLUInt2 *m);
-
 extern MTLUInt2 MTLUInt2Zero;// = {0,0};
 
 #endif

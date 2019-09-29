@@ -61,6 +61,24 @@ MTLFloat4x4
 MTLFloat4x4Make(MTLFloat4 v1,MTLFloat4 v2,MTLFloat4 v3,MTLFloat4 v4)
 {MTLFloat4x4 m; m.v1=v1;m.v2=v2;m.v3=v3;m.v4=v4;return m;}
 
+MTLInt2
+MTLInt2Make(MTLInt x, MTLInt y)
+{MTLInt2 vector; vector.x = x; vector.y = y; return vector;}
+
+MTLBool
+MTLInt2Equal(MTLInt2 m1, MTLInt2 m2)
+{return m1.x == m2.x && m1.y == m2.y;}
+
+MTLBool
+MTLInt2IsZero(MTLInt2 m)
+{return m.x == 0 || m.y == 0;}
+
+void
+MTLInt2Swap(MTLInt2 *m)
+{MTLInt x1 = m->x; m->x = m->y; m->y = x1;}
+
+MTLInt2 MTLInt2Zero = {0, 0};
+
 MTLUInt2
 MTLUInt2Make(MTLUInt x, MTLUInt y)
 {MTLUInt2 vector; vector.x = x; vector.y = y; return vector;}
