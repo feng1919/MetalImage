@@ -49,7 +49,6 @@ fragment half4 fragment_common2(VertexIO2 inFrag[[ stage_in ]], texture2d<half> 
     return color;
 }
 
-
 fragment half4 fragment_common2_test(VertexIO2 inFrag[[ stage_in ]],
                                      texture2d<half> tex2D[[ texture(0) ]],
                                      texture2d<half> tex2D2[[ texture(1) ]])
@@ -76,7 +75,6 @@ kernel void kernel_default2(texture2d<float, access::read> inTexture  [[ texture
     float4 value2 = inTexture2.read(gid);
     outTexture.write(mix(value, value2, 0.5), gid);
 }
-
 
 vertex VertexIONearbyTexelSampling vertex_nearbyTexelSampling(constant float4         *pPosition[[ buffer(0) ]],
                                                               constant float2  *pTexCoords[[ buffer(1) ]],
@@ -109,4 +107,15 @@ vertex VertexIONearbyTexelSampling vertex_nearbyTexelSampling(constant float4   
     return outVertices;
 }
 
-
+vertex VertexIOWithSteps vertex_texelSampling(constant float4         *pPosition    [[ buffer(0) ]],
+                                              constant float2         *pTexCoords   [[ buffer(1) ]],
+                                              constant float2         &texelSteps   [[ buffer(2) ]],
+                                              uint                     vid          [[ vertex_id ]])
+{
+    VertexIOWithSteps outVertices;
+    outVertices.position =  pPosition[vid];
+    outVertices.textureCoordinate = pTexCoords[vid];
+    outVertices.texelSteps = float2(texelSteps.x, texelSteps.y);
+    
+    return outVertices;
+}

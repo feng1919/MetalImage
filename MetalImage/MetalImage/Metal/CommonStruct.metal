@@ -43,5 +43,12 @@ struct VertexIONearbyTexelSampling
     
     float2 bottomLeftTextureCoordinate;
     float2 bottomTextureCoordinate;
-    float2 bottomRightTextureCoordinate;;
+    float2 bottomRightTextureCoordinate;
+};
+
+struct VertexIOWithSteps
+{
+    float4 position [[position]];
+    float2 textureCoordinate [[user(texturecoord)]];
+    float2 texelSteps;
 };

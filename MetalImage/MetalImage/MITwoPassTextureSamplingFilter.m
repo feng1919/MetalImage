@@ -22,9 +22,9 @@
                            secondStageFragmentFunction:secondStageFragmentFunction]) {
         
         id<MTLDevice> device = [MetalDevice sharedMTLDevice];
-        verticalBuffer = [device newBufferWithLength:MetalImageDefaultRenderVetexCount*sizeof(MTLFloat2)
+        verticalBuffer = [device newBufferWithLength:sizeof(MTLFloat2)
                                              options:MTLResourceOptionCPUCacheModeDefault];
-        horizontalBuffer = [device newBufferWithLength:MetalImageDefaultRenderVetexCount*sizeof(MTLFloat2)
+        horizontalBuffer = [device newBufferWithLength:sizeof(MTLFloat2)
                                                options:MTLResourceOptionCPUCacheModeDefault];
         
         self.verticalTexelSpacing = 1.0;
@@ -67,7 +67,7 @@
             verticalContentBuffer[1] = _verticalTexelSpacing / (MTLFloat)filterFrameSize.y;
         }
         
-        MTLFloat *horizontalContentBuffer = (MTLFloat *)[verticalBuffer contents];
+        MTLFloat *horizontalContentBuffer = (MTLFloat *)[horizontalBuffer contents];
         horizontalContentBuffer[0] = _horizontalTexelSpacing / (MTLFloat)filterFrameSize.x;
         horizontalContentBuffer[1] = 0.0f;
     });

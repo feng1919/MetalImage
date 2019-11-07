@@ -51,6 +51,10 @@
 		5A2659B71F92441100CE1879 /* CommonShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A7077EB1F8CE4D10017A39C /* CommonShader.metal */; };
 		5A2659B81F92441200CE1879 /* CommonShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A7077EB1F8CE4D10017A39C /* CommonShader.metal */; };
 		5A2659B91F92441400CE1879 /* CommonShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A7077EB1F8CE4D10017A39C /* CommonShader.metal */; };
+		5A26B38323740D3B00B45CAF /* MIGaussianBlurFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A26B38223740D3B00B45CAF /* MIGaussianBlurFilter.metal */; };
+		5A26B38423740D3B00B45CAF /* MIGaussianBlurFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A26B38223740D3B00B45CAF /* MIGaussianBlurFilter.metal */; };
+		5A26B38523740D3B00B45CAF /* MIGaussianBlurFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A26B38223740D3B00B45CAF /* MIGaussianBlurFilter.metal */; };
+		5A26B38623740D3B00B45CAF /* MIGaussianBlurFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A26B38223740D3B00B45CAF /* MIGaussianBlurFilter.metal */; };
 		5A5EF3321FAB440400C311D4 /* MISolarizeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A5EF3301FAB440400C311D4 /* MISolarizeFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A5EF3331FAB440400C311D4 /* MISolarizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF3311FAB440400C311D4 /* MISolarizeFilter.m */; };
 		5A5EF3341FAB440400C311D4 /* MISolarizeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EF3311FAB440400C311D4 /* MISolarizeFilter.m */; };
@@ -792,6 +796,7 @@
 		5A22D8F01FD69549006A1FC2 /* MIHistogramFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MIHistogramFilter.metal; sourceTree = "<group>"; };
 		5A22D8F11FD6954A006A1FC2 /* MIHistogramFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHistogramFilter.m; sourceTree = "<group>"; };
 		5A22D8F21FD6954A006A1FC2 /* MIHistogramFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHistogramFilter.h; sourceTree = "<group>"; };
+		5A26B38223740D3B00B45CAF /* MIGaussianBlurFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MIGaussianBlurFilter.metal; sourceTree = "<group>"; };
 		5A5EF3301FAB440400C311D4 /* MISolarizeFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MISolarizeFilter.h; sourceTree = "<group>"; };
 		5A5EF3311FAB440400C311D4 /* MISolarizeFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MISolarizeFilter.m; sourceTree = "<group>"; };
 		5A5EF3361FAB443400C311D4 /* MISolarizeFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MISolarizeFilter.metal; sourceTree = "<group>"; };
@@ -1191,6 +1196,7 @@
 				5AE7132A1FB9DB3F0067E7A7 /* MICropFilter.m */,
 				5A5EF3401FAB499A00C311D4 /* MIGaussianBlurFilter.h */,
 				5A5EF3411FAB499A00C311D4 /* MIGaussianBlurFilter.m */,
+				5A26B38223740D3B00B45CAF /* MIGaussianBlurFilter.metal */,
 				5AE713331FBD536B0067E7A7 /* MISharpenFilter.h */,
 				5AE713341FBD536B0067E7A7 /* MISharpenFilter.m */,
 				5AE713391FBD53800067E7A7 /* MISharpenFilter.metal */,
@@ -2021,6 +2027,7 @@
 				9FFACD841FB581CC004BF184 /* MIPosterizeFilter.m in Sources */,
 				5A5EF3441FAB499A00C311D4 /* MIGaussianBlurFilter.m in Sources */,
 				5AF438081F9CCB2B0081D4B8 /* MIHSBFilter.metal in Sources */,
+				5A26B38423740D3B00B45CAF /* MIGaussianBlurFilter.metal in Sources */,
 				9FFACCEE1FB42D4A004BF184 /* MILightenBlendFilter.m in Sources */,
 				5A22D8EA1FD6442D006A1FC2 /* MILanczosResamplingFilter.m in Sources */,
 				EB54C9401ECC712100FB7DC3 /* BlasMatrixMult.mm in Sources */,
@@ -2257,6 +2264,7 @@
 				9FFACCCB1FB3F8CE004BF184 /* MIDarkenBlendFilter.m in Sources */,
 				5AE713841FC2D51C0067E7A7 /* MIDirectionalNonMaximumSuppressionFilter.m in Sources */,
 				5AF4385F1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.m in Sources */,
+				5A26B38523740D3B00B45CAF /* MIGaussianBlurFilter.metal in Sources */,
 				5AE7137A1FC2C70B0067E7A7 /* MIDirectionalSobelEdgeDetectionFilter.m in Sources */,
 				9FFACD4A1FB44D78004BF184 /* MIMaskFilter.m in Sources */,
 				9FFACC921FB32CA4004BF184 /* MIChromaKeyFilter.m in Sources */,
@@ -2329,6 +2337,7 @@
 				5AE713EA1FC4523F0067E7A7 /* MIErosionFilter.metal in Sources */,
 				5AF4381D1F9CECCB0081D4B8 /* MIMonochromeFilter.metal in Sources */,
 				5AF4384F1FA30D1A0081D4B8 /* MIGrayscaleFilter.metal in Sources */,
+				5A26B38623740D3B00B45CAF /* MIGaussianBlurFilter.metal in Sources */,
 				5AF438091F9CCB2B0081D4B8 /* MIHSBFilter.metal in Sources */,
 				9FFACD9D1FB58CFC004BF184 /* MetalImageDistortionFilter.metal in Sources */,
 				5A1C66B31F93A96F00B1F0C4 /* MIRGBFilter.metal in Sources */,
@@ -2467,6 +2476,7 @@
 				9FFACC941FB32D39004BF184 /* MIChromaKeyFilter.metal in Sources */,
 				5AE713261FB9D42F0067E7A7 /* MIHalftoneFilter.m in Sources */,
 				EB57B26F1E8BAFCB00832619 /* MetalImageTwoInputFilter.m in Sources */,
+				5A26B38323740D3B00B45CAF /* MIGaussianBlurFilter.metal in Sources */,
 				5A5EF33D1FAB45B600C311D4 /* MITwoPassTextureSamplingFilter.m in Sources */,
 				9FFACD361FB446BA004BF184 /* MISaturationBlendFilter.m in Sources */,
 				5AE713541FBFEA950067E7A7 /* MI3x3ConvolutionFilter.m in Sources */,
@@ -2788,6 +2798,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				DEVELOPMENT_TEAM = 6LS62R5GKZ;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MetalImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2808,6 +2819,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MetalImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -7,6 +7,7 @@
 //
 
 #import "MIGaussianBlurFilter.h"
+#import "MetalDevice.h"
 
 @implementation MIGaussianBlurFilter
 
@@ -26,100 +27,115 @@
         return nil;
     }
     
-    self.blurPasses = 1;
-    self.texelSpacingMultiplier = 1.0;
-    _blurRadiusInPixels = 2.0;
-    shouldResizeBlurRadiusWithImageSize = NO;
+    _radiusBuffer = [[MetalDevice sharedMTLDevice] newBufferWithLength:sizeof(MTLInt) options:MTLResourceOptionCPUCacheModeDefault];
+    self.blurRadiusInPixels = 6;
     
     return self;
 }
 
-//- (id)init
-//{
-//    NSString *currentGaussianBlurVertexShader = [[self class] vertexShaderForOptimizedBlurOfRadius:4 sigma:2.0];
-//    NSString *currentGaussianBlurFragmentShader = [[self class] fragmentShaderForOptimizedBlurOfRadius:4 sigma:2.0];
-//    
-//    return [self initWithFirstStageVertexShaderFromString:currentGaussianBlurVertexShader
-//                       firstStageFragmentShaderFromString:currentGaussianBlurFragmentShader
-//                        secondStageVertexShaderFromString:currentGaussianBlurVertexShader
-//                      secondStageFragmentShaderFromString:currentGaussianBlurFragmentShader];
-//}
+- (id)init
+{
+    if (self = [super initWithFirstStageVertexFunctionName:@"vertex_texelSampling"
+                            firstStageFragmentFunctionName:@"fragment_GaussianVertical"
+                             secondStageVertexFunctionName:@"vertex_texelSampling"
+                           secondStageFragmentFunctionName:@"fragment_GaussianHorizontal"]) {
+
+        _radiusBuffer = [[MetalDevice sharedMTLDevice] newBufferWithLength:sizeof(MTLInt) options:MTLResourceOptionCPUCacheModeDefault];
+        self.blurRadiusInPixels = 6;
+    }
+    
+    return self;
+}
 
 #pragma mark - 计算高斯梯度
 // "Implementation limit of 32 varying components exceeded" - Max number of varyings for these GPUs
-+ (NSArray<NSNumber *> *)gaussianWeightsBufferForRadius:(NSUInteger)blurRadius sigma:(CGFloat)sigma {
-    NSMutableArray *gaussianKernelArray = [NSMutableArray array];
-    if (blurRadius < 1)
-    {
-        return @[];
-    }
-    
-    // First, generate the normal Gaussian weights for a given sigma
-    GLfloat *standardGaussianWeights = calloc(blurRadius + 1, sizeof(GLfloat));
-    GLfloat sumOfWeights = 0.0;
-    for (NSUInteger currentGaussianWeightIndex = 0; currentGaussianWeightIndex < blurRadius + 1; currentGaussianWeightIndex++)
-    {
-        standardGaussianWeights[currentGaussianWeightIndex] = (1.0 / sqrt(2.0 * M_PI * pow(sigma, 2.0))) * exp(-pow(currentGaussianWeightIndex, 2.0) / (2.0 * pow(sigma, 2.0)));
-        
-        if (currentGaussianWeightIndex == 0)
-        {
-            sumOfWeights += standardGaussianWeights[currentGaussianWeightIndex];
-        }
-        else
-        {
-            sumOfWeights += 2.0 * standardGaussianWeights[currentGaussianWeightIndex];
-        }
-    }
-    
-    // Next, normalize these weights to prevent the clipping of the Gaussian curve at the end of the discrete samples from reducing luminance
-    for (NSUInteger currentGaussianWeightIndex = 0; currentGaussianWeightIndex < blurRadius + 1; currentGaussianWeightIndex++)
-    {
-        GLfloat gaussianWeight = standardGaussianWeights[currentGaussianWeightIndex] / sumOfWeights;
-        [gaussianKernelArray addObject:@(gaussianWeight)];
-    }
-    
-    free(standardGaussianWeights);
-    
-    return [NSArray arrayWithArray:gaussianKernelArray];
+
+void GaussianWeights1(unsigned int blurRadius, float *buffer) {
+    GaussianWeights(blurRadius, (float)blurRadius, buffer);
 }
 
-// inputRadius for Core Image's CIGaussianBlur is really sigma in the Gaussian equation, so I'm using that for my blur radius, to be consistent
-- (void)setBlurRadiusInPixels:(CGFloat)newValue;
+void GaussianWeights(unsigned int blurRadius, float sigma, float *buffer)
 {
-    // 7.0 is the limit for blur size for hardcoded varying offsets
+    assert(blurRadius > 0);
+    assert(blurRadius < 16);
+    assert(buffer != NULL);
+    assert(sigma > 0.0f);
     
-    if (round(newValue) != _blurRadiusInPixels)
-    {
-        _blurRadiusInPixels = round(newValue); // For now, only do integral sigmas
+    // generate the normal gaussian weights for a given sigma
+    float totalWeights = 0.0f;
+    float power = 1.0f / sqrt(2.0f * M_PI * pow(sigma, 2.0)); // for reducing the cost of pow calculation
+    float std = 2.0 * pow(sigma, 2.0);
+    for (int i = 0; i < blurRadius + 1; i++) {
+        buffer[i] = power * exp(-pow(i, 2.0) / std);
         
-        NSUInteger calculatedSampleRadius = 0;
-        if (_blurRadiusInPixels >= 1) // Avoid a divide-by-zero error here
-        {
-            // Calculate the number of pixels to sample from by setting a bottom limit for the contribution of the outermost pixel
-            CGFloat minimumWeightToFindEdgeOfSamplingArea = 1.0/256.0;
-            calculatedSampleRadius = floor(sqrt(-2.0 * pow(_blurRadiusInPixels, 2.0) * log(minimumWeightToFindEdgeOfSamplingArea * sqrt(2.0 * M_PI * pow(_blurRadiusInPixels, 2.0))) ));
-            calculatedSampleRadius += calculatedSampleRadius % 2; // There's nothing to gain from handling odd radius sizes, due to the optimizations I use
+        if (i == 0) {
+            totalWeights += buffer[i];
         }
-        
-        //        NSLog(@"Blur radius: %f, calculated sample radius: %d", _blurRadiusInPixels, calculatedSampleRadius);
-        //
-//        NSString *newGaussianBlurVertexShader = [[self class] vertexShaderForOptimizedBlurOfRadius:calculatedSampleRadius sigma:_blurRadiusInPixels];
-//        NSString *newGaussianBlurFragmentShader = [[self class] fragmentShaderForOptimizedBlurOfRadius:calculatedSampleRadius sigma:_blurRadiusInPixels];
-//
-//        //        NSLog(@"Optimized vertex shader: \n%@", newGaussianBlurVertexShader);
-//        //        NSLog(@"Optimized fragment shader: \n%@", newGaussianBlurFragmentShader);
-//        //
-//        [self switchToVertexShader:newGaussianBlurVertexShader fragmentShader:newGaussianBlurFragmentShader];
-        
-        NSArray<NSNumber *> *gaussianWeights = [[self class] gaussianWeightsBufferForRadius:calculatedSampleRadius sigma:_blurRadiusInPixels];
-        
-        NSLog(@"gaussian weights: %@", gaussianWeights);
-        
+        else {
+            totalWeights += 2.0f * buffer[i];
+        }
     }
-    shouldResizeBlurRadiusWithImageSize = NO;
+    
+    // normalize the weights
+    for (int i = 0; i < blurRadius + 1; i ++) {
+        buffer[i] /= totalWeights;
+    }
 }
 
+- (void)setBlurRadiusInPixels:(NSInteger)blurRadiusInPixels {
+    
+    NSAssert(blurRadiusInPixels > 0, @"Invalid gaussian blur radius in pixels.");
+    
+    if (_blurRadiusInPixels != blurRadiusInPixels) {
+        _blurRadiusInPixels = blurRadiusInPixels;
+        
+        float *buffer = calloc(_blurRadiusInPixels + 1, sizeof(float));
+        GaussianWeights1((unsigned int)_blurRadiusInPixels, buffer);
+        
+        runMetalSynchronouslyOnVideoProcessingQueue(^{
+            
+            MTLInt *radiusBuffer = (MTLInt *)[_radiusBuffer contents];
+            radiusBuffer[0] = (MTLInt)_blurRadiusInPixels+1;
+            
+            _gaussianKernelBuffer = [[MetalDevice sharedMTLDevice] newBufferWithBytes:buffer
+                                                                               length:(_blurRadiusInPixels+1)*sizeof(float)
+                                                                              options:MTLResourceOptionCPUCacheModeDefault];
+        });
+        
+        free(buffer);
+    }
+}
 
+- (void)assembleRenderEncoder:(id<MTLRenderCommandEncoder>)renderEncoder {
+    
+    NSParameterAssert(renderEncoder);
+    
+    [renderEncoder setDepthStencilState:_depthStencilState];
+    [renderEncoder setRenderPipelineState:_pipelineState];
+    [renderEncoder setVertexBuffer:_verticsBuffer offset:0 atIndex:0];
+    [renderEncoder setVertexBuffer:_coordBuffer offset:0 atIndex:1];
+    [renderEncoder setVertexBuffer:verticalBuffer offset:0 atIndex:2];
+    [renderEncoder setFragmentTexture:[firstInputTexture texture] atIndex:0];
+    [renderEncoder setFragmentBuffer:_radiusBuffer offset:0 atIndex:0];
+    [renderEncoder setFragmentBuffer:_gaussianKernelBuffer offset:0 atIndex:1];
+    [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip vertexStart:0 vertexCount:MetalImageDefaultRenderVetexCount instanceCount:1];
+    [renderEncoder endEncoding];
+}
 
+- (void)assembleSecondStageRenderEncoder:(id<MTLRenderCommandEncoder>)renderEncoder {
+    
+    NSParameterAssert(renderEncoder);
+    
+    [renderEncoder setDepthStencilState:_secondStageDepthStencilState];
+    [renderEncoder setRenderPipelineState:_secondStagePipelineState];
+    [renderEncoder setVertexBuffer:_verticsBuffer offset:0 atIndex:0];
+    [renderEncoder setVertexBuffer:_secondCoordBuffer offset:0 atIndex:1];
+    [renderEncoder setVertexBuffer:horizontalBuffer offset:0 atIndex:2];
+    [renderEncoder setFragmentTexture:[secondOutputTexture texture] atIndex:0];
+    [renderEncoder setFragmentBuffer:_radiusBuffer offset:0 atIndex:0];
+    [renderEncoder setFragmentBuffer:_gaussianKernelBuffer offset:0 atIndex:1];
+    [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip vertexStart:0 vertexCount:MetalImageDefaultRenderVetexCount instanceCount:1];
+    [renderEncoder endEncoding];
+}
 
 @end
