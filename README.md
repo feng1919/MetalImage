@@ -1,6 +1,6 @@
 # MetalImage
 
-A GPU-Accelerated Framework for Images, Videos in iOS.This framework is based on BradLarson's GPUImage, and using the Apple Metal to accelerate, different from GPUImage using OpenGL ES.
+A GPU-Accelerated Framework for Images, Videos in iOS.This framework is based on BradLarson's GPUImage, and using the Apple Metal to accelerate, different from GPUImage by OpenGL ES.
 
 Author: Feng Shi
 
