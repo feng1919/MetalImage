@@ -93,7 +93,7 @@ static MetalDevice *_sharedMetalDevice = nil;
     @synchronized (self) {
         if (_sharedMetalDevice.commandBuffer == nil) {
             _sharedMetalDevice.commandBuffer = [_sharedMetalDevice.commandQueue commandBuffer];
-            [_sharedMetalDevice.commandBuffer enqueue];
+//            [_sharedMetalDevice.commandBuffer enqueue];
             
             NSParameterAssert(_sharedMetalDevice);
         }
