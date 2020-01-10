@@ -244,8 +244,7 @@
 #pragma mark -
 #pragma mark Image rendering
 
-- (void)removeAllTargets;
-{
+- (void)removeAllTargets {
     [super removeAllTargets];
     hasProcessedImage = NO;
 }
@@ -258,8 +257,7 @@
     
     hasProcessedImage = YES;
     
-    if (dispatch_semaphore_wait(imageUpdateSemaphore, DISPATCH_TIME_NOW) != 0)
-    {
+    if (dispatch_semaphore_wait(imageUpdateSemaphore, DISPATCH_TIME_NOW) != 0) {
         if (completion) {
             completion();
         }
@@ -267,8 +265,7 @@
     }
     
     runMetalAsynchronouslyOnVideoProcessingQueue(^{
-        for (id<MetalImageInput> currentTarget in targets)
-        {
+        for (id<MetalImageInput> currentTarget in targets) {
             NSInteger indexOfObject = [targets indexOfObject:currentTarget];
             NSInteger textureIndexOfTarget = [[targetTextureIndices objectAtIndex:indexOfObject] integerValue];
             

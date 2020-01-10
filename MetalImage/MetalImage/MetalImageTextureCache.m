@@ -174,8 +174,8 @@
 @implementation MTLTextureDescriptor (reuseIdentifier)
 
 - (NSString *)reuseIdentifier {
-    return [NSString stringWithFormat:@"%ldx%ldx%ld-%ld-%ld-%ld",
-            self.width, self.height, self.depth, self.pixelFormat, self.textureType, self.mipmapLevelCount];
+    return [NSString stringWithFormat:@"%dx%dx%d-%d-%d-%d",
+            (int)self.width, (int)self.height, (int)self.depth, (int)self.pixelFormat, (int)self.textureType, (int)self.mipmapLevelCount];
 }
 
 @end

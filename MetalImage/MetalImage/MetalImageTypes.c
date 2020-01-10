@@ -83,6 +83,39 @@ MTLInt2 MTLInt2Zero = {0, 0};
 
 
 
+MTLInt3
+MTLInt3Make(MTLInt x, MTLInt y, MTLInt z)
+{MTLInt3 vector; vector.x = x; vector.y = y; vector.z = z; return vector;}
+
+MTLBool
+MTLInt3Equal(MTLInt3 m1, MTLInt3 m2)
+{return m1.x == m2.x && m1.y == m2.y && m1.z == m2.z;}
+
+MTLBool
+MTLInt3IsZero(MTLInt3 m)
+{return m.x == 0 || m.y == 0 || m.z == 0;}
+
+void
+MTLInt3Swap(MTLInt3 *m1, MTLInt3 *m2)
+{
+    MTLInt temp = m1->x;
+    m1->x = m2->x;
+    m2->x = temp;
+    
+    temp = m1->y;
+    m1->y = m2->y;
+    m2->y = temp;
+    
+    temp = m1->z;
+    m1->z = m2->z;
+    m2->z = temp;
+}
+
+MTLInt3 MTLInt3Zero = {0,0,0};
+
+
+
+
 MTLUInt2
 MTLUInt2Make(MTLUInt x, MTLUInt y)
 {MTLUInt2 vector; vector.x = x; vector.y = y; return vector;}

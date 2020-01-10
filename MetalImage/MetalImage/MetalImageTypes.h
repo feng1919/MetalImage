@@ -72,6 +72,14 @@ MTLBool MTLInt2IsZero(MTLInt2 m);
 void MTLInt2Swap(MTLInt2 *m);
 extern MTLInt2 MTLInt2Zero;// = {0,0};
 
+struct MTLInt3 {MTLInt x,y,z;};
+typedef struct MTLInt3 MTLInt3;
+MTLInt3 MTLInt3Make(MTLInt x, MTLInt y, MTLInt z);
+MTLBool MTLInt3Equal(MTLInt3 m1, MTLInt3 m2);
+MTLBool MTLInt3IsZero(MTLInt3 m);
+void MTLInt3Swap(MTLInt3 *m1, MTLInt3 *m2);
+extern MTLInt3 MTLInt3Zero;// = {0,0,0};
+
 struct MTLUInt2 {MTLUInt x,y;};
 typedef struct MTLUInt2 MTLUInt2;
 MTLUInt2 MTLUInt2Make(MTLUInt x, MTLUInt y);
