@@ -115,6 +115,7 @@
     
     if (!pDepthStateDesc) {
         NSLog(@">> ERROR: Failed creating a depth stencil descriptor!");
+        return NO;
     }
     
     //    pDepthStateDesc.depthCompareFunction = MTLCompareFunctionNever;

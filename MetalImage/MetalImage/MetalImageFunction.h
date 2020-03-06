@@ -16,6 +16,7 @@ extern NSUInteger MetalImageDefaultRenderVetexCount;
 
 @interface MetalImageFunction : NSObject
 
+API_AVAILABLE(ios(9.0))
 extern dispatch_queue_attr_t MetalImageDefaultQueueAttribute(void);
 
 extern void runMetalOnMainQueueWithoutDeadlocking(void (^block)(void));

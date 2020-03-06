@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addFilter:(MetalImageOutput<MetalImageInput> *)filter;
 - (void)removeFilter:(MetalImageOutput<MetalImageInput> *)filter;
 - (void)removeAllFilters;
-- (MetalImageOutput<MetalImageInput> *)filterAtIndex:(NSUInteger)filterIndex;
+- (MetalImageOutput<MetalImageInput> * _Nullable)filterAtIndex:(NSUInteger)filterIndex;
 - (NSUInteger)filterCount;
 
 @end

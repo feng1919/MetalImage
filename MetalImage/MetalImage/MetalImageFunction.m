@@ -23,12 +23,8 @@ NSUInteger MetalImageDefaultRenderVetexCount = 4;
 dispatch_queue_attr_t MetalImageDefaultQueueAttribute(void)
 {
 #if TARGET_OS_IPHONE
-    if ([[[UIDevice currentDevice] systemVersion] compare:@"9.0" options:NSNumericSearch] != NSOrderedAscending)
-    {
-        return dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_DEFAULT, 0);
-    }
+    return dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_DEFAULT, 0);
 #endif
-    return nil;
 }
 
 void runMetalOnMainQueueWithoutDeadlocking(void (^block)(void))
