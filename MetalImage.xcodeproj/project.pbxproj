@@ -722,7 +722,6 @@
 		EB57B13F1E8611ED00832619 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB57B13E1E8611ED00832619 /* AppDelegate.m */; };
 		EB57B1421E8611ED00832619 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB57B1411E8611ED00832619 /* ViewController.m */; };
 		EB57B1471E8611ED00832619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB57B1461E8611ED00832619 /* Assets.xcassets */; };
-		EB57B14A1E8611ED00832619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB57B1481E8611ED00832619 /* LaunchScreen.storyboard */; };
 		EB57B1521E86124000832619 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB57B1511E86124000832619 /* ViewController.xib */; };
 		EB57B1931E86126F00832619 /* MIBrightnessFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB57B1561E86126F00832619 /* MIBrightnessFilter.m */; };
 		EB57B1941E86126F00832619 /* MIColorMatrixFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB57B1581E86126F00832619 /* MIColorMatrixFilter.m */; };
@@ -1075,7 +1074,6 @@
 		EB57B1401E8611ED00832619 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EB57B1411E8611ED00832619 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EB57B1461E8611ED00832619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EB57B1491E8611ED00832619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB57B14B1E8611ED00832619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB57B1511E86124000832619 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		EB57B1551E86126F00832619 /* MIBrightnessFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBrightnessFilter.h; sourceTree = "<group>"; };
@@ -1444,7 +1442,6 @@
 				EB57B1511E86124000832619 /* ViewController.xib */,
 				EB57B1531E86126F00832619 /* MetalImage */,
 				EB57B1461E8611ED00832619 /* Assets.xcassets */,
-				EB57B1481E8611ED00832619 /* LaunchScreen.storyboard */,
 				EB57B14B1E8611ED00832619 /* Info.plist */,
 				EB57B13A1E8611ED00832619 /* Supporting Files */,
 			);
@@ -1932,7 +1929,6 @@
 				5A60BDB81FB88A3E00781C41 /* lookup_amatorka.png in Resources */,
 				EB54C9981ECC82F600FB7DC3 /* MetalImageShader.metallib in Resources */,
 				5A60BDBE1FB88A3E00781C41 /* lookup_soft_elegance_2.png in Resources */,
-				EB57B14A1E8611ED00832619 /* LaunchScreen.storyboard in Resources */,
 				5A60BDBC1FB88A3E00781C41 /* lookup_soft_elegance_1.png in Resources */,
 				EB57B1BF1E86131E00832619 /* Default-568h@2x.png in Resources */,
 				5A60BDB61FB88A3E00781C41 /* lookup.png in Resources */,
@@ -2580,17 +2576,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		EB57B1481E8611ED00832619 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EB57B1491E8611ED00832619 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		EB54C9181ECC710200FB7DC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2819,7 +2804,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "897a6a0c-6928-4f61-92ff-403d4fce31c3";
-				PROVISIONING_PROFILE_SPECIFIER = fengshi_20190110;
+				PROVISIONING_PROFILE_SPECIFIER = fengshi_20200225;
 			};
 			name = Debug;
 		};
@@ -2828,7 +2813,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6LS62R5GKZ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MetalImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2840,7 +2825,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "cdc2dc5f-2457-4eec-a1a4-d30c89750d16";
-				PROVISIONING_PROFILE_SPECIFIER = MBP20171014;
+				PROVISIONING_PROFILE_SPECIFIER = fengshi_20200225;
 			};
 			name = Release;
 		};
