@@ -20,7 +20,6 @@ fragment half4 fragment_GaussianVertical(VertexIOWithSteps     inFrag  [[ stage_
     constexpr sampler quadSampler(coord::normalized, filter::linear, address::clamp_to_edge);
     
     float2 steps = float2(0.0f, inFrag.texelSteps.y);
-//    const float2 steps = float2(0.0f, 1.0f/1920.0f);
     
     half3 sum = half3(0.0h);
     sum += tex2D.sample(quadSampler, inFrag.textureCoordinate).rgb * weights[0];
@@ -40,7 +39,6 @@ fragment half4 fragment_GaussianHorizontal(VertexIOWithSteps     inFrag  [[ stag
     constexpr sampler quadSampler(coord::normalized, filter::linear, address::clamp_to_edge);
     
     float2 steps = float2(inFrag.texelSteps.x, 0.0f);
-//    const float2 steps = float2(1.0f/1080.0f, 0.0f);
     
     half3 sum = half3(0.0h);
     sum += tex2D.sample(quadSampler, inFrag.textureCoordinate).rgb * weights[0];

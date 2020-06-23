@@ -69,6 +69,7 @@
 #import "MILanczosResamplingFilter.h"
 #import "MILowPassFilter.h"
 #import "MIHistogramFilter.h"
+#import "MISurfaceBlurFilter.h"
 
 #define METAL_DEBUG 0
 
@@ -127,10 +128,9 @@
     [lastNode addTarget:filter1];
     lastNode = filter1;
     
-//    MILowPassFilter *filter = [[MILowPassFilter alloc] init];
-//    [filter setAffineTransform:CGAffineTransformIdentity];
-//    [lastNode addTarget:filter];
-//    lastNode = filter;
+    MISurfaceBlurFilter *filter = [[MISurfaceBlurFilter alloc] init];
+    [lastNode addTarget:filter];
+    lastNode = filter;
 
     [lastNode addTarget:_metalView];
 }
