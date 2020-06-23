@@ -9,30 +9,23 @@
 #import "MetalImageFilter.h"
 
 typedef enum {
-    kMetalImageHistogramRed,
-    kMetalImageHistogramGreen,
-    kMetalImageHistogramBlue,
-    kMetalImageHistogramRGB,
-    kMetalImageHistogramLuminance
+    kMetalImageHistogramTypeHist = 0,
+    kMetalImageHistogramTypeSTD = 1,
+    kMetalImageHistogramTypeMean = 2,
 } MetalImageHistogramType;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MIHistogramFilter : MetalImageFilter
 {
-    MetalImageHistogramType histogramType;
-    
-//    GLubyte *vertexSamplingCoordinates;
 }
 
 
 // Rather than sampling every pixel, this dictates what fraction of the image is sampled. By default, this is 16 with a minimum of 1.
-@property(readwrite, nonatomic) NSUInteger downsamplingFactor;
-
-@property (nonatomic, strong) id<MTLBuffer> pixelBuffer;
+@property (readwrite, nonatomic) NSUInteger downsamplingFactor;
 
 // Initialization and teardown
-- (id)initWithHistogramType:(MetalImageHistogramType)newHistogramType;
+- (id)initWithHistogramType:(MetalImageHistogramType)histogramType;
 
 @end
 

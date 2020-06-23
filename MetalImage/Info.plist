@@ -20,6 +20,8 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera Usage Description</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Photo Library Additions Usage Description</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
 	<key>UISupportedInterfaceOrientations</key>

@@ -157,3 +157,4 @@
 #import "MetalImageVideoCamera.h"
 #import "MetalImageView.h"
 #import "UIImage+Texture.h"
+#import "MetalImageMath.h"

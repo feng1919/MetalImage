@@ -30,9 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  
  *  This adjusts the sigma variable in the Gaussian distribution function.
  */
-@property (readwrite, nonatomic) NSInteger blurRadiusInPixels;
-
-void GaussianWeights(unsigned int blurRadius, float sigma, float *buffer);
+@property (readwrite, nonatomic) unsigned int radius;
 
 @end
 

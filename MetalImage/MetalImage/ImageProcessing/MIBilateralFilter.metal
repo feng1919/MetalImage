@@ -1,9 +1,9 @@
 //
-//  MIGaussianBlurFilter.metal
+//  MISurfaceBlurFilter.metal
 //  MetalImage
 //
-//  Created by Feng Stone on 2019/11/7.
-//  Copyright © 2019 fengshi. All rights reserved.
+//  Created by Feng Stone on 2020/6/23.
+//  Copyright © 2020 fengshi. All rights reserved.
 //
 
 #include "../Metal/CommonStruct.metal"
@@ -12,7 +12,7 @@
 
 using namespace metal;
 
-fragment half4 fragment_GaussianFilter(VertexIOWithSteps     inFrag  [[ stage_in ]],
+fragment half4 fragment_BilateralFilter(VertexIOWithSteps    inFrag  [[ stage_in ]],
                                          texture2d<half>     tex2D   [[ texture(0) ]],
                                          constant int       &radius  [[ buffer(0) ]],
                                          constant float     *weights [[ buffer(1) ]])
@@ -28,4 +28,3 @@ fragment half4 fragment_GaussianFilter(VertexIOWithSteps     inFrag  [[ stage_in
     
     return half4(sum, 1.0h);
 }
-

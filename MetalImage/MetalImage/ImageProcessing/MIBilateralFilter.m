@@ -1,16 +1,16 @@
 //
-//  MIGaussianBlurFilter.m
+//  MIBilateralFilter.m
 //  MetalImage
 //
-//  Created by Feng Stone on 2017/9/2.
-//  Copyright © 2017年 fengshi. All rights reserved.
+//  Created by Feng Stone on 2020/6/23.
+//  Copyright © 2020 fengshi. All rights reserved.
 //
 
-#import "MIGaussianBlurFilter.h"
-#import "MetalDevice.h"
+#import "MIBilateralFilter.h"
 #import "MetalImageMath.h"
+#import "MetalDevice.h"
 
-@implementation MIGaussianBlurFilter
+@implementation MIBilateralFilter
 
 #pragma mark -
 #pragma mark Initialization
@@ -37,12 +37,12 @@
 - (id)init
 {
     if (self = [super initWithFirstStageVertexFunctionName:@"vertex_texelSampling"
-                            firstStageFragmentFunctionName:@"fragment_GaussianFilter"
+                            firstStageFragmentFunctionName:@"fragment_BilateralFilter"
                              secondStageVertexFunctionName:@"vertex_texelSampling"
-                           secondStageFragmentFunctionName:@"fragment_GaussianFilter"]) {
+                           secondStageFragmentFunctionName:@"fragment_BilateralFilter"]) {
 
         _radiusBuffer = [[MetalDevice sharedMTLDevice] newBufferWithLength:sizeof(MTLInt) options:MTLResourceOptionCPUCacheModeDefault];
-        self.radius = 3;
+        self.radius = 6;
     }
     
     return self;
@@ -52,26 +52,10 @@
 
 - (void)setRadius:(unsigned int)radius {
     
-    NSAssert(radius > 0, @"Invalid gaussian blur radius in pixels.");
-    
     if (_radius != radius) {
-        _radius = radius;
         
-        float *buffer = calloc(radius + 1, sizeof(float));
-        make_gaussian_distribution(radius, (float)radius, buffer);
-        
-        runMetalSynchronouslyOnVideoProcessingQueue(^{
-            
-            MTLInt *radiusBuffer = (MTLInt *)[_radiusBuffer contents];
-            radiusBuffer[0] = (MTLInt)radius+1;
-            
-            _gaussianKernelBuffer = [[MetalDevice sharedMTLDevice] newBufferWithBytes:buffer
-                                                                               length:(radius+1)*sizeof(float)
-                                                                              options:MTLResourceOptionCPUCacheModeDefault];
-        });
-        
-        free(buffer);
     }
+    
 }
 
 - (void)assembleRenderEncoder:(id<MTLRenderCommandEncoder>)renderEncoder {
@@ -105,5 +89,6 @@
     [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip vertexStart:0 vertexCount:MetalImageDefaultRenderVetexCount instanceCount:1];
     [renderEncoder endEncoding];
 }
+
 
 @end
