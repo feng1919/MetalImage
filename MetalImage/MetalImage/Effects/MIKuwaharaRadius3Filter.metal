@@ -16,12 +16,12 @@
 #include "../Metal/CommonStruct.metal"
 using namespace metal;
 
-fragment half4 fragment_KuwaharaRadius3Filter(VertexIO         inFrag  [[ stage_in ]],
-                                              texture2d<half>  tex2D   [[ texture(0) ]])
+fragment half4 fragment_KuwaharaRadius3Filter(VertexIOWithSteps inFrag  [[ stage_in ]],
+                                              texture2d<half>   tex2D   [[ texture(0) ]])
 {
     constexpr sampler quadSampler(coord::normalized, filter::linear, address::clamp_to_edge);
     
-    const float2 src_size = float2 (1.0 / 768.0, 1.0 / 1024.0);
+    const float2 src_size = inFrag.texelSteps;
     
     float2 uv = inFrag.textureCoordinate;
     float n = float(16); // radius is assumed to be 3
