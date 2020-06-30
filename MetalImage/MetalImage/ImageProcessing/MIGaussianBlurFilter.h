@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** A radius in pixels to use for the blur, with a default of 2.0,
  *  The calculation will acting with a gaussian kernel in the size of
- *  2 * blurRadiusInPixels + 1 .
+ *  2 * radius + 1 .
  *  
  *  This adjusts the sigma variable in the Gaussian distribution function.
  */

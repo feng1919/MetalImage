@@ -70,6 +70,7 @@
 #import "MILowPassFilter.h"
 #import "MIHistogramFilter.h"
 #import "MISurfaceBlurFilter.h"
+#import "MIBilateralFilter.h"
 
 #define METAL_DEBUG 0
 
@@ -128,7 +129,8 @@
     [lastNode addTarget:filter1];
     lastNode = filter1;
     
-    MISurfaceBlurFilter *filter = [[MISurfaceBlurFilter alloc] init];
+    MIBilateralFilter *filter = [[MIBilateralFilter alloc] init];
+//    filter.radius = 5;
     [lastNode addTarget:filter];
     lastNode = filter;
 

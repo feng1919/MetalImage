@@ -75,6 +75,7 @@
 #import "MILanczosResamplingFilter.h"
 #import "MILowPassFilter.h"
 #import "MIHighPassFilter.h"
+#import "MIBilateralFilter.h"
 
 // Blend
 #import "MISourceOverBlendFilter.h"

@@ -10,6 +10,14 @@
 #import "MetalImageMath.h"
 #import "MetalDevice.h"
 
+@interface MIBilateralFilter() {
+
+    id<MTLBuffer> _weightsBuffer;
+    id<MTLBuffer> _radiusBuffer;
+}
+
+@end
+
 @implementation MIBilateralFilter
 
 #pragma mark -
@@ -42,7 +50,7 @@
                            secondStageFragmentFunctionName:@"fragment_BilateralFilter"]) {
 
         _radiusBuffer = [[MetalDevice sharedMTLDevice] newBufferWithLength:sizeof(MTLInt) options:MTLResourceOptionCPUCacheModeDefault];
-        self.radius = 6;
+        self.radius = 16;
     }
     
     return self;
@@ -52,10 +60,30 @@
 
 - (void)setRadius:(unsigned int)radius {
     
+    NSParameterAssert(radius > 0);
+    
     if (_radius != radius) {
         
+        float *buffer = malloc(sizeof(float) * (radius+1));
+        
+        float sigma = (float)radius;
+        float std = 2.0 * pow(sigma, 2.0);
+        for (int i = 0; i < radius + 1; i++) {
+            buffer[i] = exp(-pow(i, 2.0) / std);
+        }
+        
+        runMetalSynchronouslyOnVideoProcessingQueue(^{
+            
+            MTLInt *radiusBuffer = (MTLInt *)[_radiusBuffer contents];
+            radiusBuffer[0] = (MTLInt)radius+1;
+            
+            _weightsBuffer = [[MetalDevice sharedMTLDevice] newBufferWithBytes:buffer
+                                                                        length:(radius+1)*sizeof(float)
+                                                                       options:MTLResourceOptionCPUCacheModeDefault];
+        });
+        
+        free(buffer);
     }
-    
 }
 
 - (void)assembleRenderEncoder:(id<MTLRenderCommandEncoder>)renderEncoder {
@@ -69,7 +97,7 @@
     [renderEncoder setVertexBuffer:verticalBuffer offset:0 atIndex:2];
     [renderEncoder setFragmentTexture:[firstInputTexture texture] atIndex:0];
     [renderEncoder setFragmentBuffer:_radiusBuffer offset:0 atIndex:0];
-    [renderEncoder setFragmentBuffer:_gaussianKernelBuffer offset:0 atIndex:1];
+    [renderEncoder setFragmentBuffer:_weightsBuffer offset:0 atIndex:1];
     [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip vertexStart:0 vertexCount:MetalImageDefaultRenderVetexCount instanceCount:1];
     [renderEncoder endEncoding];
 }
@@ -85,7 +113,7 @@
     [renderEncoder setVertexBuffer:horizontalBuffer offset:0 atIndex:2];
     [renderEncoder setFragmentTexture:[secondOutputTexture texture] atIndex:0];
     [renderEncoder setFragmentBuffer:_radiusBuffer offset:0 atIndex:0];
-    [renderEncoder setFragmentBuffer:_gaussianKernelBuffer offset:0 atIndex:1];
+    [renderEncoder setFragmentBuffer:_weightsBuffer offset:0 atIndex:1];
     [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip vertexStart:0 vertexCount:MetalImageDefaultRenderVetexCount instanceCount:1];
     [renderEncoder endEncoding];
 }
