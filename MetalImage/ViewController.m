@@ -71,6 +71,7 @@
 #import "MIHistogramFilter.h"
 #import "MISurfaceBlurFilter.h"
 #import "MIBilateralFilter.h"
+#import "MIMaskBilateralFilter.h"
 
 #define METAL_DEBUG 0
 
@@ -130,9 +131,13 @@
     lastNode = filter1;
     
     MIBilateralFilter *filter = [[MIBilateralFilter alloc] init];
-//    filter.radius = 5;
+//    filter.radius = 6;
     [lastNode addTarget:filter];
     lastNode = filter;
+    
+    MIMedianFilter *filer2 = [[MIMedianFilter alloc] init];
+    [lastNode addTarget:filer2];
+    lastNode = filer2;
 
     [lastNode addTarget:_metalView];
 }

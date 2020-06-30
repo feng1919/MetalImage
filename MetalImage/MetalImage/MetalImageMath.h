@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-void make_gaussian_distribution(const unsigned int radius, const float sigma, float *buffer);
+void make_gaussian_distribution(const unsigned int radius, const float sigma,  const bool normalize, float *buffer);
+void make_gaussian_distribution_2d(const unsigned int radius, const float sigma,  const bool normalize, float *buffer);
 
 #endif /* MetalImageMath_h */

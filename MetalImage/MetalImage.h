@@ -76,6 +76,7 @@
 #import "MILowPassFilter.h"
 #import "MIHighPassFilter.h"
 #import "MIBilateralFilter.h"
+#import "MIMaskBilateralFilter.h"
 
 // Blend
 #import "MISourceOverBlendFilter.h"

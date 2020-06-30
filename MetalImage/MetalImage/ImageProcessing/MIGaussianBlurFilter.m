@@ -58,7 +58,7 @@
         _radius = radius;
         
         float *buffer = calloc(radius + 1, sizeof(float));
-        make_gaussian_distribution(radius, (float)radius, buffer);
+        make_gaussian_distribution(radius, (float)radius, true, buffer);
         
         runMetalSynchronouslyOnVideoProcessingQueue(^{
             
