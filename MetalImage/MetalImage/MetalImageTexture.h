@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MetalImageTexture : NSObject 
 
+@property (nonatomic,strong,nullable) NSString *label;
 @property (nonatomic,strong,readonly) id<MTLTexture> texture;
 @property (nonatomic,readonly) MTLUInt2 size;
 @property (nonatomic,readonly) int pixelFormat;

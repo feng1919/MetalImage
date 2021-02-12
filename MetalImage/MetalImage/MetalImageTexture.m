@@ -74,8 +74,8 @@ static int MetalSupportFastTextureLoad = -1;
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"[%p] <%@> width:%d height:%d depth:%d reference count: %d",
-            self, NSStringFromClass([self class]), (int)[_texture width], (int)[_texture height],
+    return [NSString stringWithFormat:@"[%p] <%@><label:%@> %dx%dx%d reference count: %d",
+            self, NSStringFromClass([self class]), _label, (int)[_texture width], (int)[_texture height],
             (int)[_texture depth], (int)_reference.count];
 }
 
