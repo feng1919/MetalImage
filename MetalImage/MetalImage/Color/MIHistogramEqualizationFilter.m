@@ -100,15 +100,17 @@
             break;
         }
     }
+    
+    free(hist);
+    
     if (min >= max) {
         _adaptiveLuminance.scale = 1.0f;
         _adaptiveLuminance.offset = 0.0f;
     }
-    
-    _adaptiveLuminance.scale = 255.0f / (float)(max - min);
-    _adaptiveLuminance.offset = -min * _adaptiveLuminance.scale / 255.0f;
-    
-    free(hist);
+    else {
+        _adaptiveLuminance.scale = 255.0f / (float)(max - min);
+        _adaptiveLuminance.offset = -min * _adaptiveLuminance.scale / 255.0f;
+    }
 }
 
 #pragma mark - MetalImageInput Protocol
