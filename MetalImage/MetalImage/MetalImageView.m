@@ -97,7 +97,7 @@
                                          length:MetalImageDefaultRenderVetexCount*sizeof(MTLFloat4)
                                         options:MTLResourceOptionCPUCacheModeDefault];
     if(!_verticsBuffer) {
-        NSLog(@">> ERROR: Failed creating a vertex buffer for a quad!");
+        NSLog(@">> ERROR: Failed to create a vertex buffer for a quad!");
         return ;
     }
     _verticsBuffer.label = @"quad vertices";
@@ -110,7 +110,7 @@
                                        length:MetalImageDefaultRenderVetexCount*sizeof(MTLFloat2)
                                       options:MTLResourceOptionCPUCacheModeDefault];
     if (!_coordBuffer) {
-        NSLog(@">> ERROR: Failed creating a 2d texture coordinate buffer!");
+        NSLog(@">> ERROR: Failed to create a 2d texture coordinate buffer!");
         return;
     }
     _coordBuffer.label = @"quad texcoords";
@@ -123,7 +123,7 @@
     if (!renderLibrary && device) {
         NSError *liberr = nil;
         renderLibrary = [device newLibraryWithFile:@"CommonStruct.metallib" error:&liberr];
-        NSAssert(liberr == nil, @"Create library failed...%@", liberr);
+        NSAssert(liberr == nil, @"Failed to create library ...%@", liberr);
     }
     
     id <MTLFunction> vertexProgram   = [renderLibrary newFunctionWithName:@"vertex_common"];
@@ -143,7 +143,7 @@
     NSError *pError = nil;
     _pipelineState = [device newRenderPipelineStateWithDescriptor:pQuadPipelineStateDescriptor error:&pError];
     if(pError) {
-        NSLog(@">> ERROR: Failed acquiring pipeline state descriptor: %@", pError);
+        NSLog(@">> ERROR: Failed to acquire pipeline state descriptor: %@", pError);
     }
     
     return _pipelineState != nil;
@@ -155,7 +155,7 @@
     MTLDepthStencilDescriptor *pDepthStateDesc = [MTLDepthStencilDescriptor new];
     
     if(!pDepthStateDesc){
-        NSLog(@">> ERROR: Failed creating a depth stencil descriptor!");
+        NSLog(@">> ERROR: Failed to create a depth stencil descriptor!");
         return NO;
     }
     
@@ -275,7 +275,7 @@
         id<MTLCommandBuffer> commandBuffer = [MetalDevice sharedCommandBuffer];
         id<CAMetalDrawable> currentDrawable = [metalLayer nextDrawable];
         if (currentDrawable == nil) {
-            NSLog(@"Obtain drawable failed...");
+            NSLog(@"Failed to obtain drawable ...");
             return;
         }
         
