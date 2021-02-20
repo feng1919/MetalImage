@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 // Rather than sampling every pixel, this dictates what fraction of the image is sampled. By default, this is 16 with a minimum of 1.
 @property (readwrite, nonatomic) NSUInteger downsamplingFactor;
 
+@property (readwrite, nonatomic) NSTimeInterval duration;
+
 @end
 
 NS_ASSUME_NONNULL_END

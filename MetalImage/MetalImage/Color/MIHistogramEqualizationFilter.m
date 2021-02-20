@@ -12,6 +12,8 @@
 
 @interface MIHistogramEqualizationFilter() {
     MIAdaptiveLuminanceFilter *_adaptiveLuminance;
+    CMTime _lastUpdateTime;
+    CMTime _updateInterval;
 }
 
 @end
@@ -28,6 +30,9 @@
     _adaptiveLuminance = [[MIAdaptiveLuminanceFilter alloc] init];
     self.downsamplingFactor = 16.0f;
     self.bgClearColor = MTLClearColorMake(0.0, 0.0, 0.0, 1.0f);
+    _duration = 1e-3;
+    _lastUpdateTime = kCMTimeInvalid;
+    _updateInterval = kCMTimeInvalid;
     
     return self;
 }
@@ -85,7 +90,7 @@
     }
     free(bgra);
     
-    int threshold = (int)pixelCount / 256 / 2;
+    int threshold = (int)pixelCount / 256 / 8;
     int min = 0;
     for (int i = 0; i < 256; i++) {
         if (hist[i] >= threshold) {
@@ -121,7 +126,16 @@
 }
 
 - (void)newTextureReadyAtTime:(CMTime)frameTime atIndex:(NSInteger)textureIndex {
-    [self renderToTexture];
+    
+    if (CMTimeCompare(frameTime, CMTimeAdd(_updateInterval, _lastUpdateTime)) == 1 || CMTIME_IS_INVALID(_lastUpdateTime)) {
+        [self renderToTexture];
+        _lastUpdateTime = frameTime;
+        _updateInterval = frameTime;
+        _updateInterval.value = _updateInterval.timescale * _duration;
+    }
+    else {
+        [firstInputTexture unlock];
+    }
     [_adaptiveLuminance newTextureReadyAtTime:frameTime atIndex:textureIndex];
 }
 
