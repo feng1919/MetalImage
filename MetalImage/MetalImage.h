@@ -79,6 +79,7 @@
 #import "MIMaskBilateralFilter.h"
 #import "MIHistogramEqualizationFilter.h"
 #import "MIAdaptiveLuminanceFilter.h"
+#import "MICannyEdgeDetectionFilter.h"
 
 // Blend
 #import "MISourceOverBlendFilter.h"
