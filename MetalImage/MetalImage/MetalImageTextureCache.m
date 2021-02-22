@@ -124,6 +124,7 @@
         }
         //NSLog(@"In cache: %@", framebufferCache.allValues);
         
+        [textureFromCache enableReferenceCounting];
         [textureFromCache lock];
         return textureFromCache;
     }
