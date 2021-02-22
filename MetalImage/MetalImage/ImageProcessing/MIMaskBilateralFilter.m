@@ -8,6 +8,7 @@
 
 #import "MIMaskBilateralFilter.h"
 #import "MetalDevice.h"
+#import "MetalImageMath.h"
 
 @interface MIMaskBilateralFilter() {
 

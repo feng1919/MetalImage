@@ -6,7 +6,7 @@
 //  Copyright © 2020 fengshi. All rights reserved.
 //
 
-#import <MetalImage/MetalImage.h>
+#import "MetalImageTwoInputFilter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

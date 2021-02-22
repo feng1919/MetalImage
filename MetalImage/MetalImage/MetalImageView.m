@@ -192,8 +192,8 @@
     runMetalOnMainQueueWithoutDeadlocking(^{
         frame = self.bounds;
         currentViewSize = self.bounds.size;
-    });
-    runMetalSynchronouslyOnVideoProcessingQueue(^{
+//    });
+//    runMetalSynchronouslyOnVideoProcessingQueue(^{
         CGFloat heightScaling, widthScaling;
         CGSize imageSize = CGSizeMake(inputImageSize.x, inputImageSize.y);
         CGRect insetRect = AVMakeRectWithAspectRatioInsideRect(imageSize, frame);
