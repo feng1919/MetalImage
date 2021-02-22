@@ -57,7 +57,7 @@ void runMetalSynchronouslyOnVideoProcessingQueue(void (^block)(void))
     if (dispatch_get_current_queue() == videoProcessingQueue)
 #pragma clang diagnostic pop
 #else
-        if (dispatch_get_specific([[[MetalImageContext sharedImageProcessingContext] contextKey] UTF8String]))
+        if (dispatch_get_specific([[[MetalImageContext sharedImageProcessingContext] contextKey] UTF8String]) || [NSThread isMainThread])
 #endif
         {
             block();
@@ -105,7 +105,7 @@ void runMetalSynchronouslyOnContextQueue(MetalImageContext *context, void (^bloc
     if (dispatch_get_current_queue() == videoProcessingQueue)
 #pragma clang diagnostic pop
 #else
-        if (dispatch_get_specific([[[MetalImageContext sharedImageProcessingContext] contextKey] UTF8String]))
+        if (dispatch_get_specific([[[MetalImageContext sharedImageProcessingContext] contextKey] UTF8String]) || [NSThread isMainThread])
 #endif
         {
             block();

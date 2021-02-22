@@ -11,6 +11,21 @@
 
 @implementation MITwoPassTextureSamplingFilter
 
+- (instancetype)initWithFirstStageVertexFunctionName:(NSString *)firstStageVertexFunctionName
+                      firstStageFragmentFunctionName:(NSString *)firstStageFragmentFunctionName
+                       secondStageVertexFunctionName:(NSString *)secondStageVertexFunctionName
+                     secondStageFragmentFunctionName:(NSString *)secondStageFragmentFunctionName {
+    if (self = [super initWithFirstStageVertexFunctionName:firstStageVertexFunctionName
+                            firstStageFragmentFunctionName:firstStageFragmentFunctionName
+                             secondStageVertexFunctionName:secondStageVertexFunctionName
+                           secondStageFragmentFunctionName:secondStageFragmentFunctionName]) {
+        
+        [self initialize];
+    }
+    
+    return self;
+}
+
 - (nonnull instancetype)initWithFirstStageVertexFunction:(nonnull id<MTLFunction>)firstStageVertexFunction
                               firstStageFragmentFunction:(nonnull id<MTLFunction>)firstStageFragmentFunction
                                secondStageVertexFunction:(nonnull id<MTLFunction>)secondStageVertexFunction
@@ -21,17 +36,22 @@
                              secondStageVertexFunction:secondStageVertexFunction
                            secondStageFragmentFunction:secondStageFragmentFunction]) {
         
-        id<MTLDevice> device = [MetalDevice sharedMTLDevice];
-        verticalBuffer = [device newBufferWithLength:sizeof(MTLFloat2)
-                                             options:MTLResourceOptionCPUCacheModeDefault];
-        horizontalBuffer = [device newBufferWithLength:sizeof(MTLFloat2)
-                                               options:MTLResourceOptionCPUCacheModeDefault];
-        
-        self.verticalTexelSpacing = 1.0;
-        self.horizontalTexelSpacing = 1.0;
+        [self initialize];
     }
     
     return self;
+}
+
+- (void)initialize {
+    
+    id<MTLDevice> device = [MetalDevice sharedMTLDevice];
+    verticalBuffer = [device newBufferWithLength:sizeof(MTLFloat2)
+                                         options:MTLResourceOptionCPUCacheModeDefault];
+    horizontalBuffer = [device newBufferWithLength:sizeof(MTLFloat2)
+                                           options:MTLResourceOptionCPUCacheModeDefault];
+    
+    self.verticalTexelSpacing = 1.0;
+    self.horizontalTexelSpacing = 1.0;
 }
 
 - (MTLUInt2)textureSizeForTexel {

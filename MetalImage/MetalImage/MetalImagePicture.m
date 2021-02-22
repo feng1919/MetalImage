@@ -184,36 +184,26 @@
     //
     //    NSLog(@"Debug, average input image red: %f, green: %f, blue: %f, alpha: %f", currentRedTotal / (CGFloat)totalNumberOfPixels, currentGreenTotal / (CGFloat)totalNumberOfPixels, currentBlueTotal / (CGFloat)totalNumberOfPixels, currentAlphaTotal / (CGFloat)totalNumberOfPixels);
     
-//    runMetalSynchronouslyOnVideoProcessingQueue(^{
-    NSParameterAssert(pixelSizeToUseForTexture.width > 0);
-    NSParameterAssert(pixelSizeToUseForTexture.height > 0);
+    __weak typeof(self) weakself = self;
+    runMetalSynchronouslyOnVideoProcessingQueue(^{
+        NSParameterAssert(pixelSizeToUseForTexture.width > 0);
+        NSParameterAssert(pixelSizeToUseForTexture.height > 0);
     
+        __strong typeof(weakself) strongself = weakself;
         MTLUInt2 texSize = MTLUInt2Make(pixelSizeToUseForTexture.width, pixelSizeToUseForTexture.height);
-        outputTexture = [[MetalImageContext sharedTextureCache] fetchTextureWithSize:texSize];
-        [outputTexture disableReferenceCounting];
-        
-        [[outputTexture texture] replaceRegion:MTLRegionMake2D(0, 0, texSize.x, texSize.y)
+//TODO bug fix
+//    outputTexture = [[MetalImageContext sharedTextureCache] fetchTextureWithSize:texSize];
+        strongself->outputTexture = [[MetalImageTexture alloc] initWithTextureSize:texSize];
+        [strongself->outputTexture disableReferenceCounting];
+    
+        [[strongself->outputTexture texture] replaceRegion:MTLRegionMake2D(0, 0, texSize.x, texSize.y)
                                    mipmapLevel:0
                                          slice:0
                                      withBytes:imageData
                                    bytesPerRow:texSize.x*4
                                  bytesPerImage:texSize.x*texSize.y*4];
-        
-//        glBindTexture(GL_TEXTURE_2D, [outputFramebuffer texture]);
-//        if (self.shouldSmoothlyScaleOutput)
-//        {
-//            glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-//        }
-//        // no need to use self.outputTextureOptions here since pictures need this texture formats and type
-//        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (int)pixelSizeToUseForTexture.width, (int)pixelSizeToUseForTexture.height, 0, format, GL_UNSIGNED_BYTE, imageData);
-//
-//        if (self.shouldSmoothlyScaleOutput)
-//        {
-//            glGenerateMipmap(GL_TEXTURE_2D);
-//        }
-//        glBindTexture(GL_TEXTURE_2D, 0);
     
-//    });
+    });
     
     if (shouldRedrawUsingCoreGraphics)
     {

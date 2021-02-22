@@ -61,14 +61,28 @@
     //    id<MTLDevice> device = [MetalDevice sharedMTLDevice];
     id<MTLLibrary> defaultLibrary = [MetalDevice MetalImageLibrary];
     id<MTLFunction> firstStageVertexFunction = [defaultLibrary newFunctionWithName:firstStageVertexFunctionName];
+    NSParameterAssert(firstStageVertexFunction);
     id<MTLFunction> firstStageFragmentFunction = [defaultLibrary newFunctionWithName:firstStageFragmentFunctionName];
+    NSParameterAssert(firstStageFragmentFunction);
     id<MTLFunction> secondStageVertexFunction = [defaultLibrary newFunctionWithName:secondStageVertexFunctionName];
+    NSParameterAssert(secondStageVertexFunction);
     id<MTLFunction> secondStageFragmentFunction = [defaultLibrary newFunctionWithName:secondStageFragmentFunctionName];
+    NSParameterAssert(secondStageFragmentFunction);
     
-    return [self initWithFirstStageVertexFunction:firstStageVertexFunction
-                       firstStageFragmentFunction:firstStageFragmentFunction
-                        secondStageVertexFunction:secondStageVertexFunction
-                      secondStageFragmentFunction:secondStageFragmentFunction];
+    self = [super initWithVertexFunction:firstStageVertexFunction fragmentFunction:firstStageFragmentFunction];
+    NSParameterAssert(self);
+    
+    if (self) {
+        
+        _secondStageVertexFunction = secondStageVertexFunction;
+        _secondStageFragmetnFunction = secondStageFragmentFunction;
+        
+        [self createSecondTextureCoordinateBuffer];
+        [self prepareSecondRenderPipeline];
+        [self prepareSecondRenderDepthStencilState];
+        [self prepareSecondRenderPassDescriptor];
+    }
+    return self;
 }
 
 - (nonnull instancetype)initWithFirstStageVertexFunction:(nonnull id<MTLFunction>)firstStageVertexFunction

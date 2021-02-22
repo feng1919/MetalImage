@@ -19,12 +19,14 @@
     MTLUInt supportedDilationRadius = MAX(MIN(dilationRadius, 4), 1);
     NSString *vertexFunctionName = [NSString stringWithFormat:@"vertex_DilationFilterRadius%d", supportedDilationRadius];
     NSString *fragmentFunctionName = [NSString stringWithFormat:@"fragment_DilationFilterRadius%d", supportedDilationRadius];
-    if (self = [super initWithFirstStageVertexFunctionName:vertexFunctionName
+    
+    self = [super initWithFirstStageVertexFunctionName:vertexFunctionName
                             firstStageFragmentFunctionName:fragmentFunctionName
                              secondStageVertexFunctionName:vertexFunctionName
-                           secondStageFragmentFunctionName:fragmentFunctionName])
+                       secondStageFragmentFunctionName:fragmentFunctionName];
+    if (self)
     {
-        
+        NSLog(@"awasdadsasds");
     }
     
     return self;
