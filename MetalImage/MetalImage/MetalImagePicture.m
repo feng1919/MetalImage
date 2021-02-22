@@ -29,7 +29,7 @@
     
     hasProcessedImage = NO;
     shouldSmoothlyScaleOutput = smoothlyScaleOutput;
-    imageUpdateSemaphore = dispatch_semaphore_create(0);
+    imageUpdateSemaphore = dispatch_semaphore_create(1);
     dispatch_semaphore_signal(imageUpdateSemaphore);
     
     
@@ -185,7 +185,9 @@
     //    NSLog(@"Debug, average input image red: %f, green: %f, blue: %f, alpha: %f", currentRedTotal / (CGFloat)totalNumberOfPixels, currentGreenTotal / (CGFloat)totalNumberOfPixels, currentBlueTotal / (CGFloat)totalNumberOfPixels, currentAlphaTotal / (CGFloat)totalNumberOfPixels);
     
 //    runMetalSynchronouslyOnVideoProcessingQueue(^{
-        
+    NSParameterAssert(pixelSizeToUseForTexture.width > 0);
+    NSParameterAssert(pixelSizeToUseForTexture.height > 0);
+    
         MTLUInt2 texSize = MTLUInt2Make(pixelSizeToUseForTexture.width, pixelSizeToUseForTexture.height);
         outputTexture = [[MetalImageContext sharedTextureCache] fetchTextureWithSize:texSize];
         [outputTexture disableReferenceCounting];
