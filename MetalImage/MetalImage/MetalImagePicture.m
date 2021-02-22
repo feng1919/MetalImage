@@ -184,7 +184,7 @@
     //
     //    NSLog(@"Debug, average input image red: %f, green: %f, blue: %f, alpha: %f", currentRedTotal / (CGFloat)totalNumberOfPixels, currentGreenTotal / (CGFloat)totalNumberOfPixels, currentBlueTotal / (CGFloat)totalNumberOfPixels, currentAlphaTotal / (CGFloat)totalNumberOfPixels);
     
-    runMetalSynchronouslyOnVideoProcessingQueue(^{
+//    runMetalSynchronouslyOnVideoProcessingQueue(^{
         
         MTLUInt2 texSize = MTLUInt2Make(pixelSizeToUseForTexture.width, pixelSizeToUseForTexture.height);
         outputTexture = [[MetalImageContext sharedTextureCache] fetchTextureWithSize:texSize];
@@ -210,7 +210,8 @@
 //            glGenerateMipmap(GL_TEXTURE_2D);
 //        }
 //        glBindTexture(GL_TEXTURE_2D, 0);
-    });
+    
+//    });
     
     if (shouldRedrawUsingCoreGraphics)
     {
