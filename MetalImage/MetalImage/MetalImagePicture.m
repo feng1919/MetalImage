@@ -192,8 +192,9 @@
         __strong typeof(weakself) strongself = weakself;
         MTLUInt2 texSize = MTLUInt2Make(pixelSizeToUseForTexture.width, pixelSizeToUseForTexture.height);
 //TODO bug fix
-//    outputTexture = [[MetalImageContext sharedTextureCache] fetchTextureWithSize:texSize];
+//        strongself->outputTexture = [[MetalImageContext sharedTextureCache] fetchTextureWithSize:texSize];
         strongself->outputTexture = [[MetalImageTexture alloc] initWithTextureSize:texSize];
+        [strongself->outputTexture lock];
         [strongself->outputTexture disableReferenceCounting];
     
         [[strongself->outputTexture texture] replaceRegion:MTLRegionMake2D(0, 0, texSize.x, texSize.y)

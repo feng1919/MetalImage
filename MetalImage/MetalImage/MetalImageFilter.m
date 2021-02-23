@@ -39,9 +39,22 @@
     }
     
     //    id<MTLDevice> device = [MetalDevice sharedMTLDevice];
-    id<MTLLibrary> defaultLibrary = [MetalDevice MetalImageLibrary];
-    id<MTLFunction> vertexFunction = [defaultLibrary newFunctionWithName:vertexFunctionName];
-    id<MTLFunction> fragmentFunction = [defaultLibrary newFunctionWithName:fragmentFunctionName];
+    id<MTLFunction> vertexFunction, fragmentFunction;
+    id<MTLLibrary> defaultLibrary = [[MetalDevice sharedMTLDevice] newDefaultLibrary];
+    id<MTLLibrary> imageLibrary = [MetalDevice MetalImageLibrary];
+    if ([defaultLibrary.functionNames containsObject:vertexFunctionName]) {
+        vertexFunction = [defaultLibrary newFunctionWithName:vertexFunctionName];
+    }
+    else {
+        vertexFunction = [imageLibrary newFunctionWithName:vertexFunctionName];
+    }
+    
+    if ([defaultLibrary.functionNames containsObject:fragmentFunctionName]) {
+        fragmentFunction = [defaultLibrary newFunctionWithName:fragmentFunctionName];
+    }
+    else {
+        fragmentFunction = [imageLibrary newFunctionWithName:fragmentFunctionName];
+    }
     return [self initWithVertexFunction:vertexFunction fragmentFunction:fragmentFunction];
 }
 

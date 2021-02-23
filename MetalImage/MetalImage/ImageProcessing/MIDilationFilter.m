@@ -26,7 +26,6 @@
                        secondStageFragmentFunctionName:fragmentFunctionName];
     if (self)
     {
-        NSLog(@"awasdadsasds");
     }
     
     return self;
