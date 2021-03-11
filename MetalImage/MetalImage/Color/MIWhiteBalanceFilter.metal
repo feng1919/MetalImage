@@ -27,7 +27,7 @@ fragment half4 fragment_whiteBalance(VertexIO         inFrag  [[ stage_in ]],
     const half3x3 RGBtoYIQ = {{0.299h, 0.587h, 0.114h}, {0.596h, -0.274h, -0.322h}, {0.212h, -0.523h, 0.311h}};
     const half3x3 YIQtoRGB = {{1.0h, 0.956h, 0.621h}, {1.0h, -0.272h, -0.647h}, {1.0h, -1.105h, 1.702h}};
     
-    const half3 yiq = RGBtoYIQ * source.rgb; //adjusting tint
+    half3 yiq = RGBtoYIQ * source.rgb; //adjusting tint
     yiq.b = clamp(yiq.b + half(parameters.tint)*0.5226h*0.1h, -0.5226h, 0.5226h);
     half3 rgb = YIQtoRGB * yiq;
     
