@@ -144,6 +144,8 @@
     if (![_captureSession isRunning])
     {
         [_captureSession startRunning];
+        
+        NSLog(@"Camera start: %@", [self deviceFormats]);
     }
 }
 
@@ -219,6 +221,10 @@
 
 - (AVCaptureDevicePosition)cameraPosition {
     return [[videoInput device] position];
+}
+
+- (NSArray<AVCaptureDeviceFormat *> *)deviceFormats {
+    return _inputCamera.formats;
 }
 
 + (BOOL)isBackFacingCameraPresent {

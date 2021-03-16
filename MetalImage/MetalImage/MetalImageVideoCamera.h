@@ -70,6 +70,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)switchCameraDevice;
 - (AVCaptureDevicePosition)cameraPosition;
 
+/*
+ *  Return the device formats of the camera in using.
+ */
+- (NSArray<AVCaptureDeviceFormat *> *)deviceFormats;
 
 /// Easy way to tell which cameras are present on device
 + (BOOL)isBackFacingCameraPresent;
