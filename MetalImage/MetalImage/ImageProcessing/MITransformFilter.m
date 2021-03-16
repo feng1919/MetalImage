@@ -32,8 +32,7 @@
     
     self.anchorTopLeft = NO;
     self.ignoreAspectRatio = NO;
-//    self.transform3D = CATransform3DIdentity;
-    self.affineTransform = CGAffineTransformTranslate(CGAffineTransformIdentity, 0.5, 0.5);
+    self.transform3D = CATransform3DIdentity;
     
     return self;
 }
@@ -193,15 +192,18 @@
     bufferContents[14] = temporaryMatrix.v4.z;
     bufferContents[15] = temporaryMatrix.v4.w;
     
-    MTLUInt2 outputSize = [self textureSizeForOutput];
-    MTLFloat width = (MTLFloat)outputSize.x;
-    MTLFloat height = (MTLFloat)outputSize.y;
-    MTLFloat ratio = (!_ignoreAspectRatio && width > 0.0f && height > 0.0f)?height / width:1.0;
+//    MTLUInt2 outputSize = [self textureSizeForOutput];
+//    MTLFloat width = (MTLFloat)outputSize.x;
+//    MTLFloat height = (MTLFloat)outputSize.y;
+//    MTLFloat ratio = (!_ignoreAspectRatio && width > 0.0f && height > 0.0f)?height / width:1.0;
     
     [self loadOrthoMatrix:(MTLFloat *)&temporaryMatrix
-                     left:-1.0 right:1.0
-                   bottom:(-1.0 * ratio) top:(1.0 * ratio)
-                     near:-1.0 far:1.0];
+                     left:-1.0f
+                    right:1.0f
+                   bottom:-1.0f
+                      top:1.0f
+                     near:-0.5f
+                      far:0.5f];
     
     bufferContents[16] = temporaryMatrix.v1.x;
     bufferContents[17] = temporaryMatrix.v1.y;
@@ -234,7 +236,7 @@
     MTLFloat f_n = far - near;
     MTLFloat tx = - (right + left) / r_l;
     MTLFloat ty = - (top + bottom) / t_b;
-    MTLFloat tz = - (far + near) / f_n;
+    MTLFloat tz = - near / f_n;
     
     MTLFloat scale = 2.0f;
     if (_anchorTopLeft)
@@ -256,7 +258,7 @@
     
     matrix[8] = 0.0f;
     matrix[9] = 0.0f;
-    matrix[10] = scale / f_n;
+    matrix[10] = -1.0f / f_n;
     matrix[11] = tz;
     
     matrix[12] = 0.0f;
