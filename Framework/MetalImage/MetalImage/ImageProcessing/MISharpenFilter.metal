@@ -59,15 +59,14 @@ fragment half4 fragment_SharpenFilter(VertexSharpen         inFrag  [[ stage_in 
 {
     constexpr sampler quadSampler(coord::normalized, filter::linear, address::clamp_to_edge);
     
-    half3 textureColor = tex2D.sample(quadSampler, inFrag.textureCoordinate).rgb;
     half3 leftTextureColor = tex2D.sample(quadSampler, inFrag.leftTextureCoordinate).rgb;
     half3 rightTextureColor = tex2D.sample(quadSampler, inFrag.rightTextureCoordinate).rgb;
     half3 topTextureColor = tex2D.sample(quadSampler, inFrag.topTextureCoordinate).rgb;
+    half4 centerTextureColor = tex2D.sample(quadSampler, inFrag.textureCoordinate);
+    half3 textureColor = centerTextureColor.rgb;
     half4 bottomTextureColor = tex2D.sample(quadSampler, inFrag.bottomTextureCoordinate);
     half centerMultiplier = half(inFrag.centerMultiplier);
     half edgeMultiplier = half(inFrag.edgeMultiplier);
     
-    return half4((textureColor * centerMultiplier - (leftTextureColor * edgeMultiplier + rightTextureColor * edgeMultiplier + topTextureColor * edgeMultiplier + bottomTextureColor.rgb * edgeMultiplier)), bottomTextureColor.w);
+    return half4((textureColor * centerMultiplier - (leftTextureColor * edgeMultiplier + rightTextureColor * edgeMultiplier + topTextureColor * edgeMultiplier + bottomTextureColor.rgb * edgeMultiplier)), centerTextureColor.a);
 }
-
-

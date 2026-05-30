@@ -91,11 +91,14 @@ kernel void PoolingMax2x2(device float *outputBuffer [[buffer(0)]],
     const int row = gid.y;
     
     int index = (row*outImageSize.column+col)*outImageSize.depth;
+    int srcCol = col << 1;
+    int srcRow = row << 1;
+    int inputColumnCount = outImageSize.column << 1;
     
-    int p0 = index<<1;
-    int p1 = p0+outImageSize.depth;
-    int p2 = ((row+1)*outImageSize.column+col)*outImageSize.depth<<1;
-    int p3 = p2+outImageSize.depth;
+    int p0 = (srcRow * inputColumnCount + srcCol) * outImageSize.depth;
+    int p1 = p0 + outImageSize.depth;
+    int p2 = ((srcRow + 1) * inputColumnCount + srcCol) * outImageSize.depth;
+    int p3 = p2 + outImageSize.depth;
     
     for (int d=0;d<outImageSize.depth;d++) {
         float v0 = hwchBuffer[p0+d];
@@ -114,6 +117,6 @@ kernel void ActivationReLu(constant float *inputBuffer [[buffer(0)]],
     int index = (gid.y*imageSize.column+gid.x)*imageSize.depth;
     for (int d=0;d<imageSize.depth;d++) {
         float v = inputBuffer[index+d];
-        outputBuffer[index+d] = v>0.0f?:0.0f;
+        outputBuffer[index+d] = v > 0.0f ? v : 0.0f;
     }
 }
