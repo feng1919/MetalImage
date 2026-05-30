@@ -1089,12 +1089,12 @@
 		9FFACDC31FBAD1B8004BF184 /* MITransformFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MITransformFilter.m; sourceTree = "<group>"; };
 		9FFACDC81FBAD58C004BF184 /* MITransformFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MITransformFilter.metal; sourceTree = "<group>"; };
 		EB50A5041F7E3AC9009B4C45 /* MIBrightnessFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MIBrightnessFilter.metal; sourceTree = "<group>"; };
-		EB50A5181F7E3BB0009B4C45 /* MIContrastFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MIContrastFilter.metal; path = MetalImage/MetalImage/Color/MIContrastFilter.metal; sourceTree = SOURCE_ROOT; };
-		EB50A51D1F7E3C87009B4C45 /* MILevelsFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MILevelsFilter.metal; path = MetalImage/MetalImage/Color/MILevelsFilter.metal; sourceTree = SOURCE_ROOT; };
-		EB50A5211F7E3CFA009B4C45 /* MIExposureFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MIExposureFilter.metal; path = MetalImage/MetalImage/Color/MIExposureFilter.metal; sourceTree = SOURCE_ROOT; };
-		EB50A5231F7E3D54009B4C45 /* MIGammaFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MIGammaFilter.metal; path = MetalImage/MetalImage/Color/MIGammaFilter.metal; sourceTree = SOURCE_ROOT; };
-		EB50A5271F7E3D83009B4C45 /* MISaturationFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MISaturationFilter.metal; path = MetalImage/MetalImage/Color/MISaturationFilter.metal; sourceTree = SOURCE_ROOT; };
-		EB50A5291F7E3DCD009B4C45 /* MIColorMatrixFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MIColorMatrixFilter.metal; path = MetalImage/MetalImage/Color/MIColorMatrixFilter.metal; sourceTree = SOURCE_ROOT; };
+		EB50A5181F7E3BB0009B4C45 /* MIContrastFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MIContrastFilter.metal; path = Framework/MetalImage/MetalImage/Color/MIContrastFilter.metal; sourceTree = SOURCE_ROOT; };
+		EB50A51D1F7E3C87009B4C45 /* MILevelsFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MILevelsFilter.metal; path = Framework/MetalImage/MetalImage/Color/MILevelsFilter.metal; sourceTree = SOURCE_ROOT; };
+		EB50A5211F7E3CFA009B4C45 /* MIExposureFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MIExposureFilter.metal; path = Framework/MetalImage/MetalImage/Color/MIExposureFilter.metal; sourceTree = SOURCE_ROOT; };
+		EB50A5231F7E3D54009B4C45 /* MIGammaFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MIGammaFilter.metal; path = Framework/MetalImage/MetalImage/Color/MIGammaFilter.metal; sourceTree = SOURCE_ROOT; };
+		EB50A5271F7E3D83009B4C45 /* MISaturationFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MISaturationFilter.metal; path = Framework/MetalImage/MetalImage/Color/MISaturationFilter.metal; sourceTree = SOURCE_ROOT; };
+		EB50A5291F7E3DCD009B4C45 /* MIColorMatrixFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MIColorMatrixFilter.metal; path = Framework/MetalImage/MetalImage/Color/MIColorMatrixFilter.metal; sourceTree = SOURCE_ROOT; };
 		EB54C9121ECC710100FB7DC3 /* MetalImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetalImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB54C9151ECC710200FB7DC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB54C95F1ECC756D00FB7DC3 /* libMetalImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMetalImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1128,12 +1128,12 @@
 		EB57B16A1E86126F00832619 /* MetalMatrixBuffers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalMatrixBuffers.m; sourceTree = "<group>"; };
 		EB57B16B1E86126F00832619 /* MetalMatrixMult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalMatrixMult.h; sourceTree = "<group>"; };
 		EB57B16C1E86126F00832619 /* MetalMatrixMult.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MetalMatrixMult.mm; sourceTree = "<group>"; };
-		EB57B16D1E86126F00832619 /* MetalMatrixMulti.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MetalMatrixMulti.metal; path = MetalImage/MetalImage/Matrix/MetalMatrixMulti.metal; sourceTree = SOURCE_ROOT; };
+		EB57B16D1E86126F00832619 /* MetalMatrixMulti.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MetalMatrixMulti.metal; path = Framework/MetalImage/MetalImage/Matrix/MetalMatrixMulti.metal; sourceTree = SOURCE_ROOT; };
 		EB57B16E1E86126F00832619 /* MetalDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalDevice.h; sourceTree = "<group>"; };
 		EB57B16F1E86126F00832619 /* MetalDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalDevice.m; sourceTree = "<group>"; };
 		EB57B1711E86126F00832619 /* MetalImageColorConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalImageColorConversion.h; sourceTree = "<group>"; };
 		EB57B1721E86126F00832619 /* MetalImageColorConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalImageColorConversion.m; sourceTree = "<group>"; };
-		EB57B1731E86126F00832619 /* MetalImageColorConversion.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MetalImageColorConversion.metal; path = MetalImage/MetalImage/MetalImageColorConversion.metal; sourceTree = SOURCE_ROOT; };
+		EB57B1731E86126F00832619 /* MetalImageColorConversion.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MetalImageColorConversion.metal; path = Framework/MetalImage/MetalImage/MetalImageColorConversion.metal; sourceTree = SOURCE_ROOT; };
 		EB57B1741E86126F00832619 /* MetalImageContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalImageContext.h; sourceTree = "<group>"; };
 		EB57B1751E86126F00832619 /* MetalImageContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalImageContext.m; sourceTree = "<group>"; };
 		EB57B1761E86126F00832619 /* MetalImageDebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalImageDebugView.h; sourceTree = "<group>"; };
@@ -1441,22 +1441,23 @@
 			path = Effects;
 			sourceTree = "<group>";
 		};
-		EB54C9131ECC710200FB7DC3 /* MetalImage */ = {
+		EB54C9131ECC710200FB7DC3 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
 				5A60BDB01FB88A3E00781C41 /* Resources */,
 				5A619049232BC21C00FD73E5 /* MetalImage.h */,
 				EB54C9151ECC710200FB7DC3 /* Info.plist */,
+				EB57B1531E86126F00832619 /* MetalImage */,
 			);
-			path = MetalImage;
+			name = Framework;
+			path = Framework/MetalImage;
 			sourceTree = "<group>";
 		};
 		EB57B12E1E8611ED00832619 = {
 			isa = PBXGroup;
 			children = (
-				EB57B1BE1E86131E00832619 /* Default-568h@2x.png */,
-				EB57B1391E8611ED00832619 /* MetalImage */,
-				EB54C9131ECC710200FB7DC3 /* MetalImage */,
+				EB57B1391E8611ED00832619 /* MetalImageDemo */,
+				EB54C9131ECC710200FB7DC3 /* Framework */,
 				EB57B1381E8611ED00832619 /* Products */,
 				EB57B1C01E86161B00832619 /* Frameworks */,
 			);
@@ -1473,7 +1474,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EB57B1391E8611ED00832619 /* MetalImage */ = {
+		EB57B1391E8611ED00832619 /* MetalImageDemo */ = {
 			isa = PBXGroup;
 			children = (
 				EB57B13D1E8611ED00832619 /* AppDelegate.h */,
@@ -1481,12 +1482,13 @@
 				EB57B1401E8611ED00832619 /* ViewController.h */,
 				EB57B1411E8611ED00832619 /* ViewController.m */,
 				EB57B1511E86124000832619 /* ViewController.xib */,
-				EB57B1531E86126F00832619 /* MetalImage */,
+				EB57B1BE1E86131E00832619 /* Default-568h@2x.png */,
 				EB57B1461E8611ED00832619 /* Assets.xcassets */,
 				EB57B14B1E8611ED00832619 /* Info.plist */,
 				EB57B13A1E8611ED00832619 /* Supporting Files */,
 			);
-			path = MetalImage;
+			name = MetalImageDemo;
+			path = Example/MetalImageDemo;
 			sourceTree = "<group>";
 		};
 		EB57B13A1E8611ED00832619 /* Supporting Files */ = {
@@ -2654,7 +2656,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = MetalImage/Info.plist;
+				INFOPLIST_FILE = Framework/MetalImage/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2680,7 +2682,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = MetalImage/Info.plist;
+				INFOPLIST_FILE = Framework/MetalImage/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2858,7 +2860,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				DEVELOPMENT_TEAM = 6LS62R5GKZ;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = MetalImage/Info.plist;
+				INFOPLIST_FILE = Example/MetalImageDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_COMPILER_FLAGS = "";
@@ -2879,7 +2881,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				DEVELOPMENT_TEAM = 6LS62R5GKZ;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = MetalImage/Info.plist;
+				INFOPLIST_FILE = Example/MetalImageDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_COMPILER_FLAGS = "";

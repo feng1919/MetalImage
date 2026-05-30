@@ -38,28 +38,32 @@ All public headers are exported through:
 ## Project Layout
 
 ```text
-MetalImage.xcodeproj          Xcode project
-MetalImage/                   Framework target sources
-MetalImage/MetalImage/Color/  Color-related filters
-MetalImage/MetalImage/ImageProcessing/
-                              Blur, edge detection, morphology, transforms
-MetalImage/MetalImage/Blend/  Blend filters
-MetalImage/MetalImage/Effects/
-                              Stylized and distortion effects
-MetalImage/MetalImage/Matrix/ Matrix acceleration helpers
-MetalImageDemo                Demo app target in the same project
-MetalImageShader              Metal shader library target
+MetalImage.xcodeproj                       Xcode project
+Framework/MetalImage/                     Framework root
+Framework/MetalImage/MetalImage/Color/    Color-related filters
+Framework/MetalImage/MetalImage/ImageProcessing/
+                                           Blur, edge detection, morphology, transforms
+Framework/MetalImage/MetalImage/Blend/    Blend filters
+Framework/MetalImage/MetalImage/Effects/  Stylized and distortion effects
+Framework/MetalImage/MetalImage/Matrix/   Matrix acceleration helpers
+Example/MetalImageDemo/                   Demo app sources and assets
+MetalImageShader                          Metal shader library target
 ```
 
 ## Getting Started
 
-This repository currently provides an Xcode project, not a CocoaPods/SPM package manifest. The simplest way to try it is:
+This repository now separates the reusable framework code from the runnable example:
+
+- `Framework/MetalImage/`: headers, sources, resources, and framework plist
+- `Example/MetalImageDemo/`: app entry, UI, assets, and example plist
+
+The project still ships as an Xcode project rather than a CocoaPods/SPM package manifest. The simplest way to try it is:
 
 1. Open `MetalImage.xcodeproj`
 2. Select the `MetalImageDemo` scheme and a physical iOS device
 3. Build and run
 
-If you integrate it into your own app, make sure your target can access the Metal shaders and that camera-based features include `NSCameraUsageDescription`.
+If you integrate it into your own app, start from `Framework/MetalImage/`, and use `Example/MetalImageDemo/` as the runnable reference implementation. Camera-based features still require `NSCameraUsageDescription`.
 
 ## Basic Usage
 
