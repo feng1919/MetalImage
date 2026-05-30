@@ -57,13 +57,18 @@ This repository now separates the reusable framework code from the runnable exam
 - `Framework/MetalImage/`: headers, sources, resources, and framework plist
 - `Example/MetalImageDemo/`: app entry, UI, assets, and example plist
 
-The project still ships as an Xcode project rather than a CocoaPods/SPM package manifest. The simplest way to try it is:
+You can integrate `MetalImage` in two ways:
 
-1. Open `MetalImage.xcodeproj`
-2. Select the `MetalImageDemo` scheme and a physical iOS device
-3. Build and run
+1. **Swift Package Manager**
+   - In Xcode, choose **Add Package Dependencies...**
+   - Use this repository URL
+   - Link the `MetalImage` product to your iOS app target
+2. **Open the sample project**
+   - Open `MetalImage.xcodeproj`
+   - Select the `MetalImageDemo` scheme and a physical iOS device
+   - Build and run
 
-If you integrate it into your own app, start from `Framework/MetalImage/`, and use `Example/MetalImageDemo/` as the runnable reference implementation. Camera-based features still require `NSCameraUsageDescription`.
+SwiftPM support is source-based and packages the framework's Metal shaders with the target. Camera-based features still require `NSCameraUsageDescription`, and runtime use still targets Metal-capable iOS devices rather than the simulator.
 
 ## Basic Usage
 
