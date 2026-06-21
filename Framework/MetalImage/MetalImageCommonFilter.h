@@ -6,7 +6,7 @@
 //  Copyright © 2017年 tencent. All rights reserved.
 //
 
-#import <MetalImage/MetalImage.h>
+#import "MetalImage.h"
 
 @interface MetalImageCommonFilter : MetalImageFilter
 
