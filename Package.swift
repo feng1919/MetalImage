@@ -17,9 +17,7 @@ let package = Package(
         .target(
             name: "MetalImage",
             path: "Framework/MetalImage",
-            exclude: [
-                "Info.plist"
-            ],
+            exclude: ["Info.plist"],
             resources: [
                 .process("MetalImage/Blend/Blend.metal"),
                 .process("MetalImage/Color/MIAdaptiveLuminanceFilter.metal"),
@@ -96,14 +94,13 @@ let package = Package(
             cSettings: [
                 .headerSearchPath("."),
                 .headerSearchPath("MetalImage"),
-                                                                                                            ],
-                            .headerSearchPath("MetalImage"),
                 .headerSearchPath("MetalImage/Blend"),
                 .headerSearchPath("MetalImage/Color"),
                 .headerSearchPath("MetalImage/Effects"),
                 .headerSearchPath("MetalImage/ImageProcessing"),
                 .headerSearchPath("MetalImage/Matrix"),
                 .headerSearchPath("MetalImage/Metal"),
+            ],
             linkerSettings: [
                 .linkedFramework("AVFoundation", .when(platforms: [.iOS])),
                 .linkedFramework("Accelerate", .when(platforms: [.iOS])),
