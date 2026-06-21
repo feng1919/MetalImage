@@ -35,10 +35,6 @@
 		5A1D752B232B7FEA00C3F5E9 /* MetalImageTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D752A232B7FEA00C3F5E9 /* MetalImageTypes.c */; };
 		5A1D752C232B7FEA00C3F5E9 /* MetalImageTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D752A232B7FEA00C3F5E9 /* MetalImageTypes.c */; };
 		5A1D752D232B7FEA00C3F5E9 /* MetalImageTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D752A232B7FEA00C3F5E9 /* MetalImageTypes.c */; };
-		A1B2C3D4E5F6012345678901 /* MetalImageMathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6012345678904 /* MetalImageMathTests.m */; };
-		A1B2C3D4E5F6012345678902 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6012345678905 /* XCTest.framework */; };
-		A1B2C3D4E5F6012345678916 /* MetalImageMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D1FAD24A1F5A800E0154C /* MetalImageMath.c */; };
-		A1B2C3D4E5F6012345678917 /* MetalImageTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D752A232B7FEA00C3F5E9 /* MetalImageTypes.c */; };
 		5A22D8D41FD6309A006A1FC2 /* MILocalBinaryPatternFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A22D8D21FD6309A006A1FC2 /* MILocalBinaryPatternFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A22D8D51FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8D31FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m */; };
 		5A22D8D61FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A22D8D31FD6309A006A1FC2 /* MILocalBinaryPatternFilter.m */; };
@@ -633,6 +629,10 @@
 		9FFACDC91FBAD58C004BF184 /* MITransformFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDC81FBAD58C004BF184 /* MITransformFilter.metal */; };
 		9FFACDCA1FBAD58C004BF184 /* MITransformFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDC81FBAD58C004BF184 /* MITransformFilter.metal */; };
 		9FFACDCB1FBAD58C004BF184 /* MITransformFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9FFACDC81FBAD58C004BF184 /* MITransformFilter.metal */; };
+		A1B2C3D4E5F6012345678901 /* MetalImageMathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6012345678904 /* MetalImageMathTests.m */; };
+		A1B2C3D4E5F6012345678902 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6012345678905 /* XCTest.framework */; };
+		A1B2C3D4E5F6012345678916 /* MetalImageMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D1FAD24A1F5A800E0154C /* MetalImageMath.c */; };
+		A1B2C3D4E5F6012345678917 /* MetalImageTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D752A232B7FEA00C3F5E9 /* MetalImageTypes.c */; };
 		EB50A5051F7E3AC9009B4C45 /* MIBrightnessFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = EB50A5041F7E3AC9009B4C45 /* MIBrightnessFilter.metal */; };
 		EB50A5061F7E3AC9009B4C45 /* MIBrightnessFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = EB50A5041F7E3AC9009B4C45 /* MIBrightnessFilter.metal */; };
 		EB50A5081F7E3AC9009B4C45 /* MIBrightnessFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = EB50A5041F7E3AC9009B4C45 /* MIBrightnessFilter.metal */; };
@@ -1092,6 +1092,9 @@
 		9FFACDC21FBAD1B8004BF184 /* MITransformFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MITransformFilter.h; sourceTree = "<group>"; };
 		9FFACDC31FBAD1B8004BF184 /* MITransformFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MITransformFilter.m; sourceTree = "<group>"; };
 		9FFACDC81FBAD58C004BF184 /* MITransformFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MITransformFilter.metal; sourceTree = "<group>"; };
+		A1B2C3D4E5F6012345678903 /* MetalImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B2C3D4E5F6012345678904 /* MetalImageMathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalImageMathTests.m; sourceTree = "<group>"; };
+		A1B2C3D4E5F6012345678905 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
 		EB50A5041F7E3AC9009B4C45 /* MIBrightnessFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MIBrightnessFilter.metal; sourceTree = "<group>"; };
 		EB50A5181F7E3BB0009B4C45 /* MIContrastFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MIContrastFilter.metal; path = Framework/MetalImage/MetalImage/Color/MIContrastFilter.metal; sourceTree = SOURCE_ROOT; };
 		EB50A51D1F7E3C87009B4C45 /* MILevelsFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = MILevelsFilter.metal; path = Framework/MetalImage/MetalImage/Color/MILevelsFilter.metal; sourceTree = SOURCE_ROOT; };
@@ -1104,9 +1107,6 @@
 		EB54C95F1ECC756D00FB7DC3 /* libMetalImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMetalImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB54C96A1ECC77B900FB7DC3 /* MetalImageShader.metallib */ = {isa = PBXFileReference; explicitFileType = "archive.metal-library"; includeInIndex = 0; path = MetalImageShader.metallib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB57B1371E8611ED00832619 /* MetalImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1B2C3D4E5F6012345678903 /* MetalImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1B2C3D4E5F6012345678904 /* MetalImageMathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetalImageMathTests.m; sourceTree = "<group>"; };
-		A1B2C3D4E5F6012345678905 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
 		EB57B13B1E8611ED00832619 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EB57B13D1E8611ED00832619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EB57B13E1E8611ED00832619 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1183,6 +1183,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A1B2C3D4E5F6012345678907 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B2C3D4E5F6012345678902 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB54C90E1ECC710100FB7DC3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1210,14 +1218,6 @@
 				EB57B1C61E86164C00832619 /* UIKit.framework in Frameworks */,
 				EB57B1C41E86162000832619 /* Metal.framework in Frameworks */,
 				EB57B1C21E86161B00832619 /* Accelerate.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A1B2C3D4E5F6012345678907 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A1B2C3D4E5F6012345678902 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1456,6 +1456,14 @@
 			path = Effects;
 			sourceTree = "<group>";
 		};
+		A1B2C3D4E5F6012345678906 /* MetalImageTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1B2C3D4E5F6012345678904 /* MetalImageMathTests.m */,
+			);
+			path = Tests/MetalImageTests;
+			sourceTree = "<group>";
+		};
 		EB54C9131ECC710200FB7DC3 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -1489,14 +1497,6 @@
 				A1B2C3D4E5F6012345678903 /* MetalImageTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		A1B2C3D4E5F6012345678906 /* MetalImageTests */ = {
-			isa = PBXGroup;
-			children = (
-				A1B2C3D4E5F6012345678904 /* MetalImageMathTests.m */,
-			);
-			path = Tests/MetalImageTests;
 			sourceTree = "<group>";
 		};
 		EB57B1391E8611ED00832619 /* MetalImageDemo */ = {
@@ -1868,6 +1868,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A1B2C3D4E5F6012345678912 /* MetalImageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1B2C3D4E5F6012345678915 /* Build configuration list for PBXNativeTarget "MetalImageTests" */;
+			buildPhases = (
+				A1B2C3D4E5F6012345678908 /* Sources */,
+				A1B2C3D4E5F6012345678907 /* Frameworks */,
+				A1B2C3D4E5F6012345678909 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalImageTests;
+			productName = MetalImageTests;
+			productReference = A1B2C3D4E5F6012345678903 /* MetalImageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EB54C9111ECC710100FB7DC3 /* MetalImage */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB54C9171ECC710200FB7DC3 /* Build configuration list for PBXNativeTarget "MetalImage" */;
@@ -1936,23 +1953,6 @@
 			productReference = EB57B1371E8611ED00832619 /* MetalImageDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A1B2C3D4E5F6012345678912 /* MetalImageTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A1B2C3D4E5F6012345678915 /* Build configuration list for PBXNativeTarget "MetalImageTests" */;
-			buildPhases = (
-				A1B2C3D4E5F6012345678908 /* Sources */,
-				A1B2C3D4E5F6012345678907 /* Frameworks */,
-				A1B2C3D4E5F6012345678909 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MetalImageTests;
-			productName = MetalImageTests;
-			productReference = A1B2C3D4E5F6012345678903 /* MetalImageTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1962,6 +1962,9 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = fengshi;
 				TargetAttributes = {
+					A1B2C3D4E5F6012345678912 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					EB54C9111ECC710100FB7DC3 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 6LS62R5GKZ;
@@ -1981,9 +1984,6 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 6LS62R5GKZ;
 						ProvisioningStyle = Manual;
-					};
-					A1B2C3D4E5F6012345678912 = {
-						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
@@ -2010,6 +2010,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A1B2C3D4E5F6012345678909 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB54C9101ECC710100FB7DC3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2033,16 +2040,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A1B2C3D4E5F6012345678909 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A1B2C3D4E5F6012345678908 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B2C3D4E5F6012345678901 /* MetalImageMathTests.m in Sources */,
+				A1B2C3D4E5F6012345678916 /* MetalImageMath.c in Sources */,
+				A1B2C3D4E5F6012345678917 /* MetalImageTypes.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EB54C90D1ECC710100FB7DC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2686,16 +2696,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A1B2C3D4E5F6012345678908 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A1B2C3D4E5F6012345678901 /* MetalImageMathTests.m in Sources */,
-				A1B2C3D4E5F6012345678916 /* MetalImageMath.c in Sources */,
-				A1B2C3D4E5F6012345678917 /* MetalImageTypes.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2707,6 +2707,48 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		A1B2C3D4E5F6012345678913 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Framework/MetalImage/MetalImage",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		A1B2C3D4E5F6012345678914 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Framework/MetalImage/MetalImage",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
 		EB54C9181ECC710200FB7DC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2722,7 +2764,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Framework/MetalImage/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2748,7 +2790,7 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Framework/MetalImage/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2766,7 +2808,7 @@
 				DEVELOPMENT_TEAM = 6LS62R5GKZ;
 				ENABLE_BITCODE = NO;
 				EXECUTABLE_PREFIX = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2781,7 +2823,7 @@
 				DEVELOPMENT_TEAM = 6LS62R5GKZ;
 				ENABLE_BITCODE = NO;
 				EXECUTABLE_PREFIX = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2794,7 +2836,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6LS62R5GKZ;
 				ENABLE_BITCODE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 x86_64 i386";
 			};
@@ -2805,7 +2847,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = 6LS62R5GKZ;
 				ENABLE_BITCODE = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 x86_64 i386";
 			};
@@ -2860,7 +2902,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2910,7 +2952,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -2925,7 +2967,7 @@
 				DEVELOPMENT_TEAM = 6LS62R5GKZ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Example/MetalImageDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_COMPILER_FLAGS = "";
 				MTL_FAST_MATH = YES;
@@ -2946,7 +2988,7 @@
 				DEVELOPMENT_TEAM = 6LS62R5GKZ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Example/MetalImageDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_COMPILER_FLAGS = "";
 				MTL_FAST_MATH = YES;
@@ -2959,49 +3001,18 @@
 			};
 			name = Release;
 		};
-		A1B2C3D4E5F6012345678913 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Framework/MetalImage/MetalImage",
-				);
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImageTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-			};
-			name = Debug;
-		};
-		A1B2C3D4E5F6012345678914 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Framework/MetalImage/MetalImage",
-				);
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fengshi.MetalImageTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A1B2C3D4E5F6012345678915 /* Build configuration list for PBXNativeTarget "MetalImageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B2C3D4E5F6012345678913 /* Debug */,
+				A1B2C3D4E5F6012345678914 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EB54C9171ECC710200FB7DC3 /* Build configuration list for PBXNativeTarget "MetalImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3043,15 +3054,6 @@
 			buildConfigurations = (
 				EB57B14F1E8611ED00832619 /* Debug */,
 				EB57B1501E8611ED00832619 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A1B2C3D4E5F6012345678915 /* Build configuration list for PBXNativeTarget "MetalImageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A1B2C3D4E5F6012345678913 /* Debug */,
-				A1B2C3D4E5F6012345678914 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
