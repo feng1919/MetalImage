@@ -97,6 +97,13 @@ let package = Package(
                 .headerSearchPath("."),
                 .headerSearchPath("MetalImage"),
                                                                                                             ],
+                            .headerSearchPath("MetalImage"),
+                .headerSearchPath("MetalImage/Blend"),
+                .headerSearchPath("MetalImage/Color"),
+                .headerSearchPath("MetalImage/Effects"),
+                .headerSearchPath("MetalImage/ImageProcessing"),
+                .headerSearchPath("MetalImage/Matrix"),
+                .headerSearchPath("MetalImage/Metal"),
             linkerSettings: [
                 .linkedFramework("AVFoundation", .when(platforms: [.iOS])),
                 .linkedFramework("Accelerate", .when(platforms: [.iOS])),
