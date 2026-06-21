@@ -1,9 +1,8 @@
 //
-//  MetalImage.h"
+//  MetalImage.h
 //  MetalImage
 //
-//  Created by Feng Stone on 2019/9/13.
-//  Copyright © 2019 fengshi. All rights reserved.
+//  SPM umbrella header — all imports use MetalImage/ prefix.
 //
 
 #if TARGET_IPHONE_SIMULATOR
@@ -12,7 +11,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Metal/Metal.h>
-// COLOR
+
 #import "MetalImage/Color/MIBrightnessFilter.h"
 #import "MetalImage/Color/MIColorMatrixFilter.h"
 #import "MetalImage/Color/MIContrastFilter.h"
@@ -34,7 +33,6 @@
 #import "MetalImage/Color/MISolarizeFilter.h"
 #import "MetalImage/Color/MIAverageLuminanceThresholdFilter.h"
 #import "MetalImage/Color/MIHistogramGenerator.h"
-#import "MetalImage/Color/MIHistogramGenerator.h"
 #import "MetalImage/Color/MIHistogramFilter.h"
 #import "MetalImage/Color/MIHighlightShadowFilter.h"
 #import "MetalImage/Color/MILookupFilter.h"
@@ -43,7 +41,6 @@
 #import "MetalImage/Color/MIWhiteBalanceFilter.h"
 #import "MetalImage/Color/MILuminanceRangeFilter.h"
 
-// Image Processing
 #import "MetalImage/ImageProcessing/MITransformFilter.h"
 #import "MetalImage/ImageProcessing/MICropFilter.h"
 #import "MetalImage/ImageProcessing/MIGaussianBlurFilter.h"
@@ -77,11 +74,10 @@
 #import "MetalImage/ImageProcessing/MIHighPassFilter.h"
 #import "MetalImage/ImageProcessing/MIBilateralFilter.h"
 #import "MetalImage/ImageProcessing/MIMaskBilateralFilter.h"
-#import "MetalImage/Color/MIHistogramEqualizationFilter.h"
-#import "MetalImage/Color/MIAdaptiveLuminanceFilter.h"
+#import "MetalImage/ImageProcessing/MIHistogramEqualizationFilter.h"
+#import "MetalImage/ImageProcessing/MIAdaptiveLuminanceFilter.h"
 #import "MetalImage/ImageProcessing/MICannyEdgeDetectionFilter.h"
 
-// Blend
 #import "MetalImage/Blend/MISourceOverBlendFilter.h"
 #import "MetalImage/Blend/MIColorBurnBlendFilter.h"
 #import "MetalImage/Blend/MIColorDodgeBlendFilter.h"
@@ -108,7 +104,6 @@
 #import "MetalImage/Blend/MILinearBurnBlendFilter.h"
 #import "MetalImage/Blend/MIMaskFilter.h"
 
-// Effects
 #import "MetalImage/Effects/MIPerlinNoiseFilter.h"
 #import "MetalImage/Effects/MIPixellateFilter.h"
 #import "MetalImage/Effects/MIPolkaDotFilter.h"
@@ -130,36 +125,34 @@
 #import "MetalImage/Effects/MIMosaicFilter.h"
 #import "MetalImage/Effects/MIVoronoiConsumerFilter.h"
 
-// Matrix
-#import "MetalMatrixBuffers.h"
+#import "MetalImage/Matrix/MetalMatrixBuffers.h"
 #import "MetalImage/Matrix/BlasMatrixMult.h"
-#import "MetalMatrixMult.h"
+#import "MetalImage/Matrix/MetalMatrixMult.h"
 
-// Foundation
-#import "MetalDevice.h"
-#import "MetalImageColorConversion.h"
-#import "MetalImageContext.h"
-#import "MetalImageDebugView.h"
-#import "MetalImageFilter.h"
-#import "MetalImageRenderResource.h"
-#import "MetalImageBuffer.h"
-#import "MetalImageFilterExtension.h"
-#import "MetalImageTwoPassFilter.h"
+#import "MetalImage/MetalDevice.h"
+#import "MetalImage/MetalImageColorConversion.h"
+#import "MetalImage/MetalImageContext.h"
+#import "MetalImage/MetalImageDebugView.h"
+#import "MetalImage/MetalImageFilter.h"
+#import "MetalImage/MetalImageRenderResource.h"
+#import "MetalImage/MetalImageBuffer.h"
+#import "MetalImage/MetalImageFilterExtension.h"
+#import "MetalImage/MetalImageTwoPassFilter.h"
 #import "MetalImage/MITwoPassTextureSamplingFilter.h"
 #import "MetalImage/MI3x3TextureSamplingFilter.h"
-#import "MetalImageTwoInputFilter.h"
-#import "MetalImageFilterGroup.h"
-#import "MetalImageFunction.h"
-#import "MetalImageGlobal.h"
-#import "MetalImageTypes.h"
-#import "MetalImageInput.h"
-#import "MetalImageKernel.h"
-#import "MetalImageTwoInputKernel.h"
-#import "MetalImageOutput.h"
-#import "MetalImagePicture.h"
-#import "MetalImageTexture.h"
-#import "MetalImageTextureCache.h"
-#import "MetalImageVideoCamera.h"
-#import "MetalImageView.h"
+#import "MetalImage/MetalImageTwoInputFilter.h"
+#import "MetalImage/MetalImageFilterGroup.h"
+#import "MetalImage/MetalImageFunction.h"
+#import "MetalImage/MetalImageGlobal.h"
+#import "MetalImage/MetalImageTypes.h"
+#import "MetalImage/MetalImageInput.h"
+#import "MetalImage/MetalImageKernel.h"
+#import "MetalImage/MetalImageTwoInputKernel.h"
+#import "MetalImage/MetalImageOutput.h"
+#import "MetalImage/MetalImagePicture.h"
+#import "MetalImage/MetalImageTexture.h"
+#import "MetalImage/MetalImageTextureCache.h"
+#import "MetalImage/MetalImageVideoCamera.h"
+#import "MetalImage/MetalImageView.h"
 #import "MetalImage/UIImage+Texture.h"
-#import "MetalImageMath.h"
+#import "MetalImage/MetalImageMath.h"
