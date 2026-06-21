@@ -90,7 +90,7 @@ let package = Package(
                 .process("MetalImage/Metal/Convolution.metal"),
                 .process("MetalImage/MetalImageColorConversion.metal")
             ],
-            publicHeadersPath: ".",
+            
             cSettings: [
                 .headerSearchPath("."),
                 .headerSearchPath("MetalImage"),
