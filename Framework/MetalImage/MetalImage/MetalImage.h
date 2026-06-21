@@ -24,7 +24,7 @@
 #import "MetalImageFilterGroup.h"
 #import "MetalImageColorConversion.h"
 #import "MetalImageContext.h"
-#import "MetalImageKernal.h"
+#import "MetalImageKernel.h"
 #import "MetalImageDebugView.h"
 
 

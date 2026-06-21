@@ -46,7 +46,7 @@
 #define VertexD1 {  PosValue,   PosValue, 0.0f, PosValue }
     MTLFloat4 imageVertices[] = {VertexA1,VertexB1,VertexC1,VertexD1};
     
-    [self updateTextureVertexBuffer:_verticsBuffer contents:imageVertices size:MetalImageDefaultRenderVetexCount];
+    [self updateTextureVertexBuffer:_verticsBuffer withNewContents:imageVertices size:MetalImageDefaultRenderVetexCount];
     
     
 #define A {0.0f, PosValue}
@@ -56,7 +56,7 @@
     
     static const MTLFloat2 noRotationTextureCoordinates[] = {A,B,C,D};
     
-    [self updateTextureCoordinateBuffer:_coordBuffer contents:noRotationTextureCoordinates size:MetalImageDefaultRenderVetexCount];
+    [self updateTextureCoordinateBuffer:_coordBuffer withNewContents:noRotationTextureCoordinates size:MetalImageDefaultRenderVetexCount];
     
     id<MTLCommandBuffer> commandBuffer = [MetalDevice sharedCommandBuffer];
     
@@ -83,7 +83,7 @@
 #define VertexD1 {  PosValue,   PosValue, 0.0f, PosValue }
         MTLFloat4 imageVertices[] = {VertexA1,VertexB1,VertexC1,VertexD1};
         
-        [self updateTextureVertexBuffer:_verticsBuffer contents:imageVertices size:MetalImageDefaultRenderVetexCount];
+        [self updateTextureVertexBuffer:_verticsBuffer withNewContents:imageVertices size:MetalImageDefaultRenderVetexCount];
         
         [renderEncoder setVertexBuffer:_verticsBuffer offset:0 atIndex:0];
         [renderEncoder setVertexBuffer:_coordBuffer offset:0 atIndex:1];
