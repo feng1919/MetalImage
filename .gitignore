@@ -1,13 +1,17 @@
+# Xcode user state
+xcuserdata/
+*.xcuserstate
+xcdebugger/
 
-MetalImage.xcodeproj/project.xcworkspace/xcuserdata/fengstone.xcuserdatad/UserInterfaceState.xcuserstate
-MetalImage.xcodeproj/project.xcworkspace/xcuserdata/fengstone.xcuserdatad/UserInterfaceState.xcuserstate
-*.xcuserstate
-MetalImage.xcodeproj/project.xcworkspace/xcuserdata/fengstone.xcuserdatad/UserInterfaceState.xcuserstate
-*.xcuserstate
-*.xcuserstate
-*.xcuserstate
-*.xcuserstate
-MetalImage.xcodeproj/project.xcworkspace/xcuserdata/fengstone.xcuserdatad/UserInterfaceState.xcuserstate
-*.xcuserstate
-*.xcuserstate
-MetalImage.xcodeproj/project.xcworkspace/xcuserdata/fengstone.xcuserdatad/UserInterfaceState.xcuserstate
+# Xcode build products
+build/
+DerivedData/
+*.xcarchive
+
+# SwiftPM
+.build/
+.swiftpm/
+Package.resolved
+
+# macOS
+.DS_Store
