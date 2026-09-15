@@ -11,6 +11,8 @@
 #import "MetalDevice.h"
 #import <Metal/MTLCommandQueue.h>
 
+void * const MetalImageContextQueueSpecificKey = &MetalImageContextQueueSpecificKey;
+
 @interface MetalImageContext () {
     CVMetalTextureCacheRef _coreVideoTextureCache;
     MetalImageTextureCache *_textureCache;
@@ -36,7 +38,9 @@
     _metalContextQueueKey = queueName;
     _contextQueue = dispatch_queue_create([queueName UTF8String], MetalImageDefaultQueueAttribute());
 #if OS_OBJECT_USE_OBJC
-    dispatch_queue_set_specific(_contextQueue, [_metalContextQueueKey UTF8String], (__bridge void *)self, NULL);
+    // Value carries the context identity so the runMetal* helpers can tell
+    // WHICH context's queue they are on (stable key, see header).
+    dispatch_queue_set_specific(_contextQueue, MetalImageContextQueueSpecificKey, (__bridge void *)self, NULL);
 #endif
     
     return self;
