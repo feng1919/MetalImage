@@ -292,9 +292,13 @@ static MTLPixelFormat MTLPixelFormatFromCVPixelFormat(int cvFormat) {
         // Metal exposes no direct API for the 2D texture dimension limit, so
         // probe the device with cheap (lazily-backed) texture allocations.
         // 2048 stays as the conservative floor, matching the old hard limit.
+        // Cap probing at 8192 (256MB BGRA): that already covers the largest
+        // camera stills (4032x3024) while avoiding a 16384^2 x 4 = 1GB
+        // speculative allocation on the synchronous MetalImagePicture init
+        // path of 16K-capable devices (Jetsam risk under memory pressure).
         maximum2DTextureSize = 2048;
         id<MTLDevice> device = [MetalDevice sharedMTLDevice];
-        for (NSUInteger candidate = 16384; candidate >= 4096; candidate >>= 1) {
+        for (NSUInteger candidate = 8192; candidate >= 4096; candidate >>= 1) {
             MTLTextureDescriptor *descriptor = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatBGRA8Unorm
                                                                                                     width:candidate
                                                                                                    height:candidate
