@@ -31,14 +31,16 @@ fragment half4 fragment_adaptiveLuminance(VertexIO         inFrag  [[ stage_in ]
     luminance = clamp(luminance * linePara.k + linePara.b, 0.0f, 1.0f);
     
     float3 result = float3(luminance, u, v);
-    
-    const float3x3 kColorConversion601FullRangeDefault = {
-        {1.0,    1.0,    1.0},
-        {0.0,    -0.343, 1.765},
-        {1.4,    -0.711, 0.0},
+
+    // Inverse of the full-range BT.2020 forward weights above:
+    // R = Y + 1.4746*Cr, G = Y - 0.1646*Cb - 0.5714*Cr, B = Y + 1.8814*Cb
+    const float3x3 kColorConversion2020FullRangeInverse = {
+        {1.0,       1.0,     1.0},
+        {0.0,    -0.1646,  1.8814},
+        {1.4746, -0.5714,     0.0},
     };
-    
-    return half4(half3(kColorConversion601FullRangeDefault * result), 1.0h);
+
+    return half4(half3(kColorConversion2020FullRangeInverse * result), 1.0h);
 }
 
 
