@@ -73,27 +73,32 @@
 #pragma mark - Accessors
 
 - (CVMetalTextureCacheRef)coreVideoTextureCache {
-    if (_coreVideoTextureCache == NULL)
-    {
-        CVReturn err = CVMetalTextureCacheCreate(kCFAllocatorDefault, NULL, [MetalDevice sharedMTLDevice], NULL, &_coreVideoTextureCache);
-        
-        if (err)
+    // Lazily created on first access from both the video-processing queue and
+    // the main thread; guard against concurrent double creation.
+    @synchronized(self) {
+        if (_coreVideoTextureCache == NULL)
         {
-            NSAssert(NO, @"Error at CVMetalTextureCacheCreate %d", err);
+            CVReturn err = CVMetalTextureCacheCreate(kCFAllocatorDefault, NULL, [MetalDevice sharedMTLDevice], NULL, &_coreVideoTextureCache);
+
+            if (err)
+            {
+                NSAssert(NO, @"Error at CVMetalTextureCacheCreate %d", err);
+            }
         }
-        
+
+        return _coreVideoTextureCache;
     }
-    
-    return _coreVideoTextureCache;
 }
 
 - (MetalImageTextureCache *)textureCache {
-    if (_textureCache == nil)
-    {
-        _textureCache = [[MetalImageTextureCache alloc] init];
+    @synchronized(self) {
+        if (_textureCache == nil)
+        {
+            _textureCache = [[MetalImageTextureCache alloc] init];
+        }
+
+        return _textureCache;
     }
-    
-    return _textureCache;
 }
 
 @end
