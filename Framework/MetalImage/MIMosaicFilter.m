@@ -14,7 +14,7 @@
 @interface MIMosaicFilter()
 
 @property (nonatomic, strong) id<MTLBuffer> buffer;
-@property (nonatomic ,strong) MetalImagePicture *pic;
+@property (nonatomic, strong) MetalImageTexture *tileTexture;
 
 @end
 
@@ -41,22 +41,34 @@
 
 
 - (void)setTileSetImage:(UIImage *)tileSetImage {
-    // Break the previous picture's filter<-pic->filter retain chain before
-    // replacing it; otherwise the old picture (holding this filter as a
-    // target) leaks along with its textures.
-    [self.pic removeAllTargets];
-    self.pic = [[MetalImagePicture alloc] initWithImage:tileSetImage smoothlyScaleOutput:YES removePremultiplication:NO];
-    [self.pic addTarget:self atTextureLocation:1];
+    // The tile set is static, so upload it once through a short-lived
+    // picture instead of keeping one alive for the filter's lifetime.
+    // The previous design held the picture strongly while the picture's
+    // target list held this filter strongly: that cycle prevented BOTH
+    // objects from ever deallocating (dealloc -> removeAllTargets never
+    // ran), leaking the picture and its textures on the normal release
+    // path. Here the picture is only retained by its dispatch block until
+    // the tile texture has been delivered to texture index 1, and no
+    // reference survives this method.
+    MetalImagePicture *picture = [[MetalImagePicture alloc] initWithImage:tileSetImage smoothlyScaleOutput:YES removePremultiplication:NO];
+    [picture addTarget:self atTextureLocation:1];
+    [picture processImage];
+
+    // The tile texture arrives once; the per-frame second-input check would
+    // stall rendering after the first frame (two-input filters reset
+    // hasReceivedFrame after every render).
+    [self disableSecondFrameCheck];
 }
 
-- (void)removeAllTargets {
-    // The picture holds this filter as a strong target and this filter holds
-    // the picture — break the cycle when the filter is being torn down,
-    // otherwise neither object deallocates.
-    [self.pic removeAllTargets];
-    self.pic = nil;
-
-    [super removeAllTargets];
+- (void)setInputTexture:(MetalImageTexture *)newInputTexture atIndex:(NSInteger)textureIndex {
+    if (textureIndex == 1) {
+        // Keep the static tile texture out of the recycle pool: every render
+        // unlocks the two-input textures, and a pooled tile texture could be
+        // reused (and overwritten) by an unrelated same-size allocation.
+        _tileTexture = newInputTexture;
+        [_tileTexture disableReferenceCounting];
+    }
+    [super setInputTexture:newInputTexture atIndex:textureIndex];
 }
 
 - (void)setInputTileSize:(MTLFloat2)inputTileSize {
@@ -129,19 +141,10 @@
     [renderEncoder setVertexBuffer:_coordBuffer offset:0 atIndex:1];
     [renderEncoder setVertexBuffer:_coordBuffer2 offset:0 atIndex:2];
     [renderEncoder setFragmentTexture:[firstInputTexture texture] atIndex:0];
-    [renderEncoder setFragmentTexture:[secondInputTexture texture] atIndex:1];
+    [renderEncoder setFragmentTexture:[_tileTexture texture] atIndex:1];
     [renderEncoder setFragmentBuffer:_buffer offset:0 atIndex:0];
     [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip vertexStart:0 vertexCount:MetalImageDefaultRenderVetexCount instanceCount:1];
     [renderEncoder endEncoding];
-}
-
-- (void)newTextureReadyAtTime:(CMTime)frameTime atIndex:(NSInteger)textureIndex {
-    
-    [super newTextureReadyAtTime:frameTime atIndex:textureIndex];
-    
-    if (textureIndex == 0) {
-        [self.pic notifyTargetsAboutNewTextureAtTime:frameTime];
-    }
 }
 
 @end
