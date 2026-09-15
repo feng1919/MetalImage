@@ -7,7 +7,7 @@
 //
 
 
-#include "../Metal/CommonStruct.metal"
+#include "CommonStruct.metal"
 using namespace metal;
 
 

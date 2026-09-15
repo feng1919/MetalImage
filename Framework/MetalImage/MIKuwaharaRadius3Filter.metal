@@ -13,7 +13,7 @@
 // Anisotropic Kuwahara Filtering on the GPU
 // by Jan Eric Kyprianidis <www.kyprianidis.com>
 
-#include "../Metal/CommonStruct.metal"
+#include "CommonStruct.metal"
 using namespace metal;
 
 fragment half4 fragment_KuwaharaRadius3Filter(VertexIOWithSteps inFrag  [[ stage_in ]],

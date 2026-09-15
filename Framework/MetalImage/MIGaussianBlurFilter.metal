@@ -6,7 +6,7 @@
 //  Copyright © 2019 fengshi. All rights reserved.
 //
 
-#include "../Metal/CommonStruct.metal"
+#include "CommonStruct.metal"
 #include <metal_stdlib>
 #include <metal_math>
 

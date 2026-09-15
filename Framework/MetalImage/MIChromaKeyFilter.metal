@@ -8,7 +8,7 @@
 
 // Shader code based on Apple's CIChromaKeyFilter example: https://developer.apple.com/library/mac/#samplecode/CIChromaKeyFilter/Introduction/Intro.html
 
-#include "../Metal/CommonStruct.metal"
+#include "CommonStruct.metal"
 using namespace metal;
 
 typedef struct {

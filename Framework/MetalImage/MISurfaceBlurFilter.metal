@@ -6,7 +6,7 @@
 //  Copyright © 2020 fengshi. All rights reserved.
 //
 
-#include "../Metal/CommonStruct.metal"
+#include "CommonStruct.metal"
 using namespace metal;
 
 fragment half4 fragment_Surface_Blur(VertexIOWithSteps   inFrag     [[ stage_in ]],

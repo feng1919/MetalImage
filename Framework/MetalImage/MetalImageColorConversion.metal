@@ -6,7 +6,7 @@
 //  Copyright © 2017年 fengshi. All rights reserved.
 //
 
-#include "Metal/CommonStruct.metal"
+#include "CommonStruct.metal"
 
 
 constant float3 ColorOffsetFullRange = float3(0.0, -0.5, -0.5);

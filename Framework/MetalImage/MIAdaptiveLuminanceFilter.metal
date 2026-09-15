@@ -6,7 +6,7 @@
 //  Copyright © 2021 fengshi. All rights reserved.
 //
 
-#include "../Metal/CommonStruct.metal"
+#include "CommonStruct.metal"
 using namespace metal;
 
 typedef struct {

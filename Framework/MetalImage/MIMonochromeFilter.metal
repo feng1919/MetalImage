@@ -6,7 +6,7 @@
 //  Copyright © 2017年 fengshi. All rights reserved.
 //
 
-#include "../Metal/CommonStruct.metal"
+#include "CommonStruct.metal"
 using namespace metal;
 
 fragment half4 fragment_monochrome(VertexIO         inFrag  [[ stage_in ]],
