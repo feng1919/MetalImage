@@ -56,7 +56,18 @@
     uint height = (uint)[texture height];
     
     outputTexture = [[MetalImageContext sharedTextureCache] fetchTextureWithSize:MTLUInt2Make(width+2*_borderSize, height+2*_borderSize)];
-    
+
+    // Pooled textures come back with uninitialized contents; clear the whole
+    // destination first so the border ring is defined (zero) instead of garbage
+    // memory handed downstream to zero-padded consumers.
+    MTLRenderPassDescriptor *clearDescriptor = [MTLRenderPassDescriptor renderPassDescriptor];
+    clearDescriptor.colorAttachments[0].texture = [outputTexture texture];
+    clearDescriptor.colorAttachments[0].loadAction = MTLLoadActionClear;
+    clearDescriptor.colorAttachments[0].storeAction = MTLStoreActionStore;
+    clearDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0.0, 0.0, 0.0, 1.0);
+    id<MTLRenderCommandEncoder> clearEncoder = [commandBuffer renderCommandEncoderWithDescriptor:clearDescriptor];
+    [clearEncoder endEncoding];
+
     id <MTLBlitCommandEncoder> blitEncoder = [commandBuffer blitCommandEncoder];
     NSAssert(blitEncoder != nil, @"Failed to create compute encode.");
     
