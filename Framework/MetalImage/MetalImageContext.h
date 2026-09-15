@@ -17,8 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 // per call whose address equality is not guaranteed, and a miss makes the
 // runMetal* helpers dispatch_sync onto the queue they are already running
 // on (guaranteed deadlock). Extern so MetalImageFunction.m can test against
-// the same address.
-extern void * const MetalImageContextQueueSpecificKey;
+// the same address; backed by a sentinel object to keep const-correctness.
+extern const void * const MetalImageContextQueueSpecificKey;
 
 @interface MetalImageContext : NSObject
 

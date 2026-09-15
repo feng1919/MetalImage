@@ -11,7 +11,8 @@
 #import "MetalDevice.h"
 #import <Metal/MTLCommandQueue.h>
 
-void * const MetalImageContextQueueSpecificKey = &MetalImageContextQueueSpecificKey;
+static const char MetalImageContextQueueSpecificKeyStorage;
+const void * const MetalImageContextQueueSpecificKey = &MetalImageContextQueueSpecificKeyStorage;
 
 @interface MetalImageContext () {
     CVMetalTextureCacheRef _coreVideoTextureCache;
