@@ -131,8 +131,10 @@
     if (CMTimeCompare(frameTime, CMTimeAdd(_updateInterval, _lastUpdateTime)) == 1 || CMTIME_IS_INVALID(_lastUpdateTime)) {
         [self renderToTexture];
         _lastUpdateTime = frameTime;
-        _updateInterval = frameTime;
-        _updateInterval.value = _updateInterval.timescale * _duration;
+        // CMTimeMakeWithSeconds keeps the requested interval intact;
+        // assigning timescale * duration into the int64_t value truncated
+        // sub-frame intervals to 0, which disabled throttling entirely.
+        _updateInterval = CMTimeMakeWithSeconds(_duration, frameTime.timescale);
     }
     else {
         [firstInputTexture unlock];
