@@ -50,7 +50,7 @@
 //#define C {0.0f, 0.0f}
 //#define D {1.0f, 0.0f}
 
-- (void)newFrameReadyAtTime:(CMTime)frameTime atIndex:(NSInteger)textureIndex;
+- (void)newTextureReadyAtTime:(CMTime)frameTime atIndex:(NSInteger)textureIndex;
 {
     MTLUInt2 textureSizeForOutput = [self textureSizeForOutput];
     MTLFloat normalizedHeight = (MTLFloat)textureSizeForOutput.y / (MTLFloat)textureSizeForOutput.x;
