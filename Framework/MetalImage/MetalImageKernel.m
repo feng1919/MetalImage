@@ -18,10 +18,15 @@
 
 - (instancetype)initWithFunctionName:(NSString *)fuctionName {
     _functionName = fuctionName;
-    
-    id<MTLDevice> device = [MetalDevice sharedMTLDevice];
-    id<MTLLibrary> defaultLibrary = [device newDefaultLibrary];
-    id<MTLFunction> function = [defaultLibrary newFunctionWithName:fuctionName];
+
+    // Framework kernels live in the framework's own Metal library, not in the
+    // application's default library.
+    id<MTLLibrary> library = [MetalDevice MetalImageLibrary];
+    id<MTLFunction> function = [library newFunctionWithName:fuctionName];
+    if (function == nil) {
+        NSLog(@"[%@] no such kernel function in MetalImageLibrary", _functionName);
+        return nil;
+    }
     return [self initWithFunction:function];
 }
 
