@@ -276,6 +276,13 @@
         id<CAMetalDrawable> currentDrawable = [metalLayer nextDrawable];
         if (currentDrawable == nil) {
             NSLog(@"Failed to obtain drawable ...");
+            // Commit whatever upstream filters encoded for this frame and
+            // release the locked input texture, otherwise the texture never
+            // returns to the cache pool and encoders accumulate on the
+            // shared command buffer without bound.
+            [MetalDevice commitCommandBufferWaitUntilDone:NO];
+            [firstInputTexture unlock];
+            firstInputTexture = nil;
             return;
         }
         
