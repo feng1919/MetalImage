@@ -57,25 +57,34 @@
 }
 
 - (void)setOutputTextureToTargets {
-    for (id<MetalImageInput> currentTarget in targets) {
-        NSInteger indexOfObject = [targets indexOfObject:currentTarget];
-        NSInteger textureIndex = [targetTextureIndices[indexOfObject] integerValue];
+    NSArray *currentTargets;
+    NSArray *currentTextureIndices;
+    @synchronized (self) {
+        currentTargets = [NSArray arrayWithArray:targets];
+        currentTextureIndices = [NSArray arrayWithArray:targetTextureIndices];
+    }
+    [currentTargets enumerateObjectsUsingBlock:^(id<MetalImageInput> currentTarget, NSUInteger idx, BOOL *stop) {
+        NSInteger textureIndex = [currentTextureIndices[idx] integerValue];
         [currentTarget setInputRotation:[self rotationForOutput] atIndex:textureIndex];
         [currentTarget setInputTexture:outputTexture atIndex:textureIndex];
-    }
+    }];
 }
 
 - (void)notifyTargetsAboutNewTextureAtTime:(CMTime)time {
-    
+
     [self setOutputTextureToTargets];
     [self removeOutputTexture];
-    
-    for (id<MetalImageInput> currentTarget in targets)
-    {
-        NSInteger indexOfObject = [targets indexOfObject:currentTarget];
-        NSInteger textureIndex = [targetTextureIndices[indexOfObject] integerValue];
-        [currentTarget newTextureReadyAtTime:time atIndex:textureIndex];
+
+    NSArray *currentTargets;
+    NSArray *currentTextureIndices;
+    @synchronized (self) {
+        currentTargets = [NSArray arrayWithArray:targets];
+        currentTextureIndices = [NSArray arrayWithArray:targetTextureIndices];
     }
+    [currentTargets enumerateObjectsUsingBlock:^(id<MetalImageInput> currentTarget, NSUInteger idx, BOOL *stop) {
+        NSInteger textureIndex = [currentTextureIndices[idx] integerValue];
+        [currentTarget newTextureReadyAtTime:time atIndex:textureIndex];
+    }];
 }
 
 - (NSArray*)targets

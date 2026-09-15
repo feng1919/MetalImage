@@ -259,15 +259,20 @@
     }
     
     runMetalAsynchronouslyOnVideoProcessingQueue(^{
-        for (id<MetalImageInput> currentTarget in targets) {
-            NSInteger indexOfObject = [targets indexOfObject:currentTarget];
-            NSInteger textureIndexOfTarget = [[targetTextureIndices objectAtIndex:indexOfObject] integerValue];
-            
+        NSArray *currentTargets;
+        NSArray *currentTextureIndices;
+        @synchronized (self) {
+            currentTargets = [NSArray arrayWithArray:targets];
+            currentTextureIndices = [NSArray arrayWithArray:targetTextureIndices];
+        }
+        [currentTargets enumerateObjectsUsingBlock:^(id<MetalImageInput> currentTarget, NSUInteger idx, BOOL *stop) {
+            NSInteger textureIndexOfTarget = [currentTextureIndices[idx] integerValue];
+
             [currentTarget setInputRotation:kMetalImageNoRotation atIndex:textureIndexOfTarget];
             [currentTarget setInputTexture:outputTexture atIndex:textureIndexOfTarget];
             [currentTarget newTextureReadyAtTime:kCMTimeIndefinite atIndex:textureIndexOfTarget];
-        }
-        
+        }];
+
         dispatch_semaphore_signal(imageUpdateSemaphore);
         
         if (completion) {
