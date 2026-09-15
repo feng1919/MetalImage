@@ -81,7 +81,6 @@
 		5A26B38323740D3B00B45CAF /* MIGaussianBlurFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A26B38223740D3B00B45CAF /* MIGaussianBlurFilter.metal */; };
 		5A26B38423740D3B00B45CAF /* MIGaussianBlurFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A26B38223740D3B00B45CAF /* MIGaussianBlurFilter.metal */; };
 		5A26B38623740D3B00B45CAF /* MIGaussianBlurFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5A26B38223740D3B00B45CAF /* MIGaussianBlurFilter.metal */; };
-		5A26B38923743C6800B45CAF /* MIGuidedFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A26B38723743C6800B45CAF /* MIGuidedFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A26B38A23743C6800B45CAF /* MIGuidedFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A26B38823743C6800B45CAF /* MIGuidedFilter.m */; };
 		5A26B38B23743C6800B45CAF /* MIGuidedFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A26B38823743C6800B45CAF /* MIGuidedFilter.m */; };
 		5A26B38C23743C6800B45CAF /* MIGuidedFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A26B38823743C6800B45CAF /* MIGuidedFilter.m */; };
@@ -254,7 +253,6 @@
 		5AE713A41FC2F8C20067E7A7 /* MIXYDerivativeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713A31FC2F8C20067E7A7 /* MIXYDerivativeFilter.metal */; };
 		5AE713A51FC2F8C20067E7A7 /* MIXYDerivativeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713A31FC2F8C20067E7A7 /* MIXYDerivativeFilter.metal */; };
 		5AE713A61FC2F8C20067E7A7 /* MIXYDerivativeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713A31FC2F8C20067E7A7 /* MIXYDerivativeFilter.metal */; };
-		5AE713A91FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE713A71FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AE713AA1FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713A81FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.m */; };
 		5AE713AB1FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713A81FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.m */; };
 		5AE713AC1FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE713A81FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.m */; };
@@ -391,7 +389,6 @@
 		5AF438571FA311DD0081D4B8 /* MILuminanceThresholdFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438561FA311DD0081D4B8 /* MILuminanceThresholdFilter.metal */; };
 		5AF438581FA311DD0081D4B8 /* MILuminanceThresholdFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438561FA311DD0081D4B8 /* MILuminanceThresholdFilter.metal */; };
 		5AF438591FA311DD0081D4B8 /* MILuminanceThresholdFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5AF438561FA311DD0081D4B8 /* MILuminanceThresholdFilter.metal */; };
-		5AF4385C1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AF4385A1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AF4385D1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4385B1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.m */; };
 		5AF4385E1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4385B1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.m */; };
 		5AF4385F1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF4385B1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.m */; };
@@ -410,7 +407,6 @@
 		5AFAA0191FD6D88800038BA4 /* MIHighPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA0171FD6D88800038BA4 /* MIHighPassFilter.m */; };
 		5AFAA01A1FD6D88800038BA4 /* MIHighPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA0171FD6D88800038BA4 /* MIHighPassFilter.m */; };
 		5AFAA01B1FD6D88800038BA4 /* MIHighPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAA0171FD6D88800038BA4 /* MIHighPassFilter.m */; };
-		9F1250EA1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1250E81FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F1250EB1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1250E91FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m */; };
 		9F1250EC1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1250E91FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m */; };
 		9F1250ED1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F1250E91FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.m */; };
@@ -1726,7 +1722,6 @@
 				5AF438481FA30D030081D4B8 /* MIGrayscaleFilter.h in Headers */,
 				9FFACCC21FB3F798004BF184 /* MIColorDodgeBlendFilter.h in Headers */,
 				5AE7135D1FBFF4EF0067E7A7 /* MILaplacianFilter.h in Headers */,
-				5AE713A91FC2FC9B0067E7A7 /* MIFASTCornerDetectionFilter.h in Headers */,
 				9FFACCBC1FB3F6C7004BF184 /* MIColorBurnBlendFilter.h in Headers */,
 				5A1D1FA424A1F4D400E0154C /* MIBilateralFilter.h in Headers */,
 				9FFACD5E1FB47391004BF184 /* MIPolarPixellateFilter.h in Headers */,
@@ -1735,7 +1730,6 @@
 				9FFACCDA1FB40222004BF184 /* MIExclusionBlendFilter.h in Headers */,
 				5A61904B232BC21C00FD73E5 /* MetalImage.h in Headers */,
 				5A22D8F81FD6954A006A1FC2 /* MIHistogramFilter.h in Headers */,
-				5AF4385C1FA603CD0081D4B8 /* MIAdaptiveThresholdFilter.h in Headers */,
 				9FFACD291FB44138004BF184 /* MIColorBlendFilter.h in Headers */,
 				9FFACD0A1FB43317004BF184 /* MIOverlayBlendFilter.h in Headers */,
 				9FFACD4E1FB453F6004BF184 /* MIPerlinNoiseFilter.h in Headers */,
@@ -1757,7 +1751,6 @@
 				9FFACCA31FB3E681004BF184 /* MILuminanceRangeFilter.h in Headers */,
 				5AF438161F9CEC840081D4B8 /* MIMonochromeFilter.h in Headers */,
 				9FFACCE01FB4036B004BF184 /* MIHardLightBlendFilter.h in Headers */,
-				9F1250EA1FAC4AD8004C0D98 /* MIAverageLuminanceThresholdFilter.h in Headers */,
 				5AFAA0121FD6C39500038BA4 /* MILowPassFilter.h in Headers */,
 				9FFACDB01FB5C2D2004BF184 /* MISphereRefractionFilter.h in Headers */,
 				5AF438201F9D941E0081D4B8 /* MIFalseColorFilter.h in Headers */,
@@ -1799,7 +1792,6 @@
 				9FFACD961FB58CED004BF184 /* MIBulgeDistortionFilter.h in Headers */,
 				9FFACC991FB3E01F004BF184 /* MIWhiteBalanceFilter.h in Headers */,
 				5AE713C51FC4164E0067E7A7 /* MIDilationFilter.h in Headers */,
-				5A26B38923743C6800B45CAF /* MIGuidedFilter.h in Headers */,
 				9FFACC8F1FB32CA4004BF184 /* MIChromaKeyFilter.h in Headers */,
 				9FFACC851FB32B1B004BF184 /* MIOpacityFilter.h in Headers */,
 				5AE7130B1FB9B9F90067E7A7 /* MIMosaicFilter.h in Headers */,
