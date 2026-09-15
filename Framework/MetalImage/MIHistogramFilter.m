@@ -77,6 +77,7 @@
     if ([MetalImageTexture supportsFastTextureUpload]) {
         void *byteBuffer = [downSamplingTexture byteBuffer];
         memcpy(bgra, byteBuffer, downSamplingSize.y * bytesPerRow);
+        [downSamplingTexture unlockAfterReading];
     }
     else {
         [[downSamplingTexture texture] getBytes:bgra
@@ -281,6 +282,7 @@
     for (int i = 0; i < outputSize.y; i++) {
         memcpy(contents+bytesPerRow*i, byteBuffer+(outputSize.x*4*i), outputSize.x*4);
     }
+    [outputTexture unlockAfterReading];
     
     free(byteBuffer);
 }

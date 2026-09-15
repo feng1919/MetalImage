@@ -264,10 +264,11 @@ static int MetalSupportFastTextureLoad = -1;
 - (Byte *)byteBuffer;
 {
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
+    // The CVPixelBuffer base address is only valid between lockForReading and
+    // unlockAfterReading. The lock is held on return; callers must pair this
+    // call with -unlockAfterReading.
     [self lockForReading];
-    Byte * bufferBytes = CVPixelBufferGetBaseAddress(_renderTarget);
-    [self unlockAfterReading];
-    return bufferBytes;
+    return CVPixelBufferGetBaseAddress(_renderTarget);
 #else
     return NULL; // TODO: do more with this on the non-texture-cache side
 #endif
