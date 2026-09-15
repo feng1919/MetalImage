@@ -269,6 +269,10 @@
     CGContextRelease(context);
      */
     
+    free(histRed);
+    free(histGreen);
+    free(histBlue);
+    
     outputTexture = [[MetalImageContext sharedTextureCache] fetchTextureWithSize:[self textureSizeForOutput]];
     NSParameterAssert(outputTexture);
         
