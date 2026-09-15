@@ -233,6 +233,18 @@
     imageScalingVertics[3] = MTLFloat4Make( widthScaling,  heightScaling, 0.0f, 1.0f);
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+
+    // Fill-mode geometry is derived from the view bounds but was only
+    // recalculated on input-size / fill-mode changes; keep it correct across
+    // rotation and autoresizing too.
+    if (!MTLUInt2IsZero(inputImageSize)) {
+        [self updateViewGeometry];
+        [self updateTextureVertics];
+    }
+}
+
 - (void)updateInputImageSize {
     if (firstInputTexture) {
         
