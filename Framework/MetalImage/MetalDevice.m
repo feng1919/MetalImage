@@ -165,8 +165,14 @@ static MetalDevice *_sharedMetalDevice = nil;
 }
 
 + (void)commitCommandBufferWithCompletion:(void (^)(id<MTLCommandBuffer>))completion {
-    [_sharedMetalDevice.commandBuffer addCompletedHandler:completion];
-    [self commitCommandBufferWaitUntilDone:NO];
+    // Attaching the handler and committing must be atomic: a concurrent commit
+    // between the two would leave the handler on an already-committed buffer
+    // or on nil, silently dropping the completion callback.
+    @synchronized (self) {
+        [_sharedMetalDevice.commandBuffer addCompletedHandler:completion];
+        [_sharedMetalDevice.commandBuffer commit];
+        _sharedMetalDevice.commandBuffer = nil;
+    }
 }
 
 + (void)commitCommandBufferWaitUntilDone:(BOOL)waitUtilDone {
