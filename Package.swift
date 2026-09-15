@@ -19,6 +19,7 @@ let package = Package(
             path: "Framework/MetalImage",
             exclude: ["Info.plist"],
             resources: [
+                .process("default.metallib"),
                 .process("lookup.png"),
                 .process("lookup_amatorka.png"),
                 .process("lookup_miss_etikate.png"),
