@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81168E3411E8587B0545D1FA /* MIAdaptiveLuminanceFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A1C49C36DBF6387A14B99FD /* MIAdaptiveLuminanceFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C4267F2492100BC68242EDA /* MICannyEdgeDetectionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB01FCD4573A668CDBAB182 /* MICannyEdgeDetectionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66DEA789B3940CA78CBCDC18 /* MIHistogramEqualizationFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 54765C7D4DD48574545E8E0A /* MIHistogramEqualizationFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		155E86B3205B8C58C58BD051 /* MetalImageCommonFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EA4FC941B875B079A46CB12 /* MetalImageCommonFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		248B76503A5C038DD88BDBB4 /* MetalImagePreprocess.h in Headers */ = {isa = PBXBuildFile; fileRef = A71825214C1EBCE501BB0D77 /* MetalImagePreprocess.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64F0089D200582D43D3E22C2 /* MIAdaptiveLuminanceFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B459E6134CD90F302512D0 /* MIAdaptiveLuminanceFilter.m */; };
+		55FF3A63332CF052472663BA /* MICannyEdgeDetectionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C31BEB8F492BDEBA15F500 /* MICannyEdgeDetectionFilter.m */; };
+		6863439598EFAED59D993225 /* MIHistogramEqualizationFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3085DD1B3B868DB15CCFDB6E /* MIHistogramEqualizationFilter.m */; };
+		07BE14D17C434604013CC084 /* MetalImageCommonFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C848C9AE963874D284098BE /* MetalImageCommonFilter.m */; };
+		754795036710A8153C9AA9C7 /* MetalImagePreprocess.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F536A320E8393295BB401D /* MetalImagePreprocess.m */; };
+		24C59CEC357EB6C0493BCA0F /* MIAdaptiveLuminanceFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8103EC3A7215AA29568A15AC /* MIAdaptiveLuminanceFilter.metal */; };
+		FE43E687D89BC0EEFEF66401 /* Convolution.metal in Sources */ = {isa = PBXBuildFile; fileRef = 74C75D34BDAA0E1E559322B2 /* Convolution.metal */; };
 		5A1C66AB1F93A1D300B1F0C4 /* MIRGBFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A1C66A91F93A1D300B1F0C4 /* MIRGBFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A1C66AC1F93A1D300B1F0C4 /* MIRGBFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C66AA1F93A1D300B1F0C4 /* MIRGBFilter.m */; };
 		5A1C66AD1F93A1D300B1F0C4 /* MIRGBFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C66AA1F93A1D300B1F0C4 /* MIRGBFilter.m */; };
@@ -808,6 +820,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A1C49C36DBF6387A14B99FD /* MIAdaptiveLuminanceFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIAdaptiveLuminanceFilter.h; sourceTree = "<group>"; };
+		5AB01FCD4573A668CDBAB182 /* MICannyEdgeDetectionFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MICannyEdgeDetectionFilter.h; sourceTree = "<group>"; };
+		54765C7D4DD48574545E8E0A /* MIHistogramEqualizationFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIHistogramEqualizationFilter.h; sourceTree = "<group>"; };
+		7EA4FC941B875B079A46CB12 /* MetalImageCommonFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalImageCommonFilter.h; sourceTree = "<group>"; };
+		A71825214C1EBCE501BB0D77 /* MetalImagePreprocess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalImagePreprocess.h; sourceTree = "<group>"; };
+		88B459E6134CD90F302512D0 /* MIAdaptiveLuminanceFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIAdaptiveLuminanceFilter.m; sourceTree = "<group>"; };
+		70C31BEB8F492BDEBA15F500 /* MICannyEdgeDetectionFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MICannyEdgeDetectionFilter.m; sourceTree = "<group>"; };
+		3085DD1B3B868DB15CCFDB6E /* MIHistogramEqualizationFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIHistogramEqualizationFilter.m; sourceTree = "<group>"; };
+		2C848C9AE963874D284098BE /* MetalImageCommonFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalImageCommonFilter.m; sourceTree = "<group>"; };
+		A0F536A320E8393295BB401D /* MetalImagePreprocess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalImagePreprocess.m; sourceTree = "<group>"; };
+		8103EC3A7215AA29568A15AC /* MIAdaptiveLuminanceFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MIAdaptiveLuminanceFilter.metal; sourceTree = "<group>"; };
+		74C75D34BDAA0E1E559322B2 /* Convolution.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Convolution.metal; sourceTree = "<group>"; };
 		5A1C66A91F93A1D300B1F0C4 /* MIRGBFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIRGBFilter.h; sourceTree = "<group>"; };
 		5A1C66AA1F93A1D300B1F0C4 /* MIRGBFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIRGBFilter.m; sourceTree = "<group>"; };
 		5A1C66AF1F93A1E500B1F0C4 /* MIRGBFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MIRGBFilter.metal; sourceTree = "<group>"; };
@@ -1584,6 +1608,18 @@
 				EB57B16B1E86126F00832619 /* MetalMatrixMult.h */,
 				EB57B16C1E86126F00832619 /* MetalMatrixMult.mm */,
 				EB57B16D1E86126F00832619 /* MetalMatrixMulti.metal */,
+				9A1C49C36DBF6387A14B99FD /* MIAdaptiveLuminanceFilter.h */,
+				5AB01FCD4573A668CDBAB182 /* MICannyEdgeDetectionFilter.h */,
+				54765C7D4DD48574545E8E0A /* MIHistogramEqualizationFilter.h */,
+				7EA4FC941B875B079A46CB12 /* MetalImageCommonFilter.h */,
+				A71825214C1EBCE501BB0D77 /* MetalImagePreprocess.h */,
+				88B459E6134CD90F302512D0 /* MIAdaptiveLuminanceFilter.m */,
+				70C31BEB8F492BDEBA15F500 /* MICannyEdgeDetectionFilter.m */,
+				3085DD1B3B868DB15CCFDB6E /* MIHistogramEqualizationFilter.m */,
+				2C848C9AE963874D284098BE /* MetalImageCommonFilter.m */,
+				A0F536A320E8393295BB401D /* MetalImagePreprocess.m */,
+				8103EC3A7215AA29568A15AC /* MIAdaptiveLuminanceFilter.metal */,
+				74C75D34BDAA0E1E559322B2 /* Convolution.metal */,
 			);
 			name = Framework;
 			path = Framework/MetalImage;
@@ -1798,6 +1834,11 @@
 				EB54C92A1ECC711B00FB7DC3 /* MetalImageFunction.h in Headers */,
 				EB54C9461ECC712700FB7DC3 /* MIBrightnessFilter.h in Headers */,
 				EB54C9221ECC711B00FB7DC3 /* MetalImageDebugView.h in Headers */,
+				81168E3411E8587B0545D1FA /* MIAdaptiveLuminanceFilter.h */,
+				5C4267F2492100BC68242EDA /* MICannyEdgeDetectionFilter.h */,
+				66DEA789B3940CA78CBCDC18 /* MIHistogramEqualizationFilter.h */,
+				155E86B3205B8C58C58BD051 /* MetalImageCommonFilter.h */,
+				248B76503A5C038DD88BDBB4 /* MetalImagePreprocess.h */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2197,6 +2238,11 @@
 				5AE713BB1FC304180067E7A7 /* MetalImageBuffer.m in Sources */,
 				5AE713A51FC2F8C20067E7A7 /* MIXYDerivativeFilter.metal in Sources */,
 				5AE713DF1FC450330067E7A7 /* MIDilationAndErosion.metal in Sources */,
+				64F0089D200582D43D3E22C2 /* MIAdaptiveLuminanceFilter.m */,
+				55FF3A63332CF052472663BA /* MICannyEdgeDetectionFilter.m */,
+				6863439598EFAED59D993225 /* MIHistogramEqualizationFilter.m */,
+				07BE14D17C434604013CC084 /* MetalImageCommonFilter.m */,
+				754795036710A8153C9AA9C7 /* MetalImagePreprocess.m */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2340,6 +2386,11 @@
 				EB54C97A1ECC77F500FB7DC3 /* MIContrastFilter.m in Sources */,
 				5AE713FA1FC457AB0067E7A7 /* MIOpeningFilter.m in Sources */,
 				EB54C9881ECC780C00FB7DC3 /* MetalImageFilterGroup.m in Sources */,
+				64F0089D200582D43D3E22C2 /* MIAdaptiveLuminanceFilter.m */,
+				55FF3A63332CF052472663BA /* MICannyEdgeDetectionFilter.m */,
+				6863439598EFAED59D993225 /* MIHistogramEqualizationFilter.m */,
+				07BE14D17C434604013CC084 /* MetalImageCommonFilter.m */,
+				754795036710A8153C9AA9C7 /* MetalImagePreprocess.m */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2415,6 +2466,8 @@
 				5AF438271F9D95920081D4B8 /* MIFalseColorFilter.metal in Sources */,
 				EB50A5261F7E3D58009B4C45 /* MIGammaFilter.metal in Sources */,
 				9FFACC781FB31DA7004BF184 /* MIHighlightShadowFilter.metal in Sources */,
+				24C59CEC357EB6C0493BCA0F /* MIAdaptiveLuminanceFilter.metal */,
+				FE43E687D89BC0EEFEF66401 /* Convolution.metal */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
