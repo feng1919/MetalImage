@@ -396,10 +396,12 @@
         
         NSAssert(_videoOutputPixelFormat == kCVPixelFormatType_32BGRA, @"Wrong pixel format");
         CVPixelBufferLockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
-        int width_expand = bytesPerRow >> 2;
-        
-        outputTexture = [[MetalImageContext sharedTextureCache] fetchTextureWithSize:MTLUInt2Make(width_expand, height)];
-        [[outputTexture texture] replaceRegion:MTLRegionMake2D(0,0,width_expand,height)
+        // bytesPerRow includes row padding; the image width must come from
+        // CVPixelBufferGetWidth or the texture is stretched by the padding.
+        int width = (int)CVPixelBufferGetWidth(pixelBuffer);
+
+        outputTexture = [[MetalImageContext sharedTextureCache] fetchTextureWithSize:MTLUInt2Make(width, height)];
+        [[outputTexture texture] replaceRegion:MTLRegionMake2D(0, 0, width, height)
                                    mipmapLevel:0
                                      withBytes:CVPixelBufferGetBaseAddress(pixelBuffer)
                                    bytesPerRow:bytesPerRow];
