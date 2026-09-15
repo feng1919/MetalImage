@@ -62,7 +62,11 @@
 - (void)dealloc;
 {
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    // Block-based observers are removed with the opaque token, not with
+    // removeObserver:self — otherwise the block stays registered forever.
+    if (memoryWarningObserver) {
+        [[NSNotificationCenter defaultCenter] removeObserver:memoryWarningObserver];
+    }
 #else
 #endif
 }
