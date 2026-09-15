@@ -29,8 +29,10 @@
     
     hasProcessedImage = NO;
     shouldSmoothlyScaleOutput = smoothlyScaleOutput;
+    // Initial value 1: one processImage may be in flight; GPUImage's original
+    // creates with 0 and signals once. The previous create(1)+signal produced
+    // an initial count of 2, letting two overlapping processing blocks run.
     imageUpdateSemaphore = dispatch_semaphore_create(1);
-    dispatch_semaphore_signal(imageUpdateSemaphore);
     
     
     // TODO: Dispatch this whole thing asynchronously to move image loading off main thread
