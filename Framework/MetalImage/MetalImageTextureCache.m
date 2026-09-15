@@ -91,7 +91,7 @@
         if ([numberOfMatchingTexturesInCache integerValue] < 1)
         {
             // Nothing in the cache, create a new framebuffer to use
-            textureFromCache = [[MetalImageTexture alloc] initWithTextureSize:size];
+            textureFromCache = [[MetalImageTexture alloc] initWithTextureSize:size pixelFormat:pixelFormat];
             //            NSLog(@"create new buffer: %p",textureFromCache);
         }
         else
@@ -118,7 +118,7 @@
             
             if (textureFromCache == nil)
             {
-                textureFromCache = [[MetalImageTexture alloc] initWithTextureSize:size];
+                textureFromCache = [[MetalImageTexture alloc] initWithTextureSize:size pixelFormat:pixelFormat];
                 //                NSLog(@"create new buffer2: %p",textureFromCache);
             }
         }

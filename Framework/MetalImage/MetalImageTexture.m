@@ -14,6 +14,17 @@
 
 static int MetalSupportFastTextureLoad = -1;
 
+// Maps the CoreVideo pixel format the texture was created with to the matching
+// Metal pixel format for CVMetalTexture wrapping / descriptor creation.
+static MTLPixelFormat MTLPixelFormatFromCVPixelFormat(int cvFormat) {
+    switch (cvFormat) {
+        case kCVPixelFormatType_32BGRA:     return MTLPixelFormatBGRA8Unorm;
+        case kCVPixelFormatType_32RGBA:     return MTLPixelFormatRGBA8Unorm;
+        case kCVPixelFormatType_64RGBAHalf: return MTLPixelFormatRGBA16Float;
+        default:                            return MTLPixelFormatBGRA8Unorm;
+    }
+}
+
 @interface MetalImageTexture () {
     struct {
         NSUInteger count;
@@ -106,7 +117,7 @@ static int MetalSupportFastTextureLoad = -1;
             NSAssert(NO, @"Error at CVPixelBufferCreate %d", err);
         }
         
-        CVReturn error = CVMetalTextureCacheCreateTextureFromImage(kCFAllocatorDefault, coreVideoTextureCache, _renderTarget, NULL, MTLPixelFormatBGRA8Unorm, _size.x, _size.y, 0, &_textureRef);
+        CVReturn error = CVMetalTextureCacheCreateTextureFromImage(kCFAllocatorDefault, coreVideoTextureCache, _renderTarget, NULL, MTLPixelFormatFromCVPixelFormat(_pixelFormat), _size.x, _size.y, 0, &_textureRef);
         
         NSAssert(error == kCVReturnSuccess, @">>>>ERR: Failed to create CVMetalTextureRef.");
         
@@ -123,7 +134,7 @@ static int MetalSupportFastTextureLoad = -1;
 }
 
 - (void)buildupTexture {
-    MTLTextureDescriptor *descriptor = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatBGRA8Unorm width:_size.x height:_size.y mipmapped:NO];
+    MTLTextureDescriptor *descriptor = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatFromCVPixelFormat(_pixelFormat) width:_size.x height:_size.y mipmapped:NO];
     descriptor.usage = _usage;
     _texture = [[MetalDevice sharedMTLDevice] newTextureWithDescriptor:descriptor];
 }
