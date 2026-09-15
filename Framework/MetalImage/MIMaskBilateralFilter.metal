@@ -37,7 +37,7 @@ fragment half4 fragment_MaskBilateralFilter(VertexIOWithSteps    inFrag  [[ stag
         textCoordinate.y *= float(i-radius);
         for (int j = 0; j < width; j++) {
             textCoordinate.x = inFrag.texelSteps.x * float(j-radius);
-            half3 color = tex2D.sample(quadSampler, textCoordinate).rgb;
+            half3 color = tex2D.sample(quadSampler, inFrag.textureCoordinate + textCoordinate).rgb;
             half3 delta = color - center;
             delta *= 255.0h;
             delta = delta * delta / power;

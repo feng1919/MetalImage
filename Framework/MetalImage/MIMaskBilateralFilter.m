@@ -25,7 +25,8 @@
 
 - (id)init
 {
-    if (self = [super initWithFragmentFunctionName:@"fragment_MaskBilateralFilter"]) {
+    if (self = [super initWithVertexFunctionName:@"vertex_texelSampling"
+                              fragmentFunctionName:@"fragment_MaskBilateralFilter"]) {
 
         id<MTLDevice> device = [MetalDevice sharedMTLDevice];
         _pixelSteps = [device newBufferWithLength:sizeof(MTLFloat2)
@@ -47,11 +48,13 @@
     
     if (_radius != radius) {
         
+        _radius = radius;
+        
         int size = radius * 2 + 1;
         
         float *buffer = malloc(sizeof(float) * size * size);
         
-        make_gaussian_distribution_2d(_radius, (float)_radius, false, buffer);
+        make_gaussian_distribution_2d(radius, (float)radius, false, buffer);
         
         runMetalSynchronouslyOnVideoProcessingQueue(^{
             
