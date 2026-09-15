@@ -345,32 +345,47 @@
             int width = (int)CVPixelBufferGetWidth(pixelBuffer);
             int height = (int)CVPixelBufferGetHeight(pixelBuffer);
             
-            CVMetalTextureRef y_texture;
+            CVMetalTextureRef y_texture = NULL;
             int y_width = (int)CVPixelBufferGetWidthOfPlane(pixelBuffer, 0);
             int y_height = (int)CVPixelBufferGetHeightOfPlane(pixelBuffer, 0);
-            CVMetalTextureCacheCreateTextureFromImage(kCFAllocatorDefault, coreVideoTextureCache, pixelBuffer, nil, MTLPixelFormatR8Unorm, y_width, y_height, 0, &y_texture);
-            
-            CVMetalTextureRef uv_texture;
+            CVReturn yStatus = CVMetalTextureCacheCreateTextureFromImage(kCFAllocatorDefault, coreVideoTextureCache, pixelBuffer, nil, MTLPixelFormatR8Unorm, y_width, y_height, 0, &y_texture);
+
+            CVMetalTextureRef uv_texture = NULL;
             int uv_width = (int)CVPixelBufferGetWidthOfPlane(pixelBuffer, 1);
             int uv_height = (int)CVPixelBufferGetHeightOfPlane(pixelBuffer, 1);
-            CVMetalTextureCacheCreateTextureFromImage(kCFAllocatorDefault, coreVideoTextureCache, pixelBuffer, nil, MTLPixelFormatRG8Unorm, uv_width, uv_height, 1, &uv_texture);
-            
+            CVReturn uvStatus = CVMetalTextureCacheCreateTextureFromImage(kCFAllocatorDefault, coreVideoTextureCache, pixelBuffer, nil, MTLPixelFormatRG8Unorm, uv_width, uv_height, 1, &uv_texture);
+
             NSAssert(y_width == (uv_width<<1) && y_height == (uv_height<<1), @"Data Invalid...");
-            
-            id<MTLTexture> luma = CVMetalTextureGetTexture(y_texture);
-            id<MTLTexture> chroma = CVMetalTextureGetTexture(uv_texture);
-            
-            if (luma && chroma) {
+
+            id<MTLTexture> luma = y_texture != NULL ? CVMetalTextureGetTexture(y_texture) : nil;
+            id<MTLTexture> chroma = uv_texture != NULL ? CVMetalTextureGetTexture(uv_texture) : nil;
+
+            if (yStatus == kCVReturnSuccess && uvStatus == kCVReturnSuccess && luma && chroma) {
                 CFTypeRef colorAttachments = CVBufferGetAttachment(pixelBuffer, kCVImageBufferYCbCrMatrixKey, NULL);
                 [self updateColorConversionWithAttachments:colorAttachments];
-                
+
                 outputTexture = [[MetalImageContext sharedTextureCache] fetchTextureWithSize:MTLUInt2Make(width, height)];
                 [_conversion generateBGROutputTexture:[outputTexture texture] YPlane:luma UVPlane:chroma];
+
+                // The derived MTLTextures are only valid while their CVMetalTextureRefs
+                // stay alive; the conversion is merely encoded into the shared command
+                // buffer here, so release the refs from the buffer's completion handler
+                // instead of dropping them before the GPU has executed.
+                id<MTLCommandBuffer> commandBuffer = [MetalDevice sharedCommandBuffer];
+                [commandBuffer addCompletedHandler:^(id<MTLCommandBuffer> buffer) {
+                    CVBufferRelease(y_texture);
+                    CVBufferRelease(uv_texture);
+                }];
             }
-            
-            CVBufferRelease(y_texture);
-            CVBufferRelease(uv_texture);
-            
+            else {
+                if (y_texture != NULL) {
+                    CVBufferRelease(y_texture);
+                }
+                if (uv_texture != NULL) {
+                    CVBufferRelease(uv_texture);
+                }
+            }
+
             CVPixelBufferUnlockBaseAddress(pixelBuffer, kCVPixelBufferLock_ReadOnly);
         }
         else {
