@@ -9,6 +9,7 @@
 #import "MetalImageVideoCamera.h"
 #import <AVFoundation/AVFoundation.h>
 #import "MetalImageContext.h"
+#import "MetalDevice.h"
 #import "MetalImageTexture.h"
 #import "MetalImageTextureCache.h"
 #import "MetalImageColorConversion.h"
