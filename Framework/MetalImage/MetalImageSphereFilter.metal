@@ -27,12 +27,15 @@ fragment half4 fragment_SphereRefractionFilter(VertexIO         inFrag  [[ stage
     float distanceFromCenter = distance((float2)parameters.center, textureCoordinateToUse);
     float checkForPresenceWithinSphere = step(distanceFromCenter, parameters.radius);
     distanceFromCenter = distanceFromCenter/parameters.radius;
-    float normalizedDepth = parameters.radius * sqrt(1.0 - distanceFromCenter * distanceFromCenter);
-    
+    // max() guards the sqrt against a marginally negative argument for
+    // fragments just outside the sphere rim (NaN otherwise, which propagates
+    // through normalize/refract and is not cleaned by the step() mask).
+    float normalizedDepth = parameters.radius * sqrt(max(1.0 - distanceFromCenter * distanceFromCenter, 0.0));
+
     float3 sphereNormal = normalize(float3(textureCoordinateToUse - parameters.center, normalizedDepth));
-    
+
     float3 refractedVector = refract(float3(0.0, 0.0, -1.0), sphereNormal, parameters.refractiveIndex);
-    
+
     return tex2D.sample(quadSampler, (refractedVector.xy + 1.0) * 0.5) * checkForPresenceWithinSphere;
 }
 
@@ -53,7 +56,7 @@ fragment half4 fragment_GlassSphereFilter(VertexIO         inFrag  [[ stage_in ]
     
     distanceFromCenter = distanceFromCenter / parameters.radius;
     
-    float normalizedDepth = parameters.radius * sqrt(1.0 - distanceFromCenter * distanceFromCenter);
+    float normalizedDepth = parameters.radius * sqrt(max(1.0 - distanceFromCenter * distanceFromCenter, 0.0));
     float3 sphereNormal = normalize(float3(textureCoordinateToUse - parameters.center, normalizedDepth));
     
     float3 refractedVector = 2.0 * refract(float3(0.0, 0.0, -1.0), sphereNormal, parameters.refractiveIndex);

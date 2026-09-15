@@ -27,7 +27,9 @@ fragment half4 fragment_colorBurnBlend(VertexIO2 inFrag[[ stage_in ]],
     half4 textureColor = texture1.sample(qsampler, inFrag.textureCoordinate);
     half4 textureColor2 = texture2.sample(qsampler, inFrag.textureCoordinate2);
     half4 whiteColor = half4(1.0h);
-    return whiteColor - (whiteColor - textureColor) / textureColor2;
+    // Guard the divisor: a zero channel yields inf (or 0/0 NaN), which is
+    // undefined output with fast math enabled.
+    return whiteColor - (whiteColor - textureColor) / max(textureColor2, half4(0.01h));
 }
 
 fragment half4 fragment_colorDodgeBlend(VertexIO2 inFrag[[ stage_in ]],
@@ -209,24 +211,24 @@ fragment half4 fragment_divideBlend(VertexIO2 inFrag[[ stage_in ]],
     half4 overlay = texture2.sample(qsampler, inFrag.textureCoordinate2);
     
     half ra;
-    if (overlay.a == 0.0h || ((base.r / overlay.r) > (base.a / overlay.a)))
+    if (overlay.a == 0.0h || ((base.r / max(overlay.r, 0.01h)) > (base.a / max(overlay.a, 0.01h))))
         ra = overlay.a * base.a + overlay.r * (1.0h - base.a) + base.r * (1.0h - overlay.a);
     else
-        ra = (base.r * overlay.a * overlay.a) / overlay.r + overlay.r * (1.0h - base.a) + base.r * (1.0h - overlay.a);
-    
-    
+        ra = (base.r * overlay.a * overlay.a) / max(overlay.r, 0.01h) + overlay.r * (1.0h - base.a) + base.r * (1.0h - overlay.a);
+
+
     half ga;
-    if (overlay.a == 0.0h || ((base.g / overlay.g) > (base.a / overlay.a)))
+    if (overlay.a == 0.0h || ((base.g / max(overlay.g, 0.01h)) > (base.a / max(overlay.a, 0.01h))))
         ga = overlay.a * base.a + overlay.g * (1.0h - base.a) + base.g * (1.0h - overlay.a);
     else
-        ga = (base.g * overlay.a * overlay.a) / overlay.g + overlay.g * (1.0h - base.a) + base.g * (1.0h - overlay.a);
-    
-    
+        ga = (base.g * overlay.a * overlay.a) / max(overlay.g, 0.01h) + overlay.g * (1.0h - base.a) + base.g * (1.0h - overlay.a);
+
+
     half ba;
-    if (overlay.a == 0.0h || ((base.b / overlay.b) > (base.a / overlay.a)))
+    if (overlay.a == 0.0h || ((base.b / max(overlay.b, 0.01h)) > (base.a / max(overlay.a, 0.01h))))
         ba = overlay.a * base.a + overlay.b * (1.0h - base.a) + base.b * (1.0h - overlay.a);
     else
-        ba = (base.b * overlay.a * overlay.a) / overlay.b + overlay.b * (1.0h - base.a) + base.b * (1.0h - overlay.a);
+        ba = (base.b * overlay.a * overlay.a) / max(overlay.b, 0.01h) + overlay.b * (1.0h - base.a) + base.b * (1.0h - overlay.a);
     
     half a = overlay.a + base.a - overlay.a * base.a;
     
