@@ -19,6 +19,11 @@ let package = Package(
             path: "Framework/MetalImage",
             exclude: ["Info.plist"],
             resources: [
+                .process("lookup.png"),
+                .process("lookup_amatorka.png"),
+                .process("lookup_miss_etikate.png"),
+                .process("lookup_soft_elegance_1.png"),
+                .process("lookup_soft_elegance_2.png"),
                 .process("Blend.metal"),
                 .process("MIAdaptiveLuminanceFilter.metal"),
                 .process("MIAdaptiveThresholdFilter.metal"),
