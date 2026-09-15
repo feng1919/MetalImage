@@ -105,7 +105,7 @@ void runMetalSynchronouslyOnContextQueue(MetalImageContext *context, void (^bloc
     if (dispatch_get_current_queue() == videoProcessingQueue)
 #pragma clang diagnostic pop
 #else
-        if (dispatch_get_specific([[[MetalImageContext sharedImageProcessingContext] contextKey] UTF8String]) || [NSThread isMainThread])
+        if (dispatch_get_specific([[context contextKey] UTF8String]) || [NSThread isMainThread])
 #endif
         {
             block();
@@ -118,14 +118,14 @@ void runMetalSynchronouslyOnContextQueue(MetalImageContext *context, void (^bloc
 void runMetalAsynchronouslyOnContextQueue(MetalImageContext *context, void (^block)(void))
 {
     dispatch_queue_t videoProcessingQueue = [context contextQueue];
-    
+
 #if !OS_OBJECT_USE_OBJC
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     if (dispatch_get_current_queue() == videoProcessingQueue)
 #pragma clang diagnostic pop
 #else
-        if (dispatch_get_specific([[[MetalImageContext sharedImageProcessingContext] contextKey] UTF8String]))
+        if (dispatch_get_specific([[context contextKey] UTF8String]))
 #endif
         {
             block();
