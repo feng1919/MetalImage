@@ -63,6 +63,7 @@
     [renderEncoder setRenderPipelineState:_pipelineState];
     [renderEncoder setVertexBuffer:_verticsBuffer offset:0 atIndex:0];
     [renderEncoder setVertexBuffer:_coordBuffer offset:0 atIndex:1];
+    [renderEncoder setVertexBuffer:_coordBuffer2 offset:0 atIndex:2];
     [renderEncoder setFragmentTexture:[firstInputTexture texture] atIndex:0];
     [renderEncoder setFragmentTexture:[secondInputTexture texture] atIndex:1];
     [renderEncoder setFragmentBuffer:_fragmentBuffer offset:0 atIndex:0];
