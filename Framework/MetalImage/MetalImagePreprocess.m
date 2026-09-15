@@ -42,9 +42,18 @@
 }
 
 - (void)newTextureReadyAtTime:(CMTime)frameTime atIndex:(NSInteger)textureIndex {
-    
-    dispatch_semaphore_wait(m_InflightSemaphore, DISPATCH_TIME_FOREVER);
-    
+
+    // Non-blocking in-flight gate: if the previous frame's command buffer has
+    // not completed yet (e.g. a terminal consumer has not committed it), drop
+    // this frame. The previous DISPATCH_TIME_FOREVER wait wedged the serial
+    // video queue permanently whenever the signal never arrived, which in
+    // turn deadlocked every main-thread call that syncs into the queue
+    // (all filter setters).
+    if (dispatch_semaphore_wait(m_InflightSemaphore, DISPATCH_TIME_NOW) != 0) {
+        [firstInputTexture unlock];
+        return;
+    }
+
     id <MTLCommandBuffer> commandBuffer = [MetalDevice sharedCommandBuffer];
     __block dispatch_semaphore_t dispatchSemaphore = m_InflightSemaphore;
     [commandBuffer addCompletedHandler:^(id <MTLCommandBuffer> cmdb) {
