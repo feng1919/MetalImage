@@ -273,9 +273,33 @@ static int MetalSupportFastTextureLoad = -1;
 #endif
 }
 
++ (NSUInteger)maximum2DTextureSize {
+    static NSUInteger maximum2DTextureSize = 0;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        // Metal exposes no direct API for the 2D texture dimension limit, so
+        // probe the device with cheap (lazily-backed) texture allocations.
+        // 2048 stays as the conservative floor, matching the old hard limit.
+        maximum2DTextureSize = 2048;
+        id<MTLDevice> device = [MetalDevice sharedMTLDevice];
+        for (NSUInteger candidate = 16384; candidate >= 4096; candidate >>= 1) {
+            MTLTextureDescriptor *descriptor = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatBGRA8Unorm
+                                                                                                    width:candidate
+                                                                                                   height:candidate
+                                                                                                mipmapped:NO];
+            descriptor.usage = MTLTextureUsageShaderRead;
+            if ([device newTextureWithDescriptor:descriptor] != nil) {
+                maximum2DTextureSize = candidate;
+                break;
+            }
+        }
+    });
+    return maximum2DTextureSize;
+}
+
 + (CGSize)sizeThatFitsWithinATextureForSize:(CGSize)inputSize
 {
-    GLint maxTextureSize = 2048;
+    GLint maxTextureSize = (GLint)[self maximum2DTextureSize];
     if ( (inputSize.width < maxTextureSize) && (inputSize.height < maxTextureSize) )
     {
         return inputSize;
