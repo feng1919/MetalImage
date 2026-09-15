@@ -28,7 +28,7 @@ All public headers are exported through:
 | Item | Requirement |
 | --- | --- |
 | Platform | iOS |
-| Deployment target | iOS 9.0+ |
+| Deployment target | iOS 13.0+ |
 | Hardware | Metal-capable physical device |
 | Architecture | arm64 device runtime |
 | Camera features | Require camera permission and supported hardware |
@@ -39,16 +39,18 @@ All public headers are exported through:
 
 ```text
 MetalImage.xcodeproj                       Xcode project
-Framework/MetalImage/                     Framework root
-Framework/MetalImage/MetalImage/Color/    Color-related filters
-Framework/MetalImage/MetalImage/ImageProcessing/
-                                           Blur, edge detection, morphology, transforms
-Framework/MetalImage/MetalImage/Blend/    Blend filters
-Framework/MetalImage/MetalImage/Effects/  Stylized and distortion effects
-Framework/MetalImage/MetalImage/Matrix/   Matrix acceleration helpers
-Example/MetalImageDemo/                   Demo app sources and assets
-MetalImageShader                          Metal shader library target
+Package.swift                              Swift Package Manager manifest
+Framework/MetalImage/                      All framework sources, headers,
+                                           shaders and resources (flat layout)
+Framework/MetalImage/default.metallib      Prebuilt shader library for SPM
+Scripts/build-metallib.sh                  Regenerates default.metallib
+Example/MetalImageDemo/                    Demo app sources and assets
+Tests/MetalImageTests/                     Unit tests
+MetalImageShader                           Metal shader library target (Xcode)
 ```
+
+> After changing any `.metal` file, run `Scripts/build-metallib.sh` and commit
+> the regenerated `default.metallib` so the SwiftPM integration keeps working.
 
 ## Getting Started
 
