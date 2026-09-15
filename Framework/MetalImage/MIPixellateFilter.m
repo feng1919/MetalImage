@@ -31,9 +31,13 @@
 
 - (void)adjustAspectRatio;
 {
+    if (firstInputTexture == nil || firstInputTexture.size.x == 0 || firstInputTexture.size.y == 0) {
+        return;
+    }
+
     MTLFloat inputTextureWidth = (MTLFloat)firstInputTexture.size.x;
     MTLFloat inputTextureHeight = (MTLFloat)firstInputTexture.size.y;
-    
+
     if (MetalImageRotationSwapsWidthAndHeight(firstInputParameter.rotationMode))
     {
         [self setAspectRatio:(inputTextureHeight / inputTextureWidth)];
@@ -47,6 +51,14 @@
 - (void)setInputRotation:(MetalImageRotationMode)newInputRotation atIndex:(NSInteger)textureIndex;
 {
     [super setInputRotation:newInputRotation atIndex:textureIndex];
+    [self adjustAspectRatio];
+}
+
+- (void)setInputTexture:(MetalImageTexture *)newInputTexture atIndex:(NSInteger)textureIndex;
+{
+    [super setInputTexture:newInputTexture atIndex:textureIndex];
+    // setInputRotation: arrives before the first texture, when the ratio
+    // cannot be computed yet; recalculate once the texture size is known.
     [self adjustAspectRatio];
 }
 
