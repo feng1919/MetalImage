@@ -11,7 +11,6 @@
 
 @interface MIKuwaharaRadius3Filter() {
     
-    id<MTLBuffer> _bufferRadius;
     id<MTLBuffer> _bufferSteps;
     
     MTLUInt2 _imageSize;
@@ -68,6 +67,19 @@
 
 - (MTLUInt2)textureSizeForTexel {
     return firstInputTexture.size;
+}
+
+- (void)assembleRenderEncoder:(id<MTLRenderCommandEncoder>)renderEncoder {
+    NSParameterAssert(renderEncoder);
+    
+    [renderEncoder setDepthStencilState:_depthStencilState];
+    [renderEncoder setRenderPipelineState:_pipelineState];
+    [renderEncoder setVertexBuffer:_verticsBuffer offset:0 atIndex:0];
+    [renderEncoder setVertexBuffer:_coordBuffer offset:0 atIndex:1];
+    [renderEncoder setVertexBuffer:_bufferSteps offset:0 atIndex:2];
+    [renderEncoder setFragmentTexture:[firstInputTexture texture] atIndex:0];
+    [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip vertexStart:0 vertexCount:MetalImageDefaultRenderVetexCount instanceCount:1];
+    [renderEncoder endEncoding];
 }
 
 @end
