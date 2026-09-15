@@ -19,7 +19,7 @@
 
 - (id)init
 {
-    if (!(self = [super initWithFragmentFunctionName:@"fragment_whiteBalance"]))
+    if (!(self = [super initWithFragmentFunctionName:@"fragment_luminanceRange"]))
     {
         return nil;
     }
