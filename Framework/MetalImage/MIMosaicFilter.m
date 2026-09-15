@@ -41,8 +41,22 @@
 
 
 - (void)setTileSetImage:(UIImage *)tileSetImage {
+    // Break the previous picture's filter<-pic->filter retain chain before
+    // replacing it; otherwise the old picture (holding this filter as a
+    // target) leaks along with its textures.
+    [self.pic removeAllTargets];
     self.pic = [[MetalImagePicture alloc] initWithImage:tileSetImage smoothlyScaleOutput:YES removePremultiplication:NO];
     [self.pic addTarget:self atTextureLocation:1];
+}
+
+- (void)removeAllTargets {
+    // The picture holds this filter as a strong target and this filter holds
+    // the picture — break the cycle when the filter is being torn down,
+    // otherwise neither object deallocates.
+    [self.pic removeAllTargets];
+    self.pic = nil;
+
+    [super removeAllTargets];
 }
 
 - (void)setInputTileSize:(MTLFloat2)inputTileSize {
